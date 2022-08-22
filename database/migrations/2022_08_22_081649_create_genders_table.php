@@ -15,11 +15,14 @@ return new class extends Migration
     {
         Schema::create('genders', function (Blueprint $table) {
 
+            // static data categories
+            
             $table->engine = 'InnoDB';
             $table->charset = 'utf8';
             $table->collation = 'utf8_general_ci';
 
             $table->id();
+            $table->string('name')->nullable();
             $table->timestamps();
         });
     }

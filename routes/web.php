@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\BrandsController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,8 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::resource('Brands', BrandsController::class);
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 Route::get('/dashboard', function () {

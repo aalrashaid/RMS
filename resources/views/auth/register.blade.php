@@ -1,59 +1,74 @@
-<x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+<!-- resources/views/child.blade.php -->
 
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
+@extends('layouts.apps')
 
-        <form method="POST" action="{{ route('register') }}">
-            @csrf
+{{-- @section('title', 'Page Title')
+ 
+@section('sidebar')
+    @parent
+ 
+    <p>This is appended to the master sidebar.</p>
+@endsection --}}
 
-            <!-- Name -->
-            <div>
-                <x-label for="username" :value="__('username')" />
+@section('content')
+    <form method="POST" action="{{ route('register') }}">
+        @csrf
+        <div class="form-floating mb-3">
 
-                <x-input id="username" class="block mt-1 w-full" type="text" name="username" :value="old('username')" required autofocus />
-            </div>
+            <input type="text" class="form-control" id="username" name="username" value="{{ old('username') }}"
+                placeholder="username" required>
 
-            <!-- Email Address -->
-            <div class="mt-4">
-                <x-label for="email" :value="__('Email')" />
+            <label for="username">Username</label>
 
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
-            </div>
+            @error('username')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+            @enderror
+        </div>
 
-            <!-- Password -->
-            <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
+         <div class="form-floating mb-3">
 
-                <x-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="new-password" />
-            </div>
+            <input type="text" class="form-control" id="email" name="email" value="{{ old('email') }}"
+                placeholder="email" required>
 
-            <!-- Confirm Password -->
-            <div class="mt-4">
-                <x-label for="password_confirmation" :value="__('Confirm Password')" />
+            <label for="email">email</label>
 
-                <x-input id="password_confirmation" class="block mt-1 w-full"
-                                type="password"
-                                name="password_confirmation" required />
-            </div>
+            @error('username')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+            @enderror
+        </div>
 
-            <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
-                </a>
+        <div class="form-floating mb-3">
 
-                <x-button class="ml-4">
-                    {{ __('Register') }}
-                </x-button>
-            </div>
-        </form>
-    </x-auth-card>
-</x-guest-layout>
+            <input type="password" class="form-control" id="password" name="password" value="{{ old('password') }}"
+                placeholder="password" required autocomplete="new-password">
+
+            <label for="password">password</label>
+
+            @error('password')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+            @enderror
+        </div>
+
+        <div class="form-floating mb-3">
+
+            <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" value="{{ old('password_confirmation') }}"
+                placeholder="password_confirmation" required autocomplete="new-password">
+
+            <label for="password_confirmation">password confirmation</label>
+
+            @error('password')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+            @enderror
+        </div>
+        <a href="{{ route('login') }}">{{ __('Already registered?') }}</a>
+        <button type="submit" value="Submit" class="btn btn-dark">{{ __('Register') }}</button>
+    </form>
+@endsection

@@ -13,14 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('countries', function (Blueprint $table) {
-
-            // static data categories
-            
-            $table->engine = 'InnoDB';
-            $table->charset = 'utf8';
-            $table->collation = 'utf8_general_ci';
-
+        Schema::create('supplier_items', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
         });
@@ -33,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('countries');
+        Schema::dropIfExists('supplier_items');
     }
 };

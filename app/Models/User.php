@@ -41,4 +41,15 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    //Eloquent: Relationships
+
+    /**
+     * Relationships: one to one
+     * Get the Brands associated with the user.
+     */
+    public function Brands()
+    {
+        return $this->hasOne(Brands::class);
+    }
 }

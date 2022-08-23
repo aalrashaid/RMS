@@ -17,7 +17,7 @@ class HasNutritionFactsRecipeCards extends Model
      *
      * @var string
      */
-    protected $table = 'categories';
+    protected $table = 'Has_Nutrition_Facts_Recipe_Cards';
 
     /**
      * The primary key associated with the table.
@@ -46,9 +46,20 @@ class HasNutritionFactsRecipeCards extends Model
      * @var array
      */
     protected $fillable = [
-        'Name',
-        'Slug',
-        'Description',
+        'Recipe_Cards_Id',
+        'Calories_Serving',
+        'Carbs_Serving',
+        'Protein_Serving',
+        'Fat_Serving',
+        'Ingredients_Name',
+        'Calories_Unit',
+        'Calories_Unit_Name',
+        'Carbs_Unit',
+        'Carbs_Unit_Name',
+        'Protein_Unit',
+        'Protein_Unit_Name',
+        'Fat_Unit',
+        'Fat_Unit_Name',
     ];
 
     /**

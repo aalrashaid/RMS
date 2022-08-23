@@ -24,6 +24,8 @@ return new class extends Migration
             $table->foreignId('Supplier_Id')->references('id')->on('suppliers');
             $table->string('Item_Name')->comment('The name of the unit');
             $table->string('Item_Description')->comment('The name of the unit');
+            $table->string('SKU')->comment('The name of the unit');
+            $table->string('UPC')->comment('The name of the unit');
             $table->string('Barcode')->comment('The name of the unit');
             $table->double('Price')->comment('The name of the unit');
             $table->integer('Quantity')->comment('The name of the unit');

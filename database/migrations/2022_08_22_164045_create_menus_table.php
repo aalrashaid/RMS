@@ -19,9 +19,9 @@ return new class extends Migration
             $table->engine = 'InnoDB';
 
             $table->id();
-            $table->foreignId('User_id')->references('id')->on('users')->comment('');
-            $table->foreignId('Brands_id')->references('id')->on('brands')->comment('');
-            $table->foreignId('Categories_id')->references('id')->on('categories')->comment('');
+            $table->foreignId('User_Id')->references('id')->on('users')->comment('');
+            $table->foreignId('Brands_Id')->references('id')->on('brands')->comment('');
+            $table->foreignId('Category_Id')->references('id')->on('categories')->comment('');
             $table->string('Recipe_ID')->nullable()->comment('');
             $table->string('Name')->nullable()->comment('');
             $table->string('Slug')->nullable()->unique()->comment('');

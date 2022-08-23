@@ -17,7 +17,7 @@ class RecipeCard extends Model
      *
      * @var string
      */
-    protected $table = 'recipe_cards';
+    protected $table = 'Recipe_Cards';
 
     /**
      * The primary key associated with the table.
@@ -46,23 +46,21 @@ class RecipeCard extends Model
      * @var array
      */
     protected $fillable = [
-        'user_id',
-        'brands_id',
-        'thumbnail_id',
-        'title',
-        'slug',
-        'description',
-        'youtube_video',
-        'recipe_method',
-        'difficulty',
-        'prep_time',
-        'cook_time',
-        'time_total',
-        'servings',
-        'yield',
-        'ingredients',
-        'directions',
-        'nutrition_facts',
+        'User_Id',
+        'Brands_Id',
+        'Thumbnail_Id',
+        'Title',
+        'Slug',
+        'Description',
+        'Youtube_Video',
+        'Recipe_Method',
+        'Difficulty',
+        'Prep_Time',
+        'Cook_Time',
+        'Time_Total',
+        'Servings',
+        'Directions',
+        
     ];
 
     /**

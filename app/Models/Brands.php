@@ -21,7 +21,7 @@ class Brands extends Model
      *
      * @var string
      */
-    protected $table = 'brands';
+    protected $table = 'Brands';
 
     /**
      * The primary key associated with the table.
@@ -51,12 +51,12 @@ class Brands extends Model
      */
     protected $fillable = [
         'user_id',
-        'NameBrand',
+        'Name_Brand',
         'Slug',
         'Description',
-        'BrandLogas',
+        'Brand_Logas',
         'Address',
-        'ZipCode',
+        'Zip_Code',
         'City',
         'Province',
         'Region',

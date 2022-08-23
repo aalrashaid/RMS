@@ -17,7 +17,7 @@ class Menu extends Model
      *
      * @var string
      */
-    protected $table = 'menus';
+    protected $table = 'Menus';
 
     /**
      * The primary key associated with the table.
@@ -46,10 +46,10 @@ class Menu extends Model
      * @var array
      */
     protected $fillable = [
-        'user_id',
-        'brands_id',
-        'categories_id',
-        'RecipeID',
+        'User_Id',
+        'Brands_Id',
+        'Category_Id',
+        'Recipe_ID',
         'Name',
         'Slug',
         'Description',

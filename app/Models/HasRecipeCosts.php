@@ -17,7 +17,7 @@ class HasRecipeCosts extends Model
      *
      * @var string
      */
-    protected $table = 'has_recipe_costs';
+    protected $table = 'Has_Recipe_Costs';
 
     /**
      * The primary key associated with the table.
@@ -46,7 +46,7 @@ class HasRecipeCosts extends Model
      * @var array
      */
     protected $fillable = [
-        'recipe_costs_id',
+        'Recipe_Costs_Id',
         'Ingredients',
         'AP_Quantity',
         'AP_Recipe_Unit',

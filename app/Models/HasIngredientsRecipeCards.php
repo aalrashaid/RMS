@@ -17,7 +17,7 @@ class HasIngredientsRecipeCards extends Model
      *
      * @var string
      */
-    protected $table = 'categories';
+    protected $table = 'Has_Ingredients_Recipe_Cards';
 
     /**
      * The primary key associated with the table.
@@ -46,9 +46,11 @@ class HasIngredientsRecipeCards extends Model
      * @var array
      */
     protected $fillable = [
-        'Name',
-        'Slug',
-        'Description',
+        'Recipe_Card_Id',
+        'Ingredients_Name',
+        'Ingredients_Unit',
+        'Ingredients_Unit_Name',
+        
     ];
 
     /**

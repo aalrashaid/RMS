@@ -24,7 +24,7 @@ return new class extends Migration
             $table->foreignId('Category_Id')->references('id')->on('categories')->comment('');
             $table->foreignId('Menus_Id')->references('id')->on('menus')->comment('');
 
-            $table->string('Recipe_ID')->nullable()->comment('');
+            $table->string('Recipe_UID')->nullable()->unique()->comment('Recipe Unique identifier ');
             $table->string('Recipe_Name')->nullable()->comment('');
             $table->date('Date_At')->nullable()->comment('');
             //$table->string('category')->nullable()->comment('');

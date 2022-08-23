@@ -18,11 +18,12 @@ return new class extends Migration
             $table->collation = 'utf8mb4_unicode_ci';
             $table->engine = 'InnoDB';
             $table->id();
-            $table->foreignId('User_id')->references('id')->on('users')->comment('');
-            $table->foreignId('Brands_id')->references('id')->on('brands')->comment('');
-            $table->foreignId('Thumbnail_id')->references('id')->on('thumbnails')->comment('');
+            $table->foreignId('User_Id')->references('id')->on('users')->comment('');
+            $table->foreignId('Brands_Id')->references('id')->on('brands')->comment('');
+            $table->foreignId('Thumbnail_Id')->references('id')->on('thumbnails')->comment('');
             $table->string('Title')->nullable()->comment('');
             $table->string('Slug')->nullable()->unique()->comment('');
+            $table->string('Recipe_UID')->nullable()->unique()->comment('Recipe Unique identifier ');
             $table->text('Description')->nullable()->comment('');
             $table->string('Youtube_Video')->nullable()->comment('');
             $table->string('Recipe_Method')->nullable()->comment('');

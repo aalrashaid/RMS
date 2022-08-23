@@ -17,7 +17,7 @@ class Category extends Model
      *
      * @var string
      */
-    protected $table = 'categories';
+    protected $table = 'Categories';
 
     /**
      * The primary key associated with the table.

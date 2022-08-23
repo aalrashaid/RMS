@@ -26,10 +26,14 @@ return new class extends Migration
             $table->string('Protein_Serving')->nullable()->comment('');
             $table->string('Fat_Serving')->nullable()->comment('');
             $table->string('ingredients_name')->nullable()->comment('');
-            $table->string('Calories')->nullable()->comment('');
+            $table->string('Calories_Unit')->nullable()->comment('');
+            $table->string('Calories_Unit_Name')->nullable()->comment('');
             $table->string('Carbs')->nullable()->comment('');
-            $table->string('Protein')->nullable()->comment('');
-            $table->string('Fat')->nullable()->comment('');
+            $table->string('Carbs_Unit_Name')->nullable()->comment('');
+            $table->string('Protein_Unit')->nullable()->comment('');
+            $table->string('Protein_Unit_Name')->nullable()->comment('');
+            $table->string('Fat_Unit')->nullable()->comment('');
+            $table->string('Fat_Unit_Name')->nullable()->comment('');
             $table->timestamps();
         });
     }

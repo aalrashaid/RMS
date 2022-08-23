@@ -1,36 +1,39 @@
-<x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+<!-- resources/views/child.blade.php -->
 
-        <div class="mb-4 text-sm text-gray-600">
+@extends('layouts.apps')
+
+{{-- @section('title', 'Page Title')
+ 
+@section('sidebar')
+    @parent
+ 
+    <p>This is appended to the master sidebar.</p>
+@endsection --}}
+
+@section('content')
+
+<div class="mb-4 text-sm text-gray-600">
             {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
         </div>
+    <form method="POST" action="{{ route('password.email') }}">
+        
+        @csrf
 
-        <!-- Session Status -->
-        <x-auth-session-status class="mb-4" :status="session('status')" />
+         <div class="form-floating mb-3">
 
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
+            <input type="text" class="form-control" id="email" name="email" value="{{ old('email') }}"
+                placeholder="email" required autofocus>
 
-        <form method="POST" action="{{ route('password.email') }}">
-            @csrf
+            <label for="email">email</label>
 
-            <!-- Email Address -->
-            <div>
-                <x-label for="email" :value="__('Email')" />
+            @error('username')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+            @enderror
+        </div>
 
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
-            </div>
-
-            <div class="flex items-center justify-end mt-4">
-                <x-button>
-                    {{ __('Email Password Reset Link') }}
-                </x-button>
-            </div>
-        </form>
-    </x-auth-card>
-</x-guest-layout>
+        <a href="{{ route('login') }}">{{ __('Already registered?') }}</a>
+        <button type="submit" value="Submit" class="btn btn-dark">{{ __('Email Password Reset Link') }}</button>
+    </form>
+@endsection

@@ -20,9 +20,10 @@ return new class extends Migration
             $table->engine = 'InnoDB';
 
             $table->id();
-            $table->foreignId('recipe_cards_id')->references('id')->on('recipe_cards')->comment('');
-            $table->string('ingredients_name')->nullable()->comment('');
+            $table->foreignId('Recipe_Card_id')->references('id')->on('recipe_cards')->comment('');
+            $table->string('ingredients_Name')->nullable()->comment('');
             $table->string('ingredients_Unit')->nullable()->comment('');
+            $table->string('ingredients_Unit_Name')->nullable()->comment('');
             $table->timestamps();
         });
     }

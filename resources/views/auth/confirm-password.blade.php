@@ -1,36 +1,38 @@
-<x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+<!-- resources/views/child.blade.php -->
 
-        <div class="mb-4 text-sm text-gray-600">
-            {{ __('This is a secure area of the application. Please confirm your password before continuing.') }}
+@extends('layouts.apps')
+
+{{-- @section('title', 'Page Title')
+ 
+@section('sidebar')
+    @parent
+ 
+    <p>This is appended to the master sidebar.</p>
+@endsection --}}
+
+@section('content')
+    <div>
+        {{ __('This is a secure area of the application. Please confirm your password before continuing.') }}
+    </div>
+    <form method="POST" action="{{ route('password.confirm') }}">
+
+        @csrf
+
+        <div class="form-floating mb-3">
+
+            <input type="password" class="form-control" id="password" name="password" value="{{ old('password') }}"
+                placeholder="password" required autocomplete="current-password">
+
+            <label for="password">password</label>
+
+            @error('password')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+            @enderror
         </div>
 
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
-
-        <form method="POST" action="{{ route('password.confirm') }}">
-            @csrf
-
-            <!-- Password -->
-            <div>
-                <x-label for="password" :value="__('Password')" />
-
-                <x-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="current-password" />
-            </div>
-
-            <div class="flex justify-end mt-4">
-                <x-button>
-                    {{ __('Confirm') }}
-                </x-button>
-            </div>
-        </form>
-    </x-auth-card>
-</x-guest-layout>
+        <a href="{{ route('login') }}">{{ __('Already registered?') }}</a>
+        <button type="submit" value="Submit" class="btn btn-dark">{{ __('Confirm') }}</button>
+    </form>
+@endsection

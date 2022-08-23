@@ -19,7 +19,8 @@ return new class extends Migration
             $table->engine = 'InnoDB';
 
             $table->id();
-            $table->foreignId('Recipe_Costs_Id')->references('id')->on('recipe_costs')->comment('');
+            $table->foreignId('Recipe_Costs_Id')->references('id')->on('recipe_costs')
+            ->onUpdate('cascade')->onDelete('cascade')->comment('');
 
             //$table->string('AP_Quantity');
             $table->string('Ingredients')->nullable()->comment('');

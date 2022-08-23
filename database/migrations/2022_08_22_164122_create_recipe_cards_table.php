@@ -18,9 +18,14 @@ return new class extends Migration
             $table->collation = 'utf8mb4_unicode_ci';
             $table->engine = 'InnoDB';
             $table->id();
-            $table->foreignId('User_Id')->references('id')->on('users')->comment('');
-            $table->foreignId('Brands_Id')->references('id')->on('brands')->comment('');
-            $table->foreignId('Thumbnail_Id')->references('id')->on('thumbnails')->comment('');
+
+            $table->foreignId('User_Id')->references('id')->on('users')
+            ->onUpdate('cascade')->onDelete('cascade')->comment('');
+            $table->foreignId('Brands_Id')->references('id')->on('brands')
+            ->onUpdate('cascade')->onDelete('cascade')->comment('');
+            $table->foreignId('Thumbnail_Id')->references('id')->on('thumbnails')
+            ->onUpdate('cascade')->onDelete('cascade')->comment('');
+
             $table->string('Title')->nullable()->comment('');
             $table->string('Slug')->nullable()->unique()->comment('');
             $table->string('Recipe_UID')->nullable()->unique()->comment('Recipe Unique identifier ');

@@ -14,14 +14,20 @@ return new class extends Migration
     public function up()
     {
         Schema::create('Supplier_Items', function (Blueprint $table) {
+            
             $table->charset = 'utf8mb4';
             $table->collation = 'utf8mb4_unicode_ci';
             $table->engine = 'InnoDB';
 
             $table->id();
-            $table->foreignId('User_Id')->references('id')->on('users');
-            $table->foreignId('Brands_Id')->references('id')->on('brands');
-            $table->foreignId('Supplier_Id')->references('id')->on('suppliers');
+
+            $table->foreignId('User_Id')->references('id')->on('users')
+            ->onUpdate('cascade')->onDelete('cascade')->comment('');
+            $table->foreignId('Brands_Id')->references('id')->on('brands')
+            ->onUpdate('cascade')->onDelete('cascade')->comment('');
+            $table->foreignId('Supplier_Id')->references('id')->on('suppliers')
+            ->onUpdate('cascade')->onDelete('cascade')->comment('');
+
             $table->string('Item_Name')->comment('The name of the unit');
             $table->string('Item_Description')->comment('The name of the unit');
             $table->string('SKU')->comment('The name of the unit');

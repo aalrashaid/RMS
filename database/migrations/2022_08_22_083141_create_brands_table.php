@@ -20,7 +20,11 @@ return new class extends Migration
             $table->collation = 'utf8_general_ci';
 
             $table->id()->comment('The primary Key');
-            $table->foreignId('User_id')->nullable()->references('id')->on('users')->comment('The foreign Key Id in Taleb In User');
+
+            $table->foreignId('User_id')->nullable()->references('id')->on('users')
+                ->onUpdate('cascade')
+                ->onDelete('cascade')
+                ->comment('The foreign Key Id in Taleb In User');
             $table->string('Slug')->nullable()->unique()->comment('the Slug Links of Business Name Brands');
             $table->string('Name_Brand')->nullable()->unique()->comment('the Business Name Brands');
             $table->text('Description')->nullable()->comment('Description Text 288 Characters ');

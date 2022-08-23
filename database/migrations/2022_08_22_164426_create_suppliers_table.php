@@ -20,10 +20,10 @@ return new class extends Migration
 
             $table->id();
             //$table->text('Description');
-            $table->string('Supplier_ID')->comment('The name of the unit');
+            $table->string('Supplier_UID')->comment('The name of the unit');
             $table->string('Name_Supplier')->comment('The name of the unit');
-            $table->string('Company')->comment('The name of the unit');
-            $table->string('Brand_image')->comment('The name of the unit');
+            $table->string('Company_Name')->comment('The name of the unit');
+            $table->string('Brand_Image')->comment('The name of the unit');
             $table->string('Street')->comment('The name of the unit');
             $table->string('Zip_Code')->comment('The name of the unit');
             $table->string('City')->comment('The name of the unit');
@@ -36,8 +36,8 @@ return new class extends Migration
             $table->string('Web')->comment('The name of the unit');
             $table->string('Facebook')->comment('The name of the unit');
             $table->string('Youtube')->comment('The name of the unit');
-            $table->string('instagram')->comment('The name of the unit');
-            $table->string('twitter')->comment('The name of the unit');
+            $table->string('Instagram')->comment('The name of the unit');
+            $table->string('Twitter')->comment('The name of the unit');
         });
     }
 

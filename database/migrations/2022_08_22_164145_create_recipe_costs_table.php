@@ -19,10 +19,16 @@ return new class extends Migration
             $table->engine = 'InnoDB';
 
             $table->id();
-            $table->foreignId('User_Id')->references('id')->on('users')->comment('');
-            $table->foreignId('Brands_Id')->references('id')->on('brands')->comment('');
-            $table->foreignId('Category_Id')->references('id')->on('categories')->comment('');
-            $table->foreignId('Menus_Id')->references('id')->on('menus')->comment('');
+            $table->foreignId('User_Id')->references('id')->on('users')
+            ->onUpdate('cascade')->onDelete('cascade')->comment('');
+            $table->foreignId('Brands_Id')->references('id')->on('brands')
+            ->onUpdate('cascade')->onDelete('cascade')->comment('');
+            $table->foreignId('Category_Id')->references('id')->on('categories')
+            ->onUpdate('cascade')->onDelete('cascade')->comment('');
+            $table->foreignId('Menus_Id')->references('id')->on('menus')
+            ->onUpdate('cascade')->onDelete('cascade')->comment('');
+            $table->foreignId('Recipe_Card_Id')->references('id')->on('recipe_cards')
+            ->onUpdate('cascade')->onDelete('cascade')->comment('');
 
             $table->string('Recipe_UID')->nullable()->unique()->comment('Recipe Unique identifier ');
             $table->string('Recipe_Name')->nullable()->comment('');

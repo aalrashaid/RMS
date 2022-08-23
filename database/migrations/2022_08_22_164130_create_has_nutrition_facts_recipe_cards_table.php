@@ -20,7 +20,8 @@ return new class extends Migration
             $table->engine = 'InnoDB';
 
             $table->id();
-            $table->foreignId('Recipe_Cards_Id')->references('id')->on('recipe_cards')->comment('');
+            $table->foreignId('Recipe_Cards_Id')->references('id')->on('recipe_cards')
+            ->onUpdate('cascade')->onDelete('cascade')->comment('');
             $table->string('Calories_Serving')->nullable()->comment('');
             $table->string('Carbs_Serving')->nullable()->comment('');
             $table->string('Protein_Serving')->nullable()->comment('');

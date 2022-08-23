@@ -16,13 +16,22 @@ return new class extends Migration
         Schema::create('countries', function (Blueprint $table) {
 
             // static data categories
-            
+
             $table->engine = 'InnoDB';
             $table->charset = 'utf8';
-            $table->collation = 'utf8_general_ci';
+            $table->collation = 'utf8_general_ci';;
 
+            //$table->unsignedInteger('id', true);
             $table->id();
+
+            $table->string('iso')->nullable();
+            $table->string('name')->nullable();
+            $table->string('nicename')->nullable();
+            $table->string('iso3')->nullable();
+            $table->string('numbercode')->nullable();
+            $table->string('phonecode')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

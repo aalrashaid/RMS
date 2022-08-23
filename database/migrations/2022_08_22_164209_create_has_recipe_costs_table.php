@@ -19,16 +19,16 @@ return new class extends Migration
             $table->engine = 'InnoDB';
 
             $table->id();
-            $table->foreignId('recipe_costs_id')->references('id')->on('recipe_costs');
+            $table->foreignId('recipe_costs_id')->references('id')->on('recipe_costs')->comment('');
 
             //$table->string('AP_Quantity');
-            $table->string('Ingredients');
-            $table->string('AP_Quantity');
-            $table->string('AP_RecipeUnit');
-            $table->string('AP_UnitCost');
-            $table->string('EP_RecipeUnit');
-            $table->string('EP_UnitCost');
-            $table->string('EP_Yield');
+            $table->string('Ingredients')->nullable()->comment('');
+            $table->string('AP_Quantity')->nullable()->comment('');
+            $table->string('AP_Recipe_Unit')->nullable()->comment('');
+            $table->string('AP_Unit_Cost')->nullable()->comment('');
+            $table->string('EP_Recipe_Unit')->nullable()->comment('');
+            $table->string('EP_Unit_Cost')->nullable()->comment('');
+            $table->string('EP_Yield')->nullable()->comment('');
             //$table->string('Total');
 
             $table->timestamps();

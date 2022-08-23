@@ -19,14 +19,14 @@ return new class extends Migration
             $table->engine = 'InnoDB';
 
             $table->id();
-            $table->foreignId('user_id')->references('id')->on('users');
-            $table->foreignId('brands_id')->references('id')->on('brands');
-            $table->foreignId('categories_id')->references('id')->on('categories');
-            $table->string('RecipeID');
-            $table->string('Name');
-            $table->string('Slug');
-            $table->text('Description');
-            $table->double('Price');
+            $table->foreignId('user_id')->references('id')->on('users')->comment('');
+            $table->foreignId('brands_id')->references('id')->on('brands')->comment('');
+            $table->foreignId('categories_id')->references('id')->on('categories')->comment('');
+            $table->string('RecipeID')->nullable()->comment('');
+            $table->string('Name')->nullable()->comment('');
+            $table->string('Slug')->nullable()->unique()->comment('');
+            $table->text('Description')->nullable()->comment('');
+            $table->double('Price')->nullable()->comment('');
             $table->timestamps();
             $table->softDeletes($column = 'deleted_at', $precision = 0);
         });

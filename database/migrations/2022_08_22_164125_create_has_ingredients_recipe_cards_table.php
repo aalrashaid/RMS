@@ -13,17 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('categories', function (Blueprint $table) {
+        Schema::create('has_ingredients_recipe_cards', function (Blueprint $table) {
+
             $table->charset = 'utf8mb4';
             $table->collation = 'utf8mb4_unicode_ci';
             $table->engine = 'InnoDB';
 
             $table->id();
-            $table->string('Name')->nullable()->comment('');
-            $table->string('Slug')->nullable()->unique()->comment('');
-            $table->text('Description')->nullable()->comment('');
+            $table->foreignId('recipe_cards_id')->references('id')->on('recipe_cards')->comment('');
+            $table->string('ingredients_name')->nullable()->comment('');
+            $table->string('ingredients_Unit')->nullable()->comment('');
             $table->timestamps();
-            $table->softDeletes($column = 'deleted_at', $precision = 0);
         });
     }
 
@@ -34,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('categories');
+        Schema::dropIfExists('has_ingredients_recipe_cards');
     }
 };

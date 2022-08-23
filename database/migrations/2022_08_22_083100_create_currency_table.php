@@ -18,6 +18,11 @@ return new class extends Migration
             // static data categories
 
             $table->id();
+            $table->string('country')->nullable();
+            $table->string('currency')->nullable();
+            $table->string('code')->nullable();
+            $table->string('minor_unit')->nullable();
+            $table->string('symbol')->nullable();
             $table->timestamps();
         });
     }

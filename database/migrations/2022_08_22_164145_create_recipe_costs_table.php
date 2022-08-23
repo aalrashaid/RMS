@@ -19,23 +19,25 @@ return new class extends Migration
             $table->engine = 'InnoDB';
 
             $table->id();
-            $table->foreignId('user_id')->references('id')->on('users');
-            $table->foreignId('brands_id')->references('id')->on('brands');
-            $table->foreignId('menus_id')->references('id')->on('menus');
-            $table->date('date_at');
-            $table->string('recipeID');
-            $table->string('recipeName');
-            $table->string('category');
-            $table->text('patch');
-            $table->string('serves');
-            $table->string('menuPrice');
-            $table->string('foodCostPrcentage');
-            $table->string('grossProfit');
-            $table->string('margin');
-            $table->string('cogs');
-            $table->string('cogsPrcentage');
-            $table->string('YieldPortion');
-            //$table->string('idealGrossSellingPrice');
+            $table->foreignId('user_id')->references('id')->on('users')->comment('');
+            $table->foreignId('brands_id')->references('id')->on('brands')->comment('');
+            $table->foreignId('category_id')->references('id')->on('categories')->comment('');
+            $table->foreignId('menus_id')->references('id')->on('menus')->comment('');
+
+            $table->string('recipeID')->nullable()->comment('');
+            $table->string('recipeName')->nullable()->comment('');
+            $table->date('date_at')->nullable()->comment('');
+            $table->string('category')->nullable()->comment('');
+            $table->text('patch')->nullable()->comment('');
+            $table->string('serves')->nullable()->comment('');
+            $table->string('menuPrice')->nullable()->comment('');
+            $table->string('foodCostPrcentage')->nullable()->comment('');
+            $table->string('grossProfit')->nullable()->comment('');
+            $table->string('margin')->nullable()->comment('');
+            $table->string('cogs')->nullable()->comment('');
+            $table->string('cogsPrcentage')->nullable()->comment('');
+            $table->string('YieldPortion')->nullable()->comment('');
+            $table->string('idealGrossSellingPrice');
             //$table->string('grossSellingPrice');
             //$table->string('RecipeID');
 

@@ -13,26 +13,26 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('has_nutrition_facts_recipe_cards', function (Blueprint $table) {
+        Schema::create('Has_Nutrition_Facts_Recipe_Cards', function (Blueprint $table) {
 
             $table->charset = 'utf8mb4';
             $table->collation = 'utf8mb4_unicode_ci';
             $table->engine = 'InnoDB';
 
             $table->id();
-            $table->foreignId('recipe_cards_id')->references('id')->on('recipe_cards')->comment('');
+            $table->foreignId('Recipe_Cards_Id')->references('id')->on('recipe_cards')->comment('');
             $table->string('Calories_Serving')->nullable()->comment('');
             $table->string('Carbs_Serving')->nullable()->comment('');
             $table->string('Protein_Serving')->nullable()->comment('');
             $table->string('Fat_Serving')->nullable()->comment('');
-            $table->string('ingredients_name')->nullable()->comment('');
-            $table->string('Calories_Unit')->nullable()->comment('');
+            $table->string('Ingredients_Name')->nullable()->comment('');
+            $table->float('Calories_Unit')->nullable()->comment('');
             $table->string('Calories_Unit_Name')->nullable()->comment('');
-            $table->string('Carbs')->nullable()->comment('');
+            $table->float('Carbs_Unit')->nullable()->comment('');
             $table->string('Carbs_Unit_Name')->nullable()->comment('');
-            $table->string('Protein_Unit')->nullable()->comment('');
+            $table->float('Protein_Unit')->nullable()->comment('');
             $table->string('Protein_Unit_Name')->nullable()->comment('');
-            $table->string('Fat_Unit')->nullable()->comment('');
+            $table->float('Fat_Unit')->nullable()->comment('');
             $table->string('Fat_Unit_Name')->nullable()->comment('');
             $table->timestamps();
         });

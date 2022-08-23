@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('genders', function (Blueprint $table) {
+        Schema::create('Genders', function (Blueprint $table) {
 
             // static data categories
             
@@ -22,7 +22,7 @@ return new class extends Migration
             $table->collation = 'utf8_general_ci';
 
             $table->id();
-            $table->string('name')->nullable();
+            $table->string('Name')->nullable()->comment('The name of the unit');
             $table->timestamps();
         });
     }

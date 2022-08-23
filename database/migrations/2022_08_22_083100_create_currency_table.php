@@ -13,16 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('currency', function (Blueprint $table) {
+        Schema::create('Currency', function (Blueprint $table) {
 
             // static data categories
 
             $table->id();
-            $table->string('country')->nullable();
-            $table->string('currency')->nullable();
-            $table->string('code')->nullable();
-            $table->string('minor_unit')->nullable();
-            $table->string('symbol')->nullable();
+            $table->string('Country')->nullable()->comment('The name of Country');
+            $table->string('Currency')->nullable()->comment('The name of Currency');
+            $table->string('Code')->nullable()->comment('The name of Currency Code unit');
+            $table->decimal('Minor_Unit')->nullable()->comment('The name of Currency Minor unit');
+            $table->string('Symbol')->nullable()->comment('The name of Currency Symbol');
             $table->timestamps();
         });
     }

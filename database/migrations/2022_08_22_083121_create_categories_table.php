@@ -13,15 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('categories', function (Blueprint $table) {
+        Schema::create('Categories', function (Blueprint $table) {
             $table->charset = 'utf8mb4';
             $table->collation = 'utf8mb4_unicode_ci';
             $table->engine = 'InnoDB';
 
             $table->id();
-            $table->string('Name')->nullable()->comment('');
-            $table->string('Slug')->nullable()->unique()->comment('');
-            $table->text('Description')->nullable()->comment('');
+            $table->string('Name')->nullable()->comment('Name Of Category');
+            $table->string('Slug')->nullable()->unique()->comment('Slug Of Category For Links ');
+            $table->text('Description')->nullable()->comment('Category Description');
             $table->timestamps();
             $table->softDeletes($column = 'deleted_at', $precision = 0);
         });

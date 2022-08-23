@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('countries', function (Blueprint $table) {
+        Schema::create('Countries', function (Blueprint $table) {
 
             // static data categories
 
@@ -24,12 +24,12 @@ return new class extends Migration
             //$table->unsignedInteger('id', true);
             $table->id();
 
-            $table->string('iso')->nullable();
-            $table->string('name')->nullable();
-            $table->string('nicename')->nullable();
-            $table->string('iso3')->nullable();
-            $table->string('numbercode')->nullable();
-            $table->string('phonecode')->nullable();
+            //$table->string('Iso')->nullable()->comment('The name of the unit');
+            $table->string('Name')->nullable()->comment('The name Countries');
+            $table->string('Alpha-2_Code')->nullable()->comment('all country ISO codes as described in the ISO 3166 international standard');
+            $table->string('Alpha-3_Code')->nullable()->comment('all country ISO codes as described in the ISO 3166 international standard');
+            $table->string('Numeric')->nullable()->comment('all country ISO codes as described in the ISO 3166 international standard');
+            $table->string('Phone_Code')->nullable()->comment('The Countries  Call Code');
             $table->timestamps();
             $table->softDeletes();
         });

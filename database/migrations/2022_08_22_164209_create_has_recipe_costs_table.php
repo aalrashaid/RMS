@@ -13,22 +13,22 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('has_recipe_costs', function (Blueprint $table) {
+        Schema::create('Has_Recipe_Costs', function (Blueprint $table) {
             $table->charset = 'utf8mb4';
             $table->collation = 'utf8mb4_unicode_ci';
             $table->engine = 'InnoDB';
 
             $table->id();
-            $table->foreignId('recipe_costs_id')->references('id')->on('recipe_costs')->comment('');
+            $table->foreignId('Recipe_Costs_Id')->references('id')->on('recipe_costs')->comment('');
 
             //$table->string('AP_Quantity');
             $table->string('Ingredients')->nullable()->comment('');
-            $table->string('AP_Quantity')->nullable()->comment('');
-            $table->string('AP_Recipe_Unit')->nullable()->comment('');
-            $table->string('AP_Unit_Cost')->nullable()->comment('');
-            $table->string('EP_Recipe_Unit')->nullable()->comment('');
-            $table->string('EP_Unit_Cost')->nullable()->comment('');
-            $table->string('EP_Yield')->nullable()->comment('');
+            $table->integer('AP_Quantity')->nullable()->comment('');
+            $table->float('AP_Recipe_Unit')->nullable()->comment('');
+            $table->double('AP_Unit_Cost')->nullable()->comment('');
+            $table->float('EP_Recipe_Unit')->nullable()->comment('');
+            $table->double('EP_Unit_Cost')->nullable()->comment('');
+            $table->float('EP_Yield')->nullable()->comment('');
             //$table->string('Total');
 
             $table->timestamps();

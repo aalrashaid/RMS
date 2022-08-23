@@ -50,6 +50,6 @@ class User extends Authenticatable
      */
     public function Brands()
     {
-        return $this->hasOne(Brands::class);
+        return $this->hasOne(Brands::class, 'id', 'user_id');
     }
 }

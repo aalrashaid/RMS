@@ -13,17 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('has_ingredients_recipe_cards', function (Blueprint $table) {
+        Schema::create('Has_Ingredients_Recipe_Cards', function (Blueprint $table) {
 
             $table->charset = 'utf8mb4';
             $table->collation = 'utf8mb4_unicode_ci';
             $table->engine = 'InnoDB';
 
             $table->id();
-            $table->foreignId('Recipe_Card_id')->references('id')->on('recipe_cards')->comment('');
-            $table->string('ingredients_Name')->nullable()->comment('');
-            $table->string('ingredients_Unit')->nullable()->comment('');
-            $table->string('ingredients_Unit_Name')->nullable()->comment('');
+            $table->foreignId('Recipe_Card_Id')->references('id')->on('recipe_cards')->comment('');
+            $table->string('Ingredients_Name')->nullable()->comment('');
+            $table->float('Ingredients_Unit')->nullable()->comment('');
+            $table->string('Ingredients_Unit_Name')->nullable()->comment('');
             $table->timestamps();
         });
     }

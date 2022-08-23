@@ -13,18 +13,18 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('thumbnails', function (Blueprint $table) {
+        Schema::create('Thumbnails', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->charset = 'utf8';
             $table->collation = 'utf8_general_ci';
 
             $table->id();
 
-            $table->foreignId('brands_id')->references('id')->on('brands');
-            $table->foreignId('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
-            $table->string('name')->nullable();
-            $table->string('size')->nullable();
-            $table->string('path')->nullable();
+            $table->foreignId('Brands_id')->references('id')->on('brands');
+            $table->foreignId('User_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
+            $table->string('Name')->nullable()->comment('The name of File Images');
+            $table->string('Size')->nullable()->comment('The name of File Size of Images');
+            $table->string('Path')->nullable()->comment('The name of File Path of Images Storage');
             $table->timestamps();
             $table->softDeletes();
         });

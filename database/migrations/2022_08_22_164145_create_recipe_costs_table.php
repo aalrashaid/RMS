@@ -13,31 +13,31 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('recipe_costs', function (Blueprint $table) {
+        Schema::create('Recipe_Costs', function (Blueprint $table) {
             $table->charset = 'utf8mb4';
             $table->collation = 'utf8mb4_unicode_ci';
             $table->engine = 'InnoDB';
 
             $table->id();
-            $table->foreignId('user_id')->references('id')->on('users')->comment('');
-            $table->foreignId('brands_id')->references('id')->on('brands')->comment('');
-            $table->foreignId('category_id')->references('id')->on('categories')->comment('');
-            $table->foreignId('menus_id')->references('id')->on('menus')->comment('');
+            $table->foreignId('User_Id')->references('id')->on('users')->comment('');
+            $table->foreignId('Brands_Id')->references('id')->on('brands')->comment('');
+            $table->foreignId('Category_Id')->references('id')->on('categories')->comment('');
+            $table->foreignId('Menus_Id')->references('id')->on('menus')->comment('');
 
-            $table->string('recipeID')->nullable()->comment('');
-            $table->string('recipeName')->nullable()->comment('');
-            $table->date('date_at')->nullable()->comment('');
-            $table->string('category')->nullable()->comment('');
-            $table->text('patch')->nullable()->comment('');
-            $table->string('serves')->nullable()->comment('');
-            $table->string('menuPrice')->nullable()->comment('');
-            $table->string('foodCostPrcentage')->nullable()->comment('');
-            $table->string('grossProfit')->nullable()->comment('');
-            $table->string('margin')->nullable()->comment('');
-            $table->string('cogs')->nullable()->comment('');
-            $table->string('cogsPrcentage')->nullable()->comment('');
-            $table->string('YieldPortion')->nullable()->comment('');
-            $table->string('idealGrossSellingPrice');
+            $table->string('Recipe_ID')->nullable()->comment('');
+            $table->string('Recipe_Name')->nullable()->comment('');
+            $table->date('Date_At')->nullable()->comment('');
+            //$table->string('category')->nullable()->comment('');
+            $table->integer('Patch')->nullable()->comment('');
+            $table->integer('Serves')->nullable()->comment('');
+            $table->double('Menu_Price')->nullable()->comment('');
+            $table->float('Food_Cost_Prcentage')->nullable()->comment('');
+            $table->double('Gross_Profit')->nullable()->comment('');
+            $table->double('Margin')->nullable()->comment('');
+            $table->double('COGS')->nullable()->comment('');
+            $table->float('COGS_Prcentage')->nullable()->comment('');
+            $table->float('Yield_Prcentage')->nullable()->comment('');
+            $table->double('Ideal_Gross_Selling_Price');
             //$table->string('grossSellingPrice');
             //$table->string('RecipeID');
 

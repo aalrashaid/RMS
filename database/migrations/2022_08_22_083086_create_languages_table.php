@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('languages', function (Blueprint $table) {
+        Schema::create('Languages', function (Blueprint $table) {
 
             // static data categories
 
@@ -23,8 +23,8 @@ return new class extends Migration
 
             //$table->unsignedInteger('id', true);
             $table->id();
-            $table->string('name')->nullable();
-            $table->string('iso_639-1')->nullable();
+            $table->string('Name')->nullable()->comment('The name of the unit');
+            $table->string('Iso_639-1')->nullable()->comment('The name of the unit');
             $table->timestamps();
             $table->softDeletes();
         });

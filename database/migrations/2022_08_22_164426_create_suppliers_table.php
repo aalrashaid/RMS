@@ -13,31 +13,31 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('suppliers', function (Blueprint $table) {
+        Schema::create('Suppliers', function (Blueprint $table) {
             $table->charset = 'utf8mb4';
             $table->collation = 'utf8mb4_unicode_ci';
             $table->engine = 'InnoDB';
 
             $table->id();
             //$table->text('Description');
-            $table->string('suppliersID');
-            $table->string('name_Suppliers');
-            $table->string('company');
-            $table->string('BrandImgs');
-            $table->string('Street');
-            $table->string('Postal_Code');
-            $table->string('City');
-            $table->string('Province');
-            $table->string('Region');
-            $table->string('Country');
-            $table->string('Moblie');
-            $table->string('Whatsapp');
-            $table->string('Email');
-            $table->string('Web');
-            $table->string('Facebook');
-            $table->string('Youtube');
-            $table->string('instagram');
-            $table->string('twitter');
+            $table->string('Supplier_ID')->comment('The name of the unit');
+            $table->string('Name_Supplier')->comment('The name of the unit');
+            $table->string('Company')->comment('The name of the unit');
+            $table->string('Brand_image')->comment('The name of the unit');
+            $table->string('Street')->comment('The name of the unit');
+            $table->string('Zip_Code')->comment('The name of the unit');
+            $table->string('City')->comment('The name of the unit');
+            $table->string('Province')->comment('The name of the unit');
+            $table->string('Region')->comment('The name of the unit');
+            $table->string('Country')->comment('The name of the unit');
+            $table->string('Moblie')->comment('The name of the unit');
+            $table->string('Whatsapp')->comment('The name of the unit');
+            $table->string('Email')->comment('The name of the unit');
+            $table->string('Web')->comment('The name of the unit');
+            $table->string('Facebook')->comment('The name of the unit');
+            $table->string('Youtube')->comment('The name of the unit');
+            $table->string('instagram')->comment('The name of the unit');
+            $table->string('twitter')->comment('The name of the unit');
         });
     }
 

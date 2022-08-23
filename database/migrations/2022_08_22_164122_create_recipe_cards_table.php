@@ -13,27 +13,27 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('recipe_cards', function (Blueprint $table) {
+        Schema::create('Recipe_Cards', function (Blueprint $table) {
             $table->charset = 'utf8mb4';
             $table->collation = 'utf8mb4_unicode_ci';
             $table->engine = 'InnoDB';
             $table->id();
-            $table->foreignId('user_id')->references('id')->on('users')->comment('');
-            $table->foreignId('brands_id')->references('id')->on('brands')->comment('');
-            $table->foreignId('thumbnail_id')->references('id')->on('thumbnails')->comment('');
-            $table->string('title')->nullable()->comment('');
-            $table->string('slug')->nullable()->unique()->comment('');
-            $table->text('description')->nullable()->comment('');
-            $table->string('youtube_video')->nullable()->comment('');
-            $table->string('recipe_method')->nullable()->comment('');
-            $table->string('difficulty')->nullable()->comment('');
-            $table->string('prep_time')->nullable()->comment('');
-            $table->string('cook_time')->nullable()->comment('');
-            $table->string('time_total')->nullable()->comment('');
-            $table->string('servings')->nullable()->comment('');
-            $table->string('yield')->nullable()->comment('');
+            $table->foreignId('User_id')->references('id')->on('users')->comment('');
+            $table->foreignId('Brands_id')->references('id')->on('brands')->comment('');
+            $table->foreignId('Thumbnail_id')->references('id')->on('thumbnails')->comment('');
+            $table->string('Title')->nullable()->comment('');
+            $table->string('Slug')->nullable()->unique()->comment('');
+            $table->text('Description')->nullable()->comment('');
+            $table->string('Youtube_Video')->nullable()->comment('');
+            $table->string('Recipe_Method')->nullable()->comment('');
+            $table->string('Difficulty')->nullable()->comment('');
+            $table->dateTime('Prep_Time')->nullable()->comment('');
+            $table->dateTime('Cook_Time')->nullable()->comment('');
+            $table->dateTime('Time_Total')->nullable()->comment('');
+            $table->integer('Servings')->nullable()->comment('');
+            //$table->string('yield')->nullable()->comment('');
             //$table->text('ingredients')->nullable()->comment('');
-            $table->text('directions')->nullable()->comment('');
+            $table->text('Directions')->nullable()->comment('');
             //$table->text('nutrition_facts')->nullable()->comment('');
             $table->timestamps();
             $table->softDeletes();

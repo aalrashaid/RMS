@@ -79,29 +79,5 @@ class RecipeCard extends Model
 
     //Eloquent Relationships - belongsTo
 
-    /**
-     * Get the user that owns the Recipe Cards.
-     */
-    public function user()
-    {
-        return $this->belongsTo(User::class, 'user_id');
-    }
-
-    /**
-     * Get the Brands that owns the Recipe Cards.
-     */
-    public function Brands()
-    {
-        return $this->belongsTo(Brands::class, 'Brands_Id');
-    }
-
-    /**
-     * Get the Thumbnails that owns the Recipe Cards.
-     */
-    public function Thumbnail()
-    {
-        return $this->belongsTo(Thumbnails::class, 'Thumbnail_Id');
-    }
-
     //Eloquent Relationships - Has One  or Has Many
 }

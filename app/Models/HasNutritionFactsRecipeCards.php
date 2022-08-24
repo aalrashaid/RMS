@@ -78,5 +78,8 @@ class HasNutritionFactsRecipeCards extends Model
 
     //Eloquent Relationships - belongsTo
 
+
+
     //Eloquent Relationships - Has One  or Has Many
+
 }

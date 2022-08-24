@@ -47,21 +47,4 @@ class User extends Authenticatable
 
     //Eloquent Relationships - Has One  or Has Many
 
-    /**
-     * Relationships: One to One
-     * Get the Brands associated with the user.
-     */
-    public function Brands()
-    {
-        return $this->hasOne(Brands::class, 'user_id', 'id');
-    }
-
-    /**
-     * Relationships: One to One
-     * Get the RecipeCard associated with the Brands.
-     */
-    public function RecipeCard()
-    {
-        return $this->hasOne(RecipeCard::class, 'user_id', 'id');
-    }
 }

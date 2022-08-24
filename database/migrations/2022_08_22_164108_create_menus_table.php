@@ -26,10 +26,11 @@ return new class extends Migration
                 ->onUpdate('cascade')->onDelete('cascade')->comment('');
             $table->foreignId('Brands_Id')->references('id')->on('brands')
                 ->onUpdate('cascade')->onDelete('cascade')->comment('');
-            $table->foreignId('Category_Id')->references('id')->on('categories')
-                ->onUpdate('cascade')->onDelete('cascade')->comment('');
-            //$table->foreignId('Recipe_Cards_Id')->references('id')->on('Recipe_Cards')
-            //    ->onUpdate('cascade')->onDelete('cascade')->comment('');
+            //$table->foreignId('Category_Id')->references('id')->on('categories')
+            //   ->onUpdate('cascade')->onDelete('cascade')->comment('');
+
+            $table->foreignId('Recipe_Cards_Id')->references('id')->on('Recipe_Cards')
+            ->onUpdate('cascade')->onDelete('cascade')->comment('');
 
             $table->string('Name')->nullable()->comment('');
             $table->string('Slug')->nullable()->unique()->comment('');
@@ -54,8 +55,8 @@ return new class extends Migration
             //the drop Foreing key
             $table->dropForeign('Menus_User_Id_foreign');
             $table->dropForeign('Menus_Brands_Id_foreign');
-            $table->dropForeign('Menus_Category_Id_foreign');
-            // $table->dropForeign('Menus_Recipe_Cards_Id_foreign');
+            // $table->dropForeign('Menus_Category_Id_foreign');
+            $table->dropForeign('Menus_Recipe_Cards_Id_foreign');
         });
     }
 };

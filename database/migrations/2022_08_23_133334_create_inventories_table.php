@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('Inventories', function (Blueprint $table) {
 
+            /**
+             * Need To view In stage 1 before beta fixed data type
+             */
             $table->charset = 'utf8mb4';
             $table->collation = 'utf8mb4_unicode_ci';
             $table->engine = 'InnoDB';

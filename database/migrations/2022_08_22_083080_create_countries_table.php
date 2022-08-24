@@ -21,9 +21,9 @@ return new class extends Migration
             $table->charset = 'utf8';
             $table->collation = 'utf8_general_ci';;
 
-            //$table->unsignedInteger('id', true);
             $table->id();
 
+            //Foreing Key id
             //$table->string('Iso')->nullable()->comment('The name of the unit');
             $table->string('Name')->nullable()->comment('The name Countries');
             $table->string('Alpha-2_Code')->nullable()->comment('all country ISO codes as described in the ISO 3166 international standard');

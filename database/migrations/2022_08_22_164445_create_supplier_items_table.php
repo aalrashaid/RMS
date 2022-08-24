@@ -21,6 +21,7 @@ return new class extends Migration
 
             $table->id();
 
+            //Foreing Key id
             $table->foreignId('User_Id')->references('id')->on('users')
             ->onUpdate('cascade')->onDelete('cascade')->comment('');
             $table->foreignId('Brands_Id')->references('id')->on('brands')
@@ -28,14 +29,22 @@ return new class extends Migration
             $table->foreignId('Supplier_Id')->references('id')->on('suppliers')
             ->onUpdate('cascade')->onDelete('cascade')->comment('');
 
+            $table->string('Item_UID')->comment('The name of the unit');
             $table->string('Item_Name')->comment('The name of the unit');
             $table->string('Item_Description')->comment('The name of the unit');
+            $table->string('Category_Item');
+            $table->string('Item_Size');
             $table->string('SKU')->comment('The name of the unit');
             $table->string('UPC')->comment('The name of the unit');
             $table->string('Barcode')->comment('The name of the unit');
-            $table->double('Price')->comment('The name of the unit');
-            $table->integer('Quantity')->comment('The name of the unit');
-            $table->double('Total')->comment('The name of the unit');
+            $table->string('Serial_Number')->comment('The name of the unit');
+
+            // $table->double('Price')->comment('The name of the unit');
+            //$table->integer('Quantity')->comment('The name of the unit');
+            //$table->double('Total')->comment('The name of the unit');
+
+            $table->string('Item_Unit_Price');
+            
             $table->timestamps();
             $table->softDeletes($column = 'deleted_at', $precision = 0);
         });
@@ -48,6 +57,14 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('supplier_items');
+        Schema::dropIfExists('Supplier_Items');
+
+        //the  Schema Table drop Foreing Key id
+        Schema::table('Supplier_Items', function (Blueprint $table) {
+            //the drop Foreing key
+            $table->dropForeign('Supplier_Items_User_Id_foreign');
+            $table->dropForeign('Supplier_Items_Brands_Id_foreign');
+            $table->dropForeign('Supplier_Items_Supplier_Id_foreign');
+        });
     }
 };

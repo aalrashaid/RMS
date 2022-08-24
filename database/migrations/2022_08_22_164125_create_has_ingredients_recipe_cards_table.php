@@ -20,7 +20,11 @@ return new class extends Migration
             $table->engine = 'InnoDB';
 
             $table->id();
+
+            //Foreing Key id
+            
             $table->foreignId('Recipe_Card_Id')->references('id')->on('recipe_cards')->onUpdate('cascade')->onDelete('cascade')->comment('');
+
             $table->string('Ingredients_Name')->nullable()->comment('');
             $table->float('Ingredients_Unit')->nullable()->comment('');
             $table->string('Ingredients_Unit_Name')->nullable()->comment('');
@@ -36,5 +40,11 @@ return new class extends Migration
     public function down()
     {
         Schema::dropIfExists('has_ingredients_recipe_cards');
+
+        //the  Schema Table drop Foreing Key id
+        Schema::table('Has_Ingredients_Recipe_Cards', function (Blueprint $table) {
+            //the drop Foreing key
+            $table->dropForeign('Has_Ingredients_Recipe_Cards_Recipe_Card_Id_foreign');
+        });
     }
 };

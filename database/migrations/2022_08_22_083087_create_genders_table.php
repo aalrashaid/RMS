@@ -22,6 +22,8 @@ return new class extends Migration
             $table->collation = 'utf8_general_ci';
 
             $table->id();
+
+            //Foreing Key id
             $table->string('Name')->nullable()->comment('The name of the unit');
             $table->timestamps();
         });

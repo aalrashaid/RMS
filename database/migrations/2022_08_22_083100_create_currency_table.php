@@ -17,7 +17,13 @@ return new class extends Migration
 
             // static data categories
 
+            $table->engine = 'InnoDB';
+            $table->charset = 'utf8';
+            $table->collation = 'utf8_general_ci';
+            
             $table->id();
+
+            //Foreing Key id
             $table->string('Country')->nullable()->comment('The name of Country');
             $table->string('Currency')->nullable()->comment('The name of Currency');
             $table->string('Code')->nullable()->comment('The name of Currency Code unit');

@@ -13,7 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('jobs', function (Blueprint $table) {
+        Schema::create('Jobs', function (Blueprint $table) {
+
+            $table->engine = 'InnoDB';
+            $table->charset = 'utf8';
+            $table->collation = 'utf8_general_ci';
+
             $table->bigIncrements('id');
             $table->string('queue')->index();
             $table->longText('payload');

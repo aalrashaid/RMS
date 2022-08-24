@@ -21,8 +21,10 @@ return new class extends Migration
             $table->charset = 'utf8';
             $table->collation = 'utf8_general_ci';
 
-            //$table->unsignedInteger('id', true);
             $table->id();
+
+            //Foreing Key id
+            
             $table->string('Name')->nullable()->comment('The name of the unit');
             $table->string('Iso_639-1')->nullable()->comment('The name of the unit');
             $table->timestamps();

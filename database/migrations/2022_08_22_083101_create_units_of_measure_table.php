@@ -18,6 +18,9 @@ return new class extends Migration
             // static data categories
 
             $table->id();
+
+            //Foreing Key id
+            
             $table->string('Unit_Name')->nullable()->comment('The name of the unit');
             $table->string('Unit_Type')->nullable()->comment('The unit type (for example, LINEAR).');
             $table->string('Conversion_Factor')->nullable()->comment('A conversion factor used for internal calculations.');

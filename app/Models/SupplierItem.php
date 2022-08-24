@@ -51,12 +51,16 @@ class SupplierItem extends Model
         'Supplier_Id',
         'Item_Name',
         'Item_Description',
+        'Category_Item',
+        'Item_Size',
         'SKU',
         'UPC',
         'Barcode',
-        'Price',
-        'Quantity',
-        'Total',
+        'Item_Unit_Price',
+        
+        //'Price',
+        //'Quantity',
+        //'Total',
     ];
 
     /**

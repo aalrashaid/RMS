@@ -17,8 +17,10 @@ return new class extends Migration
             $table->charset = 'utf8mb4';
             $table->collation = 'utf8mb4_unicode_ci';
             $table->engine = 'InnoDB';
+            
             $table->id();
 
+            //Foreing Key id
             $table->foreignId('User_Id')->references('id')->on('users')
             ->onUpdate('cascade')->onDelete('cascade')->comment('');
             $table->foreignId('Brands_Id')->references('id')->on('brands')
@@ -54,5 +56,13 @@ return new class extends Migration
     public function down()
     {
         Schema::dropIfExists('recipe_cards');
+
+        //the  Schema Table drop Foreing Key id
+        Schema::table('Recipe_Cards', function (Blueprint $table) {
+            //the drop Foreing key
+            $table->dropForeign('Recipe_Cards_User_Id_foreign');
+            $table->dropForeign('Recipe_Cards_Brands_Id_foreign');
+            $table->dropForeign('Recipe_Cards_Thumbnail_Id_foreign');
+        });
     }
 };

@@ -46,9 +46,24 @@ class Inventory extends Model
      * @var array
      */
     protected $fillable = [
-        'Name',
-        'Slug',
-        'Description',
+        'User_Id',
+        'Brands_Id',
+        'Supplier_Id',
+        'Inventory_UID',
+        'Name_Item',
+        'Description_Item',
+        'SKU',
+        'Barcode',
+        'Serial_Number',
+        'Category_Item',
+        'Item_Size',
+        'Unit_Price',
+        'Quantity_In_Stock',
+        'Inventory_Value',
+        'In_Stock',
+        'Reorder_Level',
+        'Reorder_Time_In_Days',
+        'Quantity_In_Reorder',
     ];
 
     /**

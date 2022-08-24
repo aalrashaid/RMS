@@ -19,6 +19,9 @@ return new class extends Migration
             $table->engine = 'InnoDB';
 
             $table->id();
+
+            //Foreing Key id
+            
             $table->string('Name')->nullable()->comment('Name Of Category');
             $table->string('Slug')->nullable()->unique()->comment('Slug Of Category For Links ');
             $table->text('Description')->nullable()->comment('Category Description');

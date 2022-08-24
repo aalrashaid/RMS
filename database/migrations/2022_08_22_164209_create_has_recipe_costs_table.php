@@ -19,6 +19,9 @@ return new class extends Migration
             $table->engine = 'InnoDB';
 
             $table->id();
+
+            //Foreing Key id
+            
             $table->foreignId('Recipe_Costs_Id')->references('id')->on('recipe_costs')
             ->onUpdate('cascade')->onDelete('cascade')->comment('');
 
@@ -44,6 +47,12 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('has_recipe_costs');
+        Schema::dropIfExists('Has_Recipe_Costs');
+
+        //the  Schema Table drop Foreing Key id
+        Schema::table('Has_Recipe_Costs', function (Blueprint $table) {
+            //the drop Foreing key
+            $table->dropForeign('Has_Recipe_Costs_Recipe_Costs_Id_foreign');
+        });
     }
 };

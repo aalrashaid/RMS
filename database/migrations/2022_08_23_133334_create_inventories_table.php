@@ -32,21 +32,21 @@ return new class extends Migration
             $table->foreignId('Supplier_Items_ID')->references('id')->on('Supplier_Items')
             ->onUpdate('cascade')->onDelete('cascade')->comment('');
 
-            $table->string('Inventory_UID')->comment('The name of the unit');
-            $table->string('Name_Item')->comment('The name of the unit');
+            $table->string('Inventory_UID')->nullable()->unique()->comment('The name of the unit');
+            $table->string('Name_Item')->nullable()->comment('The name of the unit');
             //$table->string('Description_Item')->comment('The name of the unit');
-            $table->string('SKU')->comment('The name of the unit');
-            $table->string('Barcode')->comment('The name of the unit');
-            $table->string('Serial_Number')->comment('The name of the unit');
-            $table->string('Category_Item')->comment('The name of the unit');
-            $table->string('Item_Size')->comment('The name of the unit');
-            $table->string('Unit_Price')->comment('The name of the unit');
-            $table->string('Quantity_In_Stock')->comment('The name of the unit');
-            $table->string('Inventory_Value')->comment('The name of the unit');
-            $table->string('In_Stock')->comment('The name of the unit');
-            $table->string('Reorder_Level')->comment('The name of the unit');
-            $table->string('Reorder_Time_In_Days')->comment('The name of the unit');
-            $table->string('Quantity_In_Reorder')->comment('The name of the unit');
+            $table->string('SKU')->nullable()->unique()->comment('The name of the unit');
+            $table->integer('Barcode')->nullable()->unique()->comment('The name of the unit');
+            $table->integer('Serial_Number')->nullable()->unique()->comment('The name of the unit');
+            $table->string('Category_Item')->nullable()->comment('The name of the unit');
+            $table->string('Item_Size')->nullable()->comment('The name of the unit');
+            $table->double('Unit_Price')->nullable()->comment('The name of the unit');
+            $table->integer('Quantity_In_Stock')->nullable()->comment('The name of the unit');
+            $table->integer('Inventory_Value')->nullable()->comment('The name of the unit');
+            $table->enum('Stock_Status', ['In Stock', 'Only %s left in stock', 'Can be Backordered', 'Available On Backorder', 'Out Of Stock'])->nullable()->comment('The name of the unit');
+            $table->string('Reorder_Level')->nullable()->comment('The name of the unit');
+            $table->integer('Reorder_Time_In_Days')->nullable()->comment('The name of the unit');
+            $table->integer('Quantity_In_Reorder')->nullable()->comment('The name of the unit');
 
             $table->timestamps();
             $table->softDeletes($column = 'deleted_at', $precision = 0);

@@ -73,12 +73,5 @@ class HasIngredientsRecipeCards extends Model
 
     //Eloquent Relationships - Has One  or Has Many
 
-    /**
-     * Relationships: One to Many
-     * Get the RecipeCard associated with the Has Ingredients Recipe Cards.
-     */
-    public function RecipeCard()
-    {
-        return $this->hasOne(RecipeCard::class, 'Recipe_Card_Id', 'id');
-    }
+    
 }

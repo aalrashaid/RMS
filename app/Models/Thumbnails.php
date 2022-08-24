@@ -66,4 +66,17 @@ class Thumbnails extends Model
             ]
         ];
     }
+
+    //Eloquent Relationships - belongsTo
+
+    //Eloquent Relationships - Has One  or Has Many
+
+    /**
+     * Relationships: One to One
+     * Get the RecipeCard associated with the Brands.
+     */
+    public function RecipeCard()
+    {
+        return $this->hasOne(RecipeCard::class, 'Thumbnail_Id', 'id');
+    }
 }

@@ -85,16 +85,25 @@ class Brands extends Model
         ];
     }
 
-    //Eloquent: Relationships
+    //Eloquent Relationships - belongsTo
 
     /**
-     * Relationships: one to one 
      * Get the user that owns the Brands.
      */
     public function user()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'user_id');
     }
 
+    //Eloquent Relationships - Has One  or Has Many
+
+    /**
+     * Relationships: One to One
+     * Get the RecipeCard associated with the Brands.
+     */
+    public function RecipeCard()
+    {
+        return $this->hasOne(RecipeCard::class, 'Brands_Id', 'id');
+    }
 
 }

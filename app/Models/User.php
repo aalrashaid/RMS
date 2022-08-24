@@ -42,14 +42,17 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    //Eloquent: Relationships
+    //Eloquent Relationships - belongsTo
+
+
+    //Eloquent Relationships - Has One  or Has Many
 
     /**
-     * Relationships: one to one
+     * Relationships: One to One
      * Get the Brands associated with the user.
      */
     public function Brands()
     {
-        return $this->hasOne(Brands::class, 'id', 'user_id');
+        return $this->hasOne(Brands::class, 'user_id', 'id');
     }
 }

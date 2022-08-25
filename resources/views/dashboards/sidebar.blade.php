@@ -1,8 +1,9 @@
 
 <div class="d-flex flex-column flex-shrink-0 bg-light" style="width: 4.5rem;">
     <a href="/" class="d-block p-3 link-dark text-decoration-none" title="Icon-only" data-bs-toggle="tooltip" data-bs-placement="right">
-      <svg class="bi pe-none" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
-      <span class="visually-hidden">Icon-only</span>
+      {{-- <svg class="bi pe-none" width="40" height="32"><use xlink:href="#bootstrap"/></svg> --}}
+      <span>Brand-Icon</span>
+      <span class="visually-hidden">Brand-Icon</span>
     </a>
     <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
       <li class="nav-item">
@@ -12,7 +13,7 @@
       </li>
       <li>
         <a href="#" class="nav-link py-3 border-bottom rounded-0" title="Dashboard" data-bs-toggle="tooltip" data-bs-placement="right">
-          <svg class="bi pe-none" width="24" height="24" role="img" aria-label="Dashboard"><use xlink:href="#speedometer2"/></svg>
+          <i class="bi bi-speedometer"></i>
         </a>
       </li>
       <li>

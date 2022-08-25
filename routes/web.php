@@ -3,6 +3,13 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\BrandsController;
+use App\Http\Controllers\InventoryController;
+use App\Http\Controllers\MenuController;
+use App\Http\Controllers\RecipeCardController;
+use App\Http\Controllers\RecipeCostsController;
+use App\Http\Controllers\SupplierController;
+use App\Http\Controllers\SupplierItemController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +23,12 @@ use App\Http\Controllers\BrandsController;
 */
 
 Route::resource('Brands', BrandsController::class);
+Route::resource('Inventory', InventoryController::class);
+Route::resource('Menu', MenuController::class);
+Route::resource('RecipeCard', RecipeCardController::class);
+Route::resource('RecipeCosts', RecipeCostsController::class);
+Route::resource('Supplier', SupplierController::class);
+Route::resource('SupplierItem', SupplierItemController::class);
 
 Route::get('/', function () {
     return view('index');

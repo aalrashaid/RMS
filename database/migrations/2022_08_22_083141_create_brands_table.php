@@ -32,10 +32,10 @@ return new class extends Migration
             $table->text('Description')->nullable()->comment('Description Text 288 Characters ');
             $table->string('Brand_Logas')->nullable()->comment('the Files images brands Loags ');
             $table->string('Address')->nullable()->comment('Address Business Localtion');
-            $table->integer('Zip_Code')->nullable()->comment(' The Number Zip Code of City 5 Number');
             $table->string('City')->nullable()->comment('City');
-            $table->string('Province')->nullable()->comment('Province of Country');
-            $table->string('Region')->nullable()->comment('The Region of Country');
+            $table->string('State')->nullable()->comment('Province of Country');
+            $table->integer('Zip_Code')->nullable()->comment(' The Number Zip Code of City 5 Number');
+            //$table->string('Region')->nullable()->comment('The Region of Country');
             $table->string('Country')->nullable()->comment('The Country');
             $table->integer('Moblie')->nullable()->comment('The Account Moblie Business');
             $table->integer('Whatsapp')->nullable()->comment('The Accunt Email Business');

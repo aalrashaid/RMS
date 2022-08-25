@@ -18,6 +18,7 @@ class BrandsController extends Controller
     public function index()
     {
         //
+        return view('Brands.index');
     }
 
     /**
@@ -71,6 +72,8 @@ class BrandsController extends Controller
 
         // dd($Brands);
         dd();
+
+        //Flash The session
 
         // redirect to index
     }

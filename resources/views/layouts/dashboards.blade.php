@@ -8,32 +8,33 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ asset('css/dashboards/dashboard.css') }}" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/bootstarp/bootstrap.css')}} " media="all">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/dashboards/dashboard.css') }}" media="all">
 
 </head>
 
-<body>
-
-    <div class="container-fluid">
-        <div class="row">
-            <header>
+<body class="">
+    <div class="row">
+            {{-- <header>
                 @include('dashboards.header')
-            </header>
+            </header> --}}
 
-            <main>
-                @include('dashboards.sidebar')
+            {{-- <main>
+                {{-- <section class="col-3">
+                    @include('dashboards.sidebar')
+                </section> --}}
 
-                @yield('content')
-            </main>
+                 {{-- <section class="col-9">
+                    @yield('content')
+                 </section> --}}
+                
+           {{-- </main> --}}
+            @yield('content')
 
-
-            <footer>
-                @include('dashboards.footer')
-            </footer>
+           
+                {{-- @include('dashboards.footer') --}}
+            
         </div>
-    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">

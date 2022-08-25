@@ -22,8 +22,8 @@ mix.js('resources/js/app.js', 'public/js')
 
 // In the build files, there is Sass
 mix.sass('resources/sass/app.scss', 'public/css')
-    .sass('resources/sass/dashboards/dashboard.scss', 'public/css/dashboards');
-//.sass('resources/sass/bootstrap-sass/bootstrap.scss','public/css/bootstarp');
+    .sass('resources/sass/dashboards/dashboard.scss', 'public/css/dashboards')
+    .sass('resources/sass/bootstrap/scss/bootstrap.scss', 'public/css/bootstarp');
 
 
 //mix.copy('node_modules/vendor/fonts', 'public');

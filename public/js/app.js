@@ -21831,6 +21831,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/sass/bootstrap/scss/bootstrap.scss":
+/*!******************************************************!*\
+  !*** ./resources/sass/bootstrap/scss/bootstrap.scss ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./node_modules/process/browser.js":
 /*!*****************************************!*\
   !*** ./node_modules/process/browser.js ***!
@@ -22160,6 +22173,7 @@ process.umask = function() { return 0; };
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/js/app": 0,
+/******/ 			"css/bootstarp/bootstrap": 0,
 /******/ 			"css/dashboards/dashboard": 0,
 /******/ 			"css/app": 0
 /******/ 		};
@@ -22211,9 +22225,10 @@ process.umask = function() { return 0; };
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/dashboards/dashboard","css/app"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	__webpack_require__.O(undefined, ["css/dashboards/dashboard","css/app"], () => (__webpack_require__("./resources/sass/app.scss")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/dashboards/dashboard","css/app"], () => (__webpack_require__("./resources/sass/dashboards/dashboard.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/bootstarp/bootstrap","css/dashboards/dashboard","css/app"], () => (__webpack_require__("./resources/js/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/bootstarp/bootstrap","css/dashboards/dashboard","css/app"], () => (__webpack_require__("./resources/sass/app.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/bootstarp/bootstrap","css/dashboards/dashboard","css/app"], () => (__webpack_require__("./resources/sass/dashboards/dashboard.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/bootstarp/bootstrap","css/dashboards/dashboard","css/app"], () => (__webpack_require__("./resources/sass/bootstrap/scss/bootstrap.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

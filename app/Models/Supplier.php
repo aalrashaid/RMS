@@ -80,7 +80,10 @@ class Supplier extends Model
         ];
     }
 
-    //Eloquent Relationships - belongsTo
+    /**
+     * Eloquent Relationships
+     * Type:belongsTo
+     */
 
     /**
      * Get the Inventory that owns the Supplier.
@@ -90,5 +93,16 @@ class Supplier extends Model
         return $this->belongsTo(Inventory::class);
     }
 
-    //Eloquent Relationships - Has One  or Has Many
+    /**
+     * Get the SupplierItem that owns the user.
+     */
+    public function SupplierItem()
+    {
+        return $this->belongsTo(SupplierItem::class);
+    }
+
+    /**
+     * Eloquent Relationships
+     * Type: Has One or Has Many
+     */
 }

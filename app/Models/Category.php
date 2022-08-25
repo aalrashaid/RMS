@@ -65,7 +65,10 @@ class Category extends Model
         ];
     }
 
-    //Eloquent Relationships - belongsTo
+    /**
+     * Eloquent Relationships
+     * Type:belongsTo
+     */
 
     /**
      * Get the user that owns the RecipeCosts.
@@ -75,6 +78,9 @@ class Category extends Model
         return $this->belongsTo(RecipeCosts::class);
     }
 
-    //Eloquent Relationships - Has One  or Has Many
+    /**
+     * Eloquent Relationships
+     * Type: Has One or Has Many
+     */
 
 }

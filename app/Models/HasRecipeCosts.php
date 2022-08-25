@@ -74,9 +74,15 @@ class HasRecipeCosts extends Model
         ];
     }
 
-    //Eloquent Relationships - belongsTo
+    /**
+     * Eloquent Relationships
+     * Type:belongsTo
+     */
 
-    //Eloquent Relationships - Has One  or Has Many
+    /**
+     * Eloquent Relationships
+     * Type: Has One or Has Many
+     */
 
     /**
      * Get the RecipeCosts associated with the Has Recipe Costs.

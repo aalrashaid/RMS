@@ -80,11 +80,15 @@ class HasNutritionFactsRecipeCards extends Model
         ];
     }
 
-    //Eloquent Relationships - belongsTo
+    /**
+     * Eloquent Relationships
+     * Type:belongsTo
+     */
 
-
-
-    //Eloquent Relationships - Has One  or Has Many
+    /**
+     * Eloquent Relationships
+     * Type: Has One or Has Many
+     */
 
     /**
      * Get the Recipe Card associated with the Has Nutrition Facts Recipe Cards.

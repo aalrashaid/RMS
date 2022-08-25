@@ -80,9 +80,15 @@ class RecipeCosts extends Model
         ];
     }
 
-    //Eloquent Relationships - belongsTo
+    /**
+     * Eloquent Relationships
+     * Type:belongsTo
+     */
 
-    //Eloquent Relationships - Has One  or Has Many
+    /**
+     * Eloquent Relationships
+     * Type: Has One or Has Many
+     */
 
     /**
      * Get the user associated with the RecipeCosts.

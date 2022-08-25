@@ -77,10 +77,13 @@ class RecipeCard extends Model
         ];
     }
 
-    //Eloquent Relationships - belongsTo
+    /**
+     * Eloquent Relationships
+     * Type:belongsTo
+     */
 
     /**
-     * Get the user that owns the Brands.
+     * Get the user that owns the RecipeCard.
      */
     public function HasIngredientsRecipeCards()
     {
@@ -88,7 +91,7 @@ class RecipeCard extends Model
     }
 
     /**
-     * Get the user that owns the Brands.
+     * Get the user that owns the RecipeCard.
      */
     public function HasNutritionFactsRecipeCards()
     {
@@ -96,16 +99,40 @@ class RecipeCard extends Model
     }
 
     /**
-     * Get the Menu that owns the user.
+     * Get the Menu that owns the RecipeCard.
      */
     public function Menu()
     {
         return $this->belongsTo(Menu::class);
     }
-    
-    //Eloquent Relationships - Has One  or Has Many
 
-    // User_Id
-    // Brands_Id
-    // Thumbnail_Id
+    /**
+     * Eloquent Relationships
+     * Type: Has One or Has Many
+     */
+
+    /**
+     * Get the user associated with the RecipeCard.
+     */
+    public function user()
+    {
+        return $this->hasOne(User::class);
+    }
+
+    /**
+     * Get the Brands associated with the RecipeCard.
+     */
+    public function brands()
+    {
+        //Brands_Id
+        return $this->hasOne(Brands::class);
+    }
+
+    /**
+     * Get the thumbnail associated with the RecipeCard.
+     */
+    public function thumbnail()
+    {
+        return $this->hasOne(Thumbnails::class);
+    }
 }

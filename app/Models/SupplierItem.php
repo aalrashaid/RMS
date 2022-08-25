@@ -77,7 +77,40 @@ class SupplierItem extends Model
         ];
     }
 
-    //Eloquent Relationships - belongsTo
+    /**
+     * Eloquent Relationships
+     * Type:belongsTo
+     */
 
-    //Eloquent Relationships - Has One  or Has Many
+    /**
+     * Eloquent Relationships
+     * Type: Has One or Has Many
+     */
+
+    /**
+     * Get the user associated with the RecipeCosts.
+     */
+    public function user()
+    {
+        return $this->hasOne(RecipeCosts::class);
+    }
+
+    /**
+     * Get the Brands associated with the RecipeCosts.
+     */
+    public function brands()
+    {
+        //Brands_Id
+        return $this->hasOne(Brands::class);
+    }
+
+    /**
+     * Get the Brands associated with the RecipeCosts.
+     */
+    public function supplier()
+    {
+        //Brands_Id
+        return $this->hasOne(Supplier::class);
+    }
+    
 }

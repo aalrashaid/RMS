@@ -42,7 +42,10 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    //Eloquent Relationships - belongsTo
+    /**
+     * Eloquent Relationships
+     * Type:belongsTo
+     */
 
     /**
      * Get the Brands that owns the user.
@@ -69,6 +72,14 @@ class User extends Authenticatable
     }
 
     /**
+     * Get the RecipeCard that owns the user.
+     */
+    public function recipecard()
+    {
+        return $this->belongsTo(RecipeCard::class);
+    }
+
+    /**
      * Get the user that owns the RecipeCosts.
      */
     public function RecipeCosts()
@@ -76,6 +87,25 @@ class User extends Authenticatable
         return $this->belongsTo(RecipeCosts::class);
     }
 
-    //Eloquent Relationships - Has One  or Has Many
+    /**
+     * Get the SupplierItem that owns the user.
+     */
+    public function SupplierItem()
+    {
+        return $this->belongsTo(SupplierItem::class);
+    }
+
+    /**
+     * Get the SupplierItem that owns the user.
+     */
+    public function Thumbnails()
+    {
+        return $this->belongsTo(Thumbnails::class);
+    }
+
+    /**
+     * Eloquent Relationships
+     * Type: Has One  or Has Many
+     */
 
 }

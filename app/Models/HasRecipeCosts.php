@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * This Models Class Relationship With Recipe Costs Models Part
+ */
+
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -73,4 +77,13 @@ class HasRecipeCosts extends Model
     //Eloquent Relationships - belongsTo
 
     //Eloquent Relationships - Has One  or Has Many
+
+    /**
+     * Get the RecipeCosts associated with the Has Recipe Costs.
+     */
+    public function recipeCosts()
+    {
+        //Menus_Id
+        return $this->hasMany(RecipeCosts::class);
+    }
 }

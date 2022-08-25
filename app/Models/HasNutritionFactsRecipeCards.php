@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * This Models Class Relationship With Recipe Costs Models Part
+ */
+
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -82,4 +86,11 @@ class HasNutritionFactsRecipeCards extends Model
 
     //Eloquent Relationships - Has One  or Has Many
 
+    /**
+     * Get the Recipe Card associated with the Has Nutrition Facts Recipe Cards.
+     */
+    public function recipecard()
+    {
+        return $this->hasMany(RecipeCard::class);
+    }
 }

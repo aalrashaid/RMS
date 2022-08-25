@@ -18,11 +18,11 @@ const mix = require('laravel-mix');
 
 // In the build files, there is JS
 mix.js('resources/js/app.js', 'public/js')
-    .js('resources/js/dashboard.js', 'public/js');
+    .js('resources/js/dashboard.js', 'public/js/dashboards');
 
 // In the build files, there is Sass
 mix.sass('resources/sass/app.scss', 'public/css')
-    .sass('resources/sass/dashboard.scss', 'public/css');
+    .sass('resources/sass/dashboards/dashboard.scss', 'public/css/dashboards');
 //.sass('resources/sass/bootstrap-sass/bootstrap.scss','public/css/bootstarp');
 
 

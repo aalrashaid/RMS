@@ -60,7 +60,7 @@ class Inventory extends Model
         'Unit_Price',
         'Quantity_In_Stock',
         'Inventory_Value',
-        'In_Stock',
+        'Stock_Status',
         'Reorder_Level',
         'Reorder_Time_In_Days',
         'Quantity_In_Reorder',
@@ -83,4 +83,30 @@ class Inventory extends Model
     //Eloquent Relationships - belongsTo
 
     //Eloquent Relationships - Has One  or Has Many
+
+    /**
+     * Get the user associated with the Inventory.
+     */
+    public function user()
+    {
+        return $this->hasOne(User::class);
+    }
+
+    /**
+     * Get the Brands associated with the Inventory.
+     */
+    public function brands()
+    {
+        //Brands_Id
+        return $this->hasOne(Brands::class);
+    }
+
+    /**
+     * Get the suppliers associated with the Inventory.
+     */
+    public function suppliers()
+    {
+        //Brands_Id
+        return $this->hasOne(Suppliers::class);
+    }
 }

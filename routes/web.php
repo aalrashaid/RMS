@@ -16,8 +16,13 @@ use App\Http\Controllers\BrandsController;
 */
 
 Route::resource('Brands', BrandsController::class);
+
 Route::get('/', function () {
     return view('index');
+});
+
+Route::get('/readme', function () {
+    return view('readme');
 });
 
 Route::get('/dashboard', function () {

@@ -82,5 +82,13 @@ class Supplier extends Model
 
     //Eloquent Relationships - belongsTo
 
+    /**
+     * Get the Inventory that owns the Supplier.
+     */
+    public function inventory()
+    {
+        return $this->belongsTo(Inventory::class);
+    }
+
     //Eloquent Relationships - Has One  or Has Many
 }

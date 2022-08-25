@@ -87,8 +87,39 @@ class Brands extends Model
 
     //Eloquent Relationships - belongsTo
 
+    /**
+     * Get the Inventory that owns the Brands.
+     */
+    public function inventory()
+    {
+        return $this->belongsTo(Inventory::class);
+    }
+
+    /**
+     * Get the Menu that owns the user.
+     */
+    public function Menu()
+    {
+        return $this->belongsTo(Menu::class);
+    }
+
+    /**
+     * Get the user that owns the RecipeCosts.
+     */
+    public function RecipeCosts()
+    {
+        return $this->belongsTo(RecipeCosts::class);
+    }
 
     //Eloquent Relationships - Has One  or Has Many
+
+    /**
+     * Get the user associated with the Brands.
+     */
+    public function user()
+    {
+        return $this->hasOne(User::class);
+    }
 
 
 }

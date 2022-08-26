@@ -17,7 +17,7 @@
 
                 @csrf
 
-                <div class="form-floating mb-3">
+                 <div class="form-floating mb-3">
                     <input type="text" name="Name_Brand" id="Name_Brand"
                         class="form-control @error('Name_Brand') is-invalid @enderror" value="{{ old('Name_Brand') }}"
                         placeholder="Name Brand" autocomplete="on" required>
@@ -26,6 +26,7 @@
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
                 </div>
+
 
                 <div class="form-floating mb-3">
                     <textarea name="text" id="Description" class="form-control @error('Description') is-invalid @enderror"
@@ -101,7 +102,7 @@
                 </div>
 
                 <div class="form-floating mb-3">
-                    <input type="tel" name="Moblie" id="Moblie"
+                    <input type="text" name="Moblie" id="Moblie"
                         class="form-control @error('Moblie') is-invalid @enderror" value="{{ old('Moblie') }}"
                         placeholder="Moblie" autocomplete="on" required>
                     <label for="Moblie">Moblie:</label>
@@ -111,7 +112,7 @@
                 </div>
 
                 <div class="form-floating mb-3">
-                    <input type="tel" name="Whatsapp" id="Whatsapp"
+                    <input type="text" name="Whatsapp" id="Whatsapp"
                         class="form-control @error('Whatsapp') is-invalid @enderror" value="{{ old('Whatsapp') }}"
                         placeholder="Whatsapp" autocomplete="on" required>
                     <label for="tel">Whatsapp:</label>
@@ -123,9 +124,9 @@
                 <div class="form-floating mb-3">
                     <input type="email" name="Email" id="Email"
                         class="form-control @error('Email') is-invalid @enderror" value="{{ old('Email') }}"
-                        placeholder="name@example.com" autocomplete="email" required>
+                        placeholder="name@example.com" autocomplete="Email" required>
                     <label for="Email">E-mail:</label>
-                    @error('lEmail')
+                    @error('Email')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
                 </div>
@@ -141,7 +142,7 @@
                 </div>
 
                 <div class="form-floating mb-3">
-                    <input type="text" name="Facebook" id="Facebook"
+                    <input type="url" name="Facebook" id="Facebook"
                         class="form-control @error('Facebook') is-invalid @enderror" value="{{ old('Facebook') }}"
                         placeholder="Facebook Fun Page Buisenss" autocomplete="on" required>
                     <label for="Facebook">Facebook:</label>

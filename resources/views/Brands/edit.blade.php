@@ -123,9 +123,9 @@
                 <div class="form-floating mb-3">
                     <input type="email" name="Email" id="Email"
                         class="form-control @error('Email') is-invalid @enderror" value="{{ old('Email') }}"
-                        placeholder="name@example.com" autocomplete="email" required>
+                        placeholder="name@example.com" autocomplete="Email" required>
                     <label for="Email">E-mail:</label>
-                    @error('lEmail')
+                    @error('Email')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
                 </div>

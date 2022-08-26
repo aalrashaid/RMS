@@ -17,12 +17,12 @@
       
          <div class="form-floating mb-3">
 
-            <input type="text" class="form-control" id="email" name="email" value="{{ old('email') }}"
+            <input type="email" class="form-control" id="email" name="email" value="{{ old('email') }}"
                 placeholder="email" required>
 
             <label for="email">email</label>
 
-            @error('username')
+            @error('email')
                 <div class="invalid-feedback">
                     {{ $message }}
                 </div>

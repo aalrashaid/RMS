@@ -48,6 +48,28 @@ class BrandsController extends Controller
         // validator fails
 
         // Store the Brands
+        $Brands = new Brands;
+
+        $Brands->user_id = auth()->user()->id;
+        $Brands->Slug = SlugService::createSlug(Brands::class, 'slug', $request->Name_Brand);
+        $Brands->Name_Brand =  $request->Name_Brand;
+        $Brands->Description = $request->Description;
+        $Brands->Brand_Logas = $request->Brand_Logas;
+        $Brands->Address = $request->City;
+        $Brands->State = $request->State;
+        $Brands->Zip_Code = $request->Zip_Code;
+        $Brands->Country = $request->Country;
+        $request->Moblie = $request->Moblie;
+        $request->Whatsapp = $request->Whatsapp;
+        $request->Email = $request->Email;
+        $Brands->Web = $request->Web;
+        $Brands->Facebook = $request->Facebook;
+        $Brands->Youtube = $request->Youtube;
+        $Brands->Instagram = $request->Instagram;
+        $Brands->Twitter = $request->Twitter;
+
+        dd($Brands);
+
         // $Brands = Brands::create([
         //     ['user_id' => auth()->user()->id],
         //     ['Slug' => SlugService::createSlug(Brands::class, 'slug', $request->nameBrand)],
@@ -70,8 +92,7 @@ class BrandsController extends Controller
         //     ['twitter' => $request->twitter],
         // ]);
 
-        // dd($Brands);
-        dd();
+        //dd();
 
         //Flash The session
 

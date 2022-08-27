@@ -113,7 +113,7 @@ class Brands extends Model
     {
         return $this->belongsTo(RecipeCard::class);
     }
-    
+
     /**
      * Get the user that owns the RecipeCosts.
      */
@@ -151,5 +151,26 @@ class Brands extends Model
         return $this->hasOne(User::class);
     }
 
+    /**
+     * The Wirting All Function 
+     */
 
+    /**
+     * Uploads Logo For in Create froms
+     * @param  App\Http\Requests
+     */
+    public function logoUplaod($request)
+    {
+        if ($request->hasFile('thumbnails')) {
+            $name = $request->file('thumbnails')->getClientOriginalName();
+            $path = $request->file('thumbnails')->storeAs('public/Brands/Logos', $name);
+        }
+    }
+
+    /**
+     * The set Logo For profile Brand
+     */
+    public function setLoga()
+    {
+    }
 }

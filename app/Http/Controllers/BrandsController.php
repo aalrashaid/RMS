@@ -4,12 +4,21 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreBrandsRequest;
 use App\Http\Requests\UpdateBrandsRequest;
+
 use App\Models\Brands;
+use App\Models\Countries;
 
 use \Cviebrock\EloquentSluggable\Services\SlugService;
+use Illuminate\Support\Facades\Auth;
 
 class BrandsController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -29,7 +38,8 @@ class BrandsController extends Controller
     public function create()
     {
         //
-        return view('Brands.create');
+        $Countries = Countries::all();
+        return view('Brands.create', compact('Countries'));
     }
 
     /**
@@ -50,7 +60,7 @@ class BrandsController extends Controller
         // Store the Brands
         $Brands = new Brands;
 
-        $Brands->user_id = auth()->user()->id;
+        $Brands->User_id = $request->user()->id;
         $Brands->Slug = SlugService::createSlug(Brands::class, 'slug', $request->Name_Brand);
         $Brands->Name_Brand =  $request->Name_Brand;
         $Brands->Description = $request->Description;
@@ -68,7 +78,9 @@ class BrandsController extends Controller
         $Brands->Instagram = $request->Instagram;
         $Brands->Twitter = $request->Twitter;
 
-        dd($Brands);
+        //dd($Brands);
+
+        $Brands->saveOrFail();
 
         // $Brands = Brands::create([
         //     ['user_id' => auth()->user()->id],
@@ -97,6 +109,7 @@ class BrandsController extends Controller
         //Flash The session
 
         // redirect to index
+        return redirect('Brands.create')->back();
     }
 
     /**

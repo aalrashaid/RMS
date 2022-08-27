@@ -17,7 +17,7 @@
 
                 @csrf
 
-                 <div class="form-floating mb-3">
+                <div class="form-floating mb-3">
                     <input type="text" name="Name_Brand" id="Name_Brand"
                         class="form-control @error('Name_Brand') is-invalid @enderror" value="{{ old('Name_Brand') }}"
                         placeholder="Name Brand" autocomplete="on" required>
@@ -29,8 +29,8 @@
 
 
                 <div class="form-floating mb-3">
-                    <textarea name="text" id="Description" class="form-control @error('Description') is-invalid @enderror"
-                        placeholder="Leave a comment here"></textarea>
+                    <textarea name="text" name="Description" id="Description"
+                        class="form-control @error('Description') is-invalid @enderror" placeholder="Leave a comment here"></textarea>
                     <label for="Description">Description:</label>
                     @error('Description')
                         <span class="text-danger">{{ $message }}</span>
@@ -88,17 +88,19 @@
                 </div>
 
                 <div class="form-floating mb-3">
-                    <select class="form-select @error('Country') is-invalid @enderror" name="Country" id="Country"
+                    <select class="form-select" name="Country" id="Country"
                         aria-label="Floating label select example" required>
                         <option selected>Open this select menu</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                        @foreach ($Countries as $Country)
+                            <option value="{{ $Country->id }}">
+                                {{ $Country->Name }}
+                            </option>
+                        @endforeach
                     </select>
                     <label for="Country">Country:</label>
-                    @error('Country')
+                    {{-- @error('Country')
                         <span class="text-danger">{{ $message }}</span>
-                    @enderror
+                    @enderror --}}
                 </div>
 
                 <div class="form-floating mb-3">
@@ -115,7 +117,7 @@
                     <input type="text" name="Whatsapp" id="Whatsapp"
                         class="form-control @error('Whatsapp') is-invalid @enderror" value="{{ old('Whatsapp') }}"
                         placeholder="Whatsapp" autocomplete="on" required>
-                    <label for="tel">Whatsapp:</label>
+                    <label for="Whatsapp">Whatsapp:</label>
                     @error('Whatsapp')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
@@ -153,7 +155,7 @@
 
                 <div class="form-floating mb-3">
                     <input type="url" name="Youtube" id="Youtube"
-                        class="form-control @error('title') is-invalid @enderror" value="{{ old('Youtube') }}"
+                        class="form-control @error('Youtube') is-invalid @enderror" value="{{ old('Youtube') }}"
                         placeholder="Channel Name Youtube" autocomplete="on" required>
                     <label for="Youtube">Youtube:</label>
                     @error('Youtube')
@@ -174,7 +176,7 @@
                 <div class="form-floating mb-3">
                     <input type="url" name="Twitter" id="Twitter"
                         class="form-control @error('Twitter') is-invalid @enderror" value="{{ old('Twitter') }}"
-                        placeholder="Accout Username Instagram"  autocomplete="on" required>
+                        placeholder="Accout Username Twitter" autocomplete="on" required>
                     <label for="Twitter">Twitter:</label>
                     @error('Twitter')
                         <span class="text-danger">{{ $message }}</span>

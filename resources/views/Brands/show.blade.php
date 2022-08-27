@@ -77,12 +77,14 @@
 
             <div class="col-4">
                 <div>
-                    <label class="form-label">Name Brand:</label>            
+                    <label class="form-label">
+                        {Name Brand}
+                    </label>            
                 </div>
 
                 <div>
                     <p>
-                         Description
+                        { Description}
                     </p>
                                
                 </div>
@@ -92,55 +94,46 @@
                 </div>
 
                 <div>
-                    <label class="form-label">Address:</label>            
+                    <address>
+                    <label class="form-label">{Address}</label>            
+                    <label class="form-label">{Zip Code}</label>            
+                    <label class="form-label">{City}</label>            
+                    <label class="form-label">{Province}</label>            
+                    <label class="form-label">{Region}</label>            
+                    <label class="form-label">{Country}</label>
+                    </address>
+                                
                 </div>
 
                 <div>
-                    <label class="form-label">Zip Code:</label>            
+                    <label class="form-label">
+                        {Moblie}
+                    </label>            
                 </div>
 
                 <div>
-                    <label class="form-label">City:</label>            
+                    <label class="form-label">{Whatsapp}</label>            
                 </div>
 
                 <div>
-                    <label class="form-label">Province:</label>            
+                    <label class="form-label">{Web}</label>            
                 </div>
 
                 <div>
-                    <label class="form-label">Region:</label>            
+                    <label class="form-label">
+                        {Facebook}</label>            
                 </div>
 
                 <div>
-                    <label class="form-label">Country:</label>            
+                    <label class="form-label">{Youtube}</label>            
                 </div>
 
                 <div>
-                    <label class="form-label">Moblie:</label>            
+                    <label class="form-label">{Instagram}</label>            
                 </div>
 
                 <div>
-                    <label class="form-label">Whatsapp:</label>            
-                </div>
-
-                <div>
-                    <label class="form-label">Web:</label>            
-                </div>
-
-                <div>
-                    <label class="form-label">Facebook:</label>            
-                </div>
-
-                <div>
-                    <label class="form-label">Youtube:</label>            
-                </div>
-
-                <div>
-                    <label class="form-label">Instagram:</label>            
-                </div>
-
-                <div>
-                    <label class="form-label">Twitter:</label>            
+                    <label class="form-label">{Twitter}</label>            
                 </div>
 
             </div>

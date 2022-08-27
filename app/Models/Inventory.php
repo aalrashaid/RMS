@@ -115,4 +115,15 @@ class Inventory extends Model
         //Brands_Id
         return $this->hasOne(Suppliers::class);
     }
+
+    /**
+     * The Wirting All Function 
+     */
+
+    /**
+     * Inventory UID
+     * Generator Random Inventory UID (A unique identifier)
+     * Formula: YY - Time - Name - -Sequence Number
+     *  22-0336-TK-0001
+     */
 }

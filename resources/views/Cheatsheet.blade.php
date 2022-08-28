@@ -7,15 +7,10 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.98.0">
-    <title>Cheatsheet · Bootstrap v5.2 beta</title>
-
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/cheatsheet/">
+    <title>Cheatsheet - Themes</title>
 
 
-
-
-
-    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{asset('css/bootstarp/bootstrap.css')}}" rel="stylesheet">
 
     <style>
         .bd-placeholder-img {
@@ -72,7 +67,7 @@
 
 
     <!-- Custom styles for this template -->
-    <link href="../bootstrarp/cheatsheet.css" rel="stylesheet">
+    <link href="{{ assets('/css/cheatsheet.css')}}" rel="stylesheet">
 </head>
 
 <body class="bg-light">
@@ -2317,7 +2312,7 @@
 
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src="../bootstarp/cheatsheet.js"></script>
+    <script src="{{asset('js/cheatsheet.js')}}"></script>
 </body>
 
 </html>

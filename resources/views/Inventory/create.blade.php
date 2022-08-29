@@ -129,7 +129,7 @@
         <div class="form-floating mb-3">
             <input type="text" name="Reorder_Time_In_Days" id="Reorder_Time_In_Days" class="form-control @error('Reorder_Time_In_Days') is-invalid @enderror" value="{{ old('Quantity_In_Stock') }}"
                 placeholder="Reorder_Time_In_Days" required>
-            <label for="Reorder_Time_In_Days">Reorder_Time_In_Days:</label>
+            <label for="Reorder_Time_In_Days">Reorder Time In Days:</label>
             @error('Reorder_Time_In_Days')
                 <span class="text-danger">{{ $message }}</span>
             @enderror
@@ -138,7 +138,7 @@
         <div class="form-floating mb-3">
             <input type="text" name="Quantity_In_Reorder" id="Quantity_In_Reorder" class="form-control @error('Quantity_In_Reorder') is-invalid @enderror" value="{{ old('Quantity_In_Stock') }}"
                 placeholder="Quantity_In_Reorder" required>
-            <label for="Quantity_In_Reorder">Quantity_In_Reorder:</label>
+            <label for="Quantity_In_Reorder">Quantity In Reorder:</label>
             @error('Quantity_In_Reorder')
                 <span class="text-danger">{{ $message }}</span>
             @enderror

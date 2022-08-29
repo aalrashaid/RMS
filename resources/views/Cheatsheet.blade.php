@@ -67,7 +67,7 @@
 
 
     <!-- Custom styles for this template -->
-    <link href="{{ assets('/css/cheatsheet.css')}}" rel="stylesheet">
+    <link href="{{ asset('/css/cheatsheet.css')}}" rel="stylesheet">
 </head>
 
 <body class="bg-light">
@@ -79,7 +79,7 @@
                     alt="Bootstrap">
                 Cheatsheet
             </h1>
-            <a href="../examples/cheatsheet-rtl/" class="ms-auto link-light" hreflang="ar">RTL cheatsheet</a>
+            
         </div>
     </header>
     <aside class="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">

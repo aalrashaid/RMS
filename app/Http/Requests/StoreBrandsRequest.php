@@ -25,8 +25,23 @@ class StoreBrandsRequest extends FormRequest
     {
         return [
             //
-            // 'NameBrand' => ['required'],
-            
+            'Name_Brand' => ['required', 'unique:Brands,Name_Brand', 'min:5', 'max:255',],
+            'Description' => ['required', 'min:5', 'max:280',],
+            'Brand_Loga' => ['required', 'image', 'size:5120', 'mimes:jpeg,png,jpg,'],
+            'Address' => ['required', 'min:5', 'max:255',],
+            'City' => ['required', 'min:5', 'max:255',],
+            'State' => ['required', 'min:5', 'max:255',],
+            'Zip_Code' => ['required', 'min:5', 'max:10',],
+            'Country' => ['required', 'min:5', 'max:255',],
+            'Moblie' => ['required', 'digits:10', 'min:7', 'max:12',],
+            'Whatsapp' => ['required', 'digits:10', 'min:7', 'max:12',],
+            'Email' => ['required', 'email', 'unique:Brands,Email', 'min:7', 'max:155',],
+            'Web' => ['nullable'],
+            'Facebook' => ['nullable'],
+            'Youtube' => ['nullable'],
+            'Instagram' => ['nullable'],
+            'Twitter' => ['nullable'],
+
         ];
     }
 
@@ -38,23 +53,23 @@ class StoreBrandsRequest extends FormRequest
     public function messages()
     {
         return [
-            // 'NameBrand.required' => 'A NameBrand is required',
-            // 'Description.required' => 'A Description is required',
-            // 'BrandLogas.required' => 'A Brand Loga is required',
-            // 'Address.required' => 'A Address is required',
-            // 'ZipCode.required' => 'A ZipCode is required',
-            // 'City.required' => 'A City is required',
-            // 'Province.required' => 'A Province is required',
-            // 'Region.required' => 'A Region is required',
-            // 'Country.required' => 'A Country is required',
-            // 'Moblie.required' => 'A Moblie is required',
-            // 'Whatsapp.required' => 'A Whatsapp is required',
-            // 'Email.required' => 'A Email is required',
-            // 'Web.required' => 'A Web is required',
-            // 'Facebook.required' => 'A Facebook is required',
-            // 'Youtube.required' => 'A Youtube is required',
-            // 'Instagram.required' => 'A Instagram is required',
-            // 'Twitter.required' => 'A Twitter is required',
+
+            'Name_Brand' => ['A Name Brand is required'],
+            'Description' => ['A Name Description is required max 280'],
+            'Brand_Loga' => ['A Name Brand_Loga is required max 5 MB'],
+            'Address' => ['A Address is required'],
+            'City' => ['A Name of City is required'],
+            'State' => ['A Name of State is required'],
+            'Zip_Code' => ['A Zip Code is required'],
+            'Country' => ['A Name of Country is required'],
+            'Moblie' => ['A Name of Country is required'],
+            'Whatsapp' => ['A Name of Country is required'],
+            'Email' => ['A Name of Country is required'],
+            'Web' => ['A Address of Web is required'],
+            'Facebook' => ['A Account of Facebook Business is required'],
+            'Youtube' => ['A Account of Youtube Business is required'],
+            'Instagram' => ['A Account of Instagram Business is required'],
+            'Twitter' => ['A Account of Twitter Businessis required'],
         ];
     }
 

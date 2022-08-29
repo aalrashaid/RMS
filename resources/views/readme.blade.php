@@ -11,5 +11,8 @@
 @endsection --}}
  
 @section('content')
-    <p>This is my body content.</p>
+   Read Me 
+   <code>
+        php art
+   </code>
 @endsection

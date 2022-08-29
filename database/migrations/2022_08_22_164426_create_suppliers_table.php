@@ -32,7 +32,7 @@ return new class extends Migration
             $table->string('Supplier_UID')->comment('The name of the unit');
             $table->string('Name_Supplier')->comment('The name of the unit');
             $table->string('Company_Name')->comment('The name of the unit');
-            $table->string('Brand_Image')->comment('The name of the unit');
+            $table->string('Brand_Logo')->comment('The name of the unit');
             $table->string('Street')->comment('The name of the unit');
             $table->string('Zip_Code')->comment('The name of the unit');
             $table->string('City')->comment('The name of the unit');

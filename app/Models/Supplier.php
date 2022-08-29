@@ -49,7 +49,7 @@ class Supplier extends Model
         'Supplier_UID',
         'Name_Supplier',
         'Company_Name',
-        'Brand_Image',
+        'Brand_Logo',
         'Street',
         'Zip_Code',
         'City',

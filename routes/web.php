@@ -10,6 +10,8 @@ use App\Http\Controllers\RecipeCostsController;
 use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\SupplierItemController;
 
+use App\Http\Middleware\Dashboards;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -22,14 +24,21 @@ use App\Http\Controllers\SupplierItemController;
 |
 */
 
+// Route::middleware([Dashboards::class])->group(function () {
+
+require __DIR__ . '/auth.php';
 Route::resource('Brands', BrandsController::class);
 Route::resource('Inventory', InventoryController::class);
 Route::resource('Menu', MenuController::class);
 Route::resource('RecipeCard', RecipeCardController::class);
 Route::resource('RecipeCosts', RecipeCostsController::class);
 Route::resource('Supplier', SupplierController::class);
-Route::resource('SupplierItem', SupplierItemController::class);
+Route::resource('SupplierItem', SupplierItemController::class);   
+    
+// });
 
+
+//The Static Pages
 Route::get('/', function () {
     return view('index');
 });
@@ -38,8 +47,13 @@ Route::get('/readme', function () {
     return view('readme');
 });
 
+Route::get('/Cheatsheet', function () {
+    return view('Cheatsheet');
+});
+
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-require __DIR__.'/auth.php';
+

@@ -13,7 +13,7 @@ class StoreMenuRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -25,6 +25,39 @@ class StoreMenuRequest extends FormRequest
     {
         return [
             //
+            'Name' => ['required'],
+            'Slug' => ['required'],
+            'Description' => ['required'],
+            'Price' => ['required'],
+        ];
+    }
+
+    /**
+     * Get the error messages for the defined validation rules.
+     *
+     * @return array
+     */
+    public function messages()
+    {
+        return [
+            //
+            'Name.required' => ['Name Required'],
+            'Slug.required' => ['Slug Required'],
+            'Description.required' => ['Description Required'],
+            'Price.required' => ['Price Required'],
+        ];
+    }
+
+    /**
+     * Get custom attributes for validator errors.
+     *
+     * @return array
+     */
+    public function attributes()
+    {
+        return [
+            //'email' => 'email address',
+            '' => [],
         ];
     }
 }

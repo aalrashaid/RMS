@@ -13,7 +13,7 @@ class StoreHasIngredientsRecipeCardsRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -25,6 +25,38 @@ class StoreHasIngredientsRecipeCardsRequest extends FormRequest
     {
         return [
             //
+            // validation rules Later modfnaion
+            'Ingredients_Name' => ['required'],
+            'Ingredients_Unit' => ['required'],
+            'Ingredients_Unit_Name' => ['required'],
+        ];
+    }
+
+    /**
+     * Get the error messages for the defined validation rules.
+     *
+     * @return array
+     */
+    public function messages()
+    {
+        return [
+            //
+            'Ingredients_Name.required' => ['A Ingredients Name Required'],
+            'Ingredients_Unit.required' => ['Ingredients Unit Required'],
+            'Ingredients_Unit_Name.required' => ['Ingredients Unit Name Required'],
+        ];
+    }
+
+    /**
+     * Get custom attributes for validator errors.
+     *
+     * @return array
+     */
+    public function attributes()
+    {
+        return [
+            //'email' => 'email address',
+            '' => [],
         ];
     }
 }

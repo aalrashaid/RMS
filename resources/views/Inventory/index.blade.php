@@ -20,9 +20,9 @@
         </thead>
         <tbody class="table-group-divider">
             <tr>
-                @for ($i = 0; $i < $max; $i++)
-                    <th scope="row">{{ $i }}</th>
-                @endfor
+                {{-- @for ($i = 0; $i < $max; $i++) --}}
+                     <th scope="row">{{--{{ $i }}--}} 1</th> 
+                {{-- @endfor --}}
                 <td>Inventory UID</td>
                 <td>Name Item</td>
                 <td>SKU</td>

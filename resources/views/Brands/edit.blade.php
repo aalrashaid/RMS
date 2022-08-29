@@ -27,6 +27,16 @@
                     @enderror
                 </div>
 
+                <div class="form-floating mb-3">
+                    <input type="text" name="Slug" id="Slug"
+                        class="form-control @error('Slug') is-invalid @enderror" value="{{ old('Slug') }}"
+                        placeholder="Name Slug" autocomplete="on" required>
+                    <label for="Slug">Slug:</label>
+                    @error('Slug')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
+
 
                 <div class="form-floating mb-3">
                     <textarea name="text" name="Description" id="Description"

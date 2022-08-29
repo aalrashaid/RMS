@@ -33,8 +33,8 @@ return new class extends Migration
             $table->string('Recipe_UID')->nullable()->unique()->comment('Recipe Unique identifier ');
             $table->text('Description')->nullable()->comment('');
             $table->string('Youtube_Video')->nullable()->comment('');
-            $table->string('Recipe_Method')->nullable()->comment('');
-            $table->string('Difficulty')->nullable()->comment('');
+            $table->string('Recipe_Method')->nullable()->comment('method meaning in cooking There are three basic cooking methods, dry heat cooking method, medium of fat or oil, and medium of liquids or moist heat cooking method');
+            $table->string('Difficulty')->nullable()->comment('The rating is from 1 to 5, one being the easiest and five being the most difficult.');
             $table->dateTime('Prep_Time')->nullable()->comment('');
             $table->dateTime('Cook_Time')->nullable()->comment('');
             $table->dateTime('Time_Total')->nullable()->comment('');

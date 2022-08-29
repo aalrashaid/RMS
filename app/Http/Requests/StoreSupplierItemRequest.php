@@ -13,7 +13,7 @@ class StoreSupplierItemRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -25,6 +25,51 @@ class StoreSupplierItemRequest extends FormRequest
     {
         return [
             //
+            'Item_UID' => ['required'],
+            'Item_Name' => ['required'],
+            'Item_Description' => ['required'],
+            'Category_Item' => ['required'],
+            'Item_Size' => ['required'],
+            'SKU' => ['required'],
+            'UPC' => ['required'],
+            'Barcode' => ['required'],
+            'Serial_Number' => ['required'],
+            'Item_Unit_Price' => ['required'],
+        ];
+    }
+
+    /**
+     * Get the error messages for the defined validation rules.
+     *
+     * @return array
+     */
+    public function messages()
+    {
+        return [
+            //
+            'Item_UID.required' => ['required'],
+            'Item_Name.required' => ['required'],
+            'Item_Description.required' => ['required'],
+            'Category_Item.required' => ['required'],
+            'Item_Size.required' => ['required'],
+            'SKU.required' => ['required'],
+            'UPC.required' => ['required'],
+            'Barcode.required' => ['required'],
+            'Serial_Number.required' => ['required'],
+            'Item_Unit_Price.required' => ['required'],
+        ];
+    }
+
+    /**
+     * Get custom attributes for validator errors.
+     *
+     * @return array
+     */
+    public function attributes()
+    {
+        return [
+            //'email' => 'email address',
+            '' => [],
         ];
     }
 }

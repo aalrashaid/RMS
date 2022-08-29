@@ -16,6 +16,7 @@ class InventoryController extends Controller
     public function index()
     {
         //
+        return view('Inventory.index');
     }
 
     /**
@@ -26,6 +27,7 @@ class InventoryController extends Controller
     public function create()
     {
         //
+        return view('Inventory.create');
     }
 
     /**
@@ -48,6 +50,7 @@ class InventoryController extends Controller
     public function show(Inventory $inventory)
     {
         //
+        return view('Inventory.show');
     }
 
     /**
@@ -59,6 +62,7 @@ class InventoryController extends Controller
     public function edit(Inventory $inventory)
     {
         //
+        return view('Inventory.edit');
     }
 
     /**
@@ -82,5 +86,6 @@ class InventoryController extends Controller
     public function destroy(Inventory $inventory)
     {
         //
+        return view('Inventory.destroy');
     }
 }

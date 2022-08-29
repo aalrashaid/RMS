@@ -27,6 +27,16 @@
                     @enderror
                 </div>
 
+                 <div class="form-floating mb-3">
+                    <input type="text" name="Slug" id="Slug"
+                        class="form-control @error('Slug') is-invalid @enderror" value="{{ old('Slug') }}"
+                        placeholder="Name Slug" autocomplete="on" required>
+                    <label for="Slug">Slug:</label>
+                    @error('Slug')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
+
 
                 <div class="form-floating mb-3">
                     <textarea name="text" name="Description" id="Description"
@@ -38,11 +48,11 @@
                 </div>
 
                 <div class=" mb-3">
-                    <label for="Brand_Logas" class="form-label">Uploads images Brand loga</label>
-                    <input name="Brand_Logas" id="Brand_Logas"
-                        class="form-control form-control-lg @error('Brand_Logas') is-invalid @enderror " type="file"
+                    <label for="Brand_Loga" class="form-label">Uploads images Brand loga</label>
+                    <input name="Brand_Loga" id="Brand_Loga"
+                        class="form-control form-control-lg @error('Brand_Loga') is-invalid @enderror " type="file"
                         required>
-                    @error('Brand_Logas')
+                    @error('Brand_Loga')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
                 </div>

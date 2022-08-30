@@ -1,0 +1,67 @@
+{
+    "name": "cooking method",
+    "Dry heat": [
+        {
+            "id": "1",
+            "name": "Broiling"
+        },
+        {
+            "id": "2",
+            "name": "Baking"
+        }
+    ],
+    "Medium of fat or oil": [
+        {
+            "id": "1",
+            "name": "Roasting",
+            "toArray": [
+                "Pot roasting",
+                "Oven roasting",
+                "Spit-roasting",
+                "Tandoor roasting"
+            ]
+        },
+        {
+            "id": "2",
+            "name": "Grilling",
+            "toArray": [
+                "Salamander",
+                "Oepn Fire"
+            ]
+        },
+        {
+            "id": "3",
+            "name": "Frying",
+            "toArray": [
+                "Deep frying",
+                "Shallow frying"
+            ]
+        }
+    ],
+    "Medium of liquids": [
+        {
+            "id": "1",
+            "name": "Boiling"
+        },
+        {
+            "id": "2",
+            "name": "Poaching"
+        },
+        {
+            "id": "3",
+            "name": "Steaming",
+            "toArray": [
+                "Indirect steaming",
+                "Direct steaming"
+            ]
+        },
+        {
+            "id": "4",
+            "name": "Stewing"
+        },
+        {
+            "id": "5",
+            "name": "Braising"
+        }
+    ]
+}

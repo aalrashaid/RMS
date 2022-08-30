@@ -16,6 +16,7 @@ class RecipeCostsController extends Controller
     public function index()
     {
         //
+        return view('RecipeCosts.index');
     }
 
     /**
@@ -26,6 +27,7 @@ class RecipeCostsController extends Controller
     public function create()
     {
         //
+        return view('RecipeCosts.create');
     }
 
     /**
@@ -48,6 +50,7 @@ class RecipeCostsController extends Controller
     public function show(RecipeCosts $recipeCosts)
     {
         //
+        return view('RecipeCosts.show');
     }
 
     /**
@@ -59,6 +62,7 @@ class RecipeCostsController extends Controller
     public function edit(RecipeCosts $recipeCosts)
     {
         //
+        return view('RecipeCosts.edit');
     }
 
     /**
@@ -82,5 +86,6 @@ class RecipeCostsController extends Controller
     public function destroy(RecipeCosts $recipeCosts)
     {
         //
+        return view('RecipeCosts.destroy');
     }
 }

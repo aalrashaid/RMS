@@ -16,6 +16,7 @@ class SupplierItemController extends Controller
     public function index()
     {
         //
+        return view('SupplierItem.index');
     }
 
     /**
@@ -26,6 +27,7 @@ class SupplierItemController extends Controller
     public function create()
     {
         //
+        return view('SupplierItem.create');
     }
 
     /**
@@ -48,6 +50,7 @@ class SupplierItemController extends Controller
     public function show(SupplierItem $supplierItem)
     {
         //
+        return view('SupplierItem.show');
     }
 
     /**
@@ -59,6 +62,7 @@ class SupplierItemController extends Controller
     public function edit(SupplierItem $supplierItem)
     {
         //
+        return view('SupplierItem.edit');
     }
 
     /**
@@ -71,6 +75,7 @@ class SupplierItemController extends Controller
     public function update(UpdateSupplierItemRequest $request, SupplierItem $supplierItem)
     {
         //
+       // return view('SupplierItem.index');
     }
 
     /**
@@ -82,5 +87,6 @@ class SupplierItemController extends Controller
     public function destroy(SupplierItem $supplierItem)
     {
         //
+        return view('SupplierItem.destroy');
     }
 }

@@ -49,6 +49,7 @@ class RecipeCard extends Model
         'User_Id',
         'Brands_Id',
         'Thumbnail_Id',
+        'Recipe_UID',
         'Title',
         'Slug',
         'Description',

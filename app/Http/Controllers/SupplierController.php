@@ -16,6 +16,7 @@ class SupplierController extends Controller
     public function index()
     {
         //
+        return view('Suppliers.index');
     }
 
     /**
@@ -26,6 +27,7 @@ class SupplierController extends Controller
     public function create()
     {
         //
+        return view('Suppliers.create');
     }
 
     /**
@@ -48,6 +50,7 @@ class SupplierController extends Controller
     public function show(Supplier $supplier)
     {
         //
+        return view('Suppliers.show');
     }
 
     /**
@@ -59,6 +62,7 @@ class SupplierController extends Controller
     public function edit(Supplier $supplier)
     {
         //
+        return view('Suppliers.edit');
     }
 
     /**
@@ -82,5 +86,6 @@ class SupplierController extends Controller
     public function destroy(Supplier $supplier)
     {
         //
+        return view('Suppliers.destroy');
     }
 }

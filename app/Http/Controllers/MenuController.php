@@ -16,6 +16,7 @@ class MenuController extends Controller
     public function index()
     {
         //
+        return view('Menu.index');
     }
 
     /**
@@ -26,6 +27,7 @@ class MenuController extends Controller
     public function create()
     {
         //
+        return view('Menu.create');
     }
 
     /**
@@ -48,6 +50,7 @@ class MenuController extends Controller
     public function show(Menu $menu)
     {
         //
+        return view('Menu.show');
     }
 
     /**
@@ -59,6 +62,7 @@ class MenuController extends Controller
     public function edit(Menu $menu)
     {
         //
+        return view('Menu.edit');
     }
 
     /**
@@ -82,5 +86,6 @@ class MenuController extends Controller
     public function destroy(Menu $menu)
     {
         //
+        return view('Menu.destroy');
     }
 }

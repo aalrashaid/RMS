@@ -37,6 +37,7 @@ class HasRecipeCostsController extends Controller
     public function store(StoreHasRecipeCostsRequest $request)
     {
         //
+        // the funcation to store Has Recipe Costs to from
     }
 
     /**
@@ -71,6 +72,7 @@ class HasRecipeCostsController extends Controller
     public function update(UpdateHasRecipeCostsRequest $request, HasRecipeCosts $hasRecipeCosts)
     {
         //
+        // the funcation to store Has Recipe Costs to from
     }
 
     /**

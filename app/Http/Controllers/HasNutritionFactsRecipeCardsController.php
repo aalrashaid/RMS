@@ -37,6 +37,7 @@ class HasNutritionFactsRecipeCardsController extends Controller
     public function store(StoreHasNutritionFactsRecipeCardsRequest $request)
     {
         //
+        // the funcation to store Has Nutrition Facts Recipe Cards to from 
     }
 
     /**
@@ -71,6 +72,7 @@ class HasNutritionFactsRecipeCardsController extends Controller
     public function update(UpdateHasNutritionFactsRecipeCardsRequest $request, HasNutritionFactsRecipeCards $hasNutritionFactsRecipeCards)
     {
         //
+        // the funcation to store Has Nutrition Facts Recipe Cards to from
     }
 
     /**

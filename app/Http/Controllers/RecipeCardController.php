@@ -16,6 +16,7 @@ class RecipeCardController extends Controller
     public function index()
     {
         //
+        return view('RecipeCard.index');
     }
 
     /**
@@ -26,6 +27,7 @@ class RecipeCardController extends Controller
     public function create()
     {
         //
+        return view('RecipeCard.create');
     }
 
     /**
@@ -48,6 +50,7 @@ class RecipeCardController extends Controller
     public function show(RecipeCard $recipeCard)
     {
         //
+        return view('RecipeCard.show');
     }
 
     /**
@@ -59,6 +62,7 @@ class RecipeCardController extends Controller
     public function edit(RecipeCard $recipeCard)
     {
         //
+        return view('RecipeCard.edit');
     }
 
     /**
@@ -82,5 +86,6 @@ class RecipeCardController extends Controller
     public function destroy(RecipeCard $recipeCard)
     {
         //
+        return view('RecipeCard.destroy');
     }
 }

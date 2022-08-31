@@ -21,8 +21,8 @@ return new class extends Migration
             $table->charset = 'utf8mb4';
             $table->collation = 'utf8mb4_unicode_ci';
             $table->engine = 'InnoDB';
-            
-            $table->id();
+
+            $table->id()->comment('The primary Key');
 
             //Foreing Key id
             $table->foreignId('User_Id')->references('id')->on('users')

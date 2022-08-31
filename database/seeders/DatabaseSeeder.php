@@ -21,8 +21,8 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
         $this->call([
-
-            // CuisinesSeeder::class,
+            //
+            CuisineSeeder::class,
             CategorySeeder::class,
             CountriesSeeder::class,
             GendersSeeder::class,
@@ -30,7 +30,7 @@ class DatabaseSeeder extends Seeder
             LanguagesSeeder::class
         ]);
 
-        // $this->command->info('Cuisine Seeder table seeded !,  created successfully.');
+        $this->command->info('Cuisine Seeder table seeded !,  created successfully.');
         $this->command->info('Category Seeder table seeded!,  created successfully.');
         $this->command->info('Country Seeder table seeded!,  created successfully.');
         $this->command->info('Currency Seeder table seeded!,  created successfully.');

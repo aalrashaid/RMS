@@ -97,4 +97,12 @@ class HasNutritionFactsRecipeCards extends Model
     {
         return $this->hasMany(RecipeCard::class);
     }
+
+    /**
+     * The Wirting All Function 
+     */
+
+    /**
+     * 
+     */
 }

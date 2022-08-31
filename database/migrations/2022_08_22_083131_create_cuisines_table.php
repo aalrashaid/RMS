@@ -13,19 +13,22 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('Genders', function (Blueprint $table) {
+        Schema::create('Cuisines', function (Blueprint $table) {
 
-            // static data Genders
-            
+            // static data Cuisines
+
+            $table->charset = 'utf8mb4';
+            $table->collation = 'utf8mb4_unicode_ci';
             $table->engine = 'InnoDB';
-            $table->charset = 'utf8';
-            $table->collation = 'utf8_general_ci';
 
             $table->id()->comment('The primary Key');
 
-            //Foreing Key id
-            $table->string('Name')->nullable()->comment('The name of the unit');
+            $table->string('Name')->nullable()->comment('Name Of Cuisines');
+            $table->string('Slug')->unique()->comment('Slug Of Cuisines');
+            $table->text('Description')->nullable()->comment('the Description  of Cuisines');
+
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
@@ -36,6 +39,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('genders');
+        Schema::dropIfExists('cuisines');
     }
 };

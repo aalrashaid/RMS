@@ -1,40 +1,12 @@
-<nav class="navbar navbar-expand-lg bg-light">
-    <div class="container-fluid">
-        <img src="" alt="" width="30" height="24" class="d-inline-block align-text-top">
-        <a class="navbar-brand" href="{{ route('dashboard') }}">{{ config('app.name', 'Laravel') }}</a>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{ route('dashboard') }}">Dashboard</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Dropdown link
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ route('Brands.index') }}">Brands</a></li>
-                        <li><a class="dropdown-item" href="{{ route('Inventory.index') }}">Inventory</a></li>
-                        <li><a class="dropdown-item" href="{{ route('Menu.index') }}">Menu</a></li>
-                        <li><a class="dropdown-item" href="{{ route('RecipeCard.index') }}">RecipeCard</a></li>
-                        <li><a class="dropdown-item" href="{{ route('RecipeCosts.index') }}">RecipeCosts</a></li>
-                        <li><a class="dropdown-item" href="{{ route('Supplier.index') }}">Supplier</a></li>
-                        <li><a class="dropdown-item" href="{{ route('SupplierItem.index') }}">SupplierItem</a></li>
-                    </ul>
-                </li>
-                <!-- Authentication -->
-                <form method="POST" action="{{ route('logout') }}">
-                    @csrf
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('logout') }}">log out</a>
-                    </li>
-                </form>
-            </ul>
-        </div>
+<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">Company name</a>
+  <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <input class="form-control form-control-dark w-100 rounded-0 border-0" type="text" placeholder="Search" aria-label="Search">
+  <div class="navbar-nav">
+    <div class="nav-item text-nowrap">
+      <a class="nav-link px-3" href="#">Sign out</a>
     </div>
-</nav>
+  </div>
+</header>

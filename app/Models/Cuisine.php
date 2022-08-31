@@ -1,10 +1,5 @@
 <?php
 
-/**
- * This Models Class Relationship With Recipe Costs Models Part
- */
-
-
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -12,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 use Cviebrock\EloquentSluggable\Sluggable;
 
-class HasIngredientsRecipeCards extends Model
+class Cuisine extends Model
 {
     use HasFactory;
     use Sluggable;
@@ -22,7 +17,7 @@ class HasIngredientsRecipeCards extends Model
      *
      * @var string
      */
-    protected $table = 'Has_Ingredients_Recipe_Cards';
+    protected $table = 'Cuisines';
 
     /**
      * The primary key associated with the table.
@@ -51,11 +46,9 @@ class HasIngredientsRecipeCards extends Model
      * @var array
      */
     protected $fillable = [
-        'Recipe_Card_Id',
-        'Ingredients_Name',
-        'Ingredients_Unit',
-        'Ingredients_Unit_Name',
-        
+        'Name',
+        'Slug',
+        'Description',
     ];
 
     /**
@@ -66,33 +59,9 @@ class HasIngredientsRecipeCards extends Model
     public function sluggable(): array
     {
         return [
-            'slug' => [
+            'Slug' => [
                 'source' => 'Name'
             ]
         ];
     }
-
-    /**
-     * Eloquent Relationships
-     * Type:belongsTo
-     */
-
-    /**
-     * Eloquent Relationships
-     * Type: Has One or Has Many
-     */
-
-    /**
-     * Get the Recipe Card associated with the Has Ingredients Recipe Cards.
-     */
-    public function recipecard()
-    {
-
-        return $this->hasMany(RecipeCard::class);
-    }
-
-    /**
-     * The Wirting All Function 
-     */
-    
 }

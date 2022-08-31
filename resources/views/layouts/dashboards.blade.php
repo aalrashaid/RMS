@@ -15,25 +15,11 @@
 
 <body class="">
     <div class="row">
-            {{-- <header>
+             
                 @include('dashboards.header')
-            </header> --}}
-
-            {{-- <main>
-                {{-- <section class="col-3">
-                    @include('dashboards.sidebar')
-                </section> --}}
-
-                 {{-- <section class="col-9">
-                    @yield('content')
-                 </section> --}}
+        
+                @include('dashboards.main')
                 
-           {{-- </main> --}}
-            @yield('content')
-
-           
-                {{-- @include('dashboards.footer') --}}
-            
         </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"

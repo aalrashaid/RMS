@@ -18,19 +18,25 @@ return new class extends Migration
             $table->collation = 'utf8mb4_unicode_ci';
             $table->engine = 'InnoDB';
 
-            $table->id();
+            $table->id()->comment('The primary Key');
 
             //Foreing Key id
 
             $table->foreignId('User_Id')->references('id')->on('users')
-                ->onUpdate('cascade')->onDelete('cascade')->comment('');
+            ->onUpdate('cascade')
+                ->onDelete('cascade')
+                ->comment('');
             $table->foreignId('Brands_Id')->references('id')->on('brands')
-                ->onUpdate('cascade')->onDelete('cascade')->comment('');
+                ->onUpdate('cascade')
+                ->onDelete('cascade')
+                ->comment('');
             //$table->foreignId('Category_Id')->references('id')->on('categories')
             //   ->onUpdate('cascade')->onDelete('cascade')->comment('');
 
             $table->foreignId('Recipe_Cards_Id')->references('id')->on('Recipe_Cards')
-            ->onUpdate('cascade')->onDelete('cascade')->comment('');
+            ->onUpdate('cascade')
+            ->onDelete('cascade')
+            ->comment('');
 
             $table->string('Name')->nullable()->comment('');
             $table->string('Slug')->nullable()->unique()->comment('');

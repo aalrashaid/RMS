@@ -15,13 +15,13 @@ return new class extends Migration
     {
         Schema::create('Countries', function (Blueprint $table) {
 
-            // static data categories
+            // static data Countries
 
             $table->engine = 'InnoDB';
             $table->charset = 'utf8';
             $table->collation = 'utf8_general_ci';;
 
-            $table->id();
+            $table->id()->comment('The primary Key');
 
             //Foreing Key id
             //$table->string('Iso')->nullable()->comment('The name of the unit');

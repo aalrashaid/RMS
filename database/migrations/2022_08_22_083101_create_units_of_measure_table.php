@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('Units_Of_Measure', function (Blueprint $table) {
 
-            // static data categories
+            // static data Units_Of_Measure
 
-            $table->id();
+            $table->id()->comment('The primary Key');
 
             //Foreing Key id
             

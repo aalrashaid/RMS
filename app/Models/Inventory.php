@@ -124,6 +124,6 @@ class Inventory extends Model
      * Inventory UID
      * Generator Random Inventory UID (A unique identifier)
      * Formula: YY - Time - Name - -Sequence Number
-     *  22-0336-TK-0001
+     * Example: 22-0336-TK-0001
      */
 }

@@ -26,7 +26,12 @@ return new class extends Migration
                 ->onUpdate('cascade')
                 ->onDelete('cascade')
                 ->comment('The foreign Key Id in Taleb In User');
-            
+
+            $table->foreignId('Cuisine_id')->nullable()->references('id')->on('cuisines')
+                ->onUpdate('cascade')
+                ->onDelete('cascade')
+                ->comment('The foreign Key Id in Taleb In cuisines');
+
             $table->string('Slug')->nullable()->unique()->comment('the Slug Links of Business Name Brands');
             $table->string('Name_Brand')->nullable()->unique()->comment('the Business Name Brands');
             $table->text('Description')->nullable()->comment('Description Text 288 Characters ');
@@ -45,7 +50,7 @@ return new class extends Migration
             $table->string('Youtube')->nullable()->comment('The Accunt Youtube Business');
             $table->string('Instagram')->nullable()->comment('The Accunt Instagram Business');
             $table->string('Twitter')->nullable()->comment('The Accunt Twitter Business');
-            
+
             $table->timestamps();
             $table->softDeletes($column = 'deleted_at', $precision = 0);
         });

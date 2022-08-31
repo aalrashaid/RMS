@@ -5,6 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+use App\Models\HasIngredientsRecipeCards;
+use App\Models\HasNutritionFactsRecipeCards;
+
 use Cviebrock\EloquentSluggable\Sluggable;
 
 class RecipeCard extends Model
@@ -136,4 +139,34 @@ class RecipeCard extends Model
     {
         return $this->hasOne(Thumbnails::class);
     }
+
+    /**
+     * The Wirting All Function 
+     */
+
+    /**
+     * Recipe UID
+     * Generator Random Recipe UID (A unique identifier)
+     * Formula:  Name Brands - YY - Time - Sequence Number
+     * Example:  MC-22-0351-00001
+     * Note: Be same Generator in Models RecipeCosts
+     */
+    public function generatorRecipeUID()
+    {
+        //
+    }
+
+    /**
+     * Recipe UID 
+     * Store in Tables function
+     */
+    public function storeRecipeUID()
+    {
+        //
+    }
+
+    /**
+     * 
+     */
+    
 }

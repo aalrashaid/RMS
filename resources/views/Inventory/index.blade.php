@@ -2,6 +2,9 @@
 
 
 @section('content')
+    <h1>Inventory </h1>
+    <a href="{{ route('Inventory.create')}}">Create</a>
+    <hr class="">
     <table class="table">
         <thead>
             <tr>
@@ -21,7 +24,7 @@
         <tbody class="table-group-divider">
             <tr>
                 {{-- @for ($i = 0; $i < $max; $i++) --}}
-                     <th scope="row">{{--{{ $i }}--}} 1</th> 
+                <th scope="row">{{-- {{ $i }} --}} 1</th>
                 {{-- @endfor --}}
                 <td>Inventory UID</td>
                 <td>Name Item</td>

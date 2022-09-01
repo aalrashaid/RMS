@@ -52,7 +52,7 @@ class RecipeCard extends Model
         'User_Id',
         'Brands_Id',
         'Thumbnail_Id',
-        'Recipe_UID',
+        //'Recipe_UID',
         'Title',
         'Slug',
         'Description',
@@ -166,7 +166,23 @@ class RecipeCard extends Model
     }
 
     /**
-     * 
+     * Nutrition Facts
+     * Calculator Calories Serving
+     */
+
+    /**
+     * Nutrition Facts
+     * Calculator Carbs Serving
+     */
+
+    /**
+     * Nutrition Facts
+     * Calculator Protein Serving
+     */
+
+    /**
+     * Nutrition Facts
+     * Calculator Fat Serving
      */
     
 }

@@ -32,6 +32,11 @@ return new class extends Migration
                 ->onDelete('cascade')
                 ->comment('The foreign Key Id in Taleb In cuisines');
 
+            $table->foreignId('Thumbnail_Id')->references('id')->on('thumbnails')
+                ->onUpdate('cascade')
+                ->onDelete('cascade')
+                ->comment('');
+
             $table->string('Slug')->nullable()->unique()->comment('the Slug Links of Business Name Brands');
             $table->string('Name_Brand')->nullable()->unique()->comment('the Business Name Brands');
             $table->text('Description')->nullable()->comment('Description Text 288 Characters ');

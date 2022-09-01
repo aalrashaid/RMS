@@ -7,6 +7,9 @@
         <div class="row">
 
             <h1>Infomation Brand</h1>
+
+            <a href="{{route('Brands.create')}}">Create</a>
+
             <hr>
             <div class="col-8">
                 
@@ -77,9 +80,9 @@
 
             <div class="col-4">
                 <div>
-                    <label class="form-label">
+                    
                         {Name Brand}
-                    </label>            
+                                
                 </div>
 
                 <div>

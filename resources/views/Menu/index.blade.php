@@ -2,6 +2,9 @@
 
 
 @section('content')
+    <h1>Menu</h1>
+    <a href="{{ route('Menu.create')}}">Ceater</a>
+    <hr>
     <table class="table">
         <thead>
             <tr>

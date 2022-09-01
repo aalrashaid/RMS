@@ -21,13 +21,13 @@ return new class extends Migration
             $table->id()->comment('The primary Key');
 
             //The Foreing Key id
-            $table->foreignId('Brands_id')->references('id')->on('brands')
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
+            //$table->foreignId('Brands_id')->references('id')->on('brands')
+              //  ->onUpdate('cascade')
+               // ->onDelete('cascade');
 
-            $table->foreignId('User_id')->references('id')->on('users')
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
+            //$table->foreignId('User_id')->references('id')->on('users')
+             //   ->onUpdate('cascade')
+              //  ->onDelete('cascade');
 
             $table->string('File_Name')->nullable()->comment('The name of File Images');
             $table->string('File_Size')->nullable()->comment('The name of File Size of Images');

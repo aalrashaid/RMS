@@ -23,11 +23,18 @@ return new class extends Migration
 
             //Foreing Key id
             $table->foreignId('User_Id')->references('id')->on('users')
-            ->onUpdate('cascade')->onDelete('cascade')->comment('');
+            ->onUpdate('cascade')
+            ->onDelete('cascade')
+            ->comment('');
+
             $table->foreignId('Brands_Id')->references('id')->on('brands')
-            ->onUpdate('cascade')->onDelete('cascade')->comment('');
+            ->onUpdate('cascade')
+            ->onDelete('cascade')
+            ->comment('');
             $table->foreignId('Supplier_Id')->references('id')->on('suppliers')
-            ->onUpdate('cascade')->onDelete('cascade')->comment('');
+            ->onUpdate('cascade')
+            ->onDelete('cascade')
+            ->comment('');
 
             $table->string('Item_UID')->comment('The name of the unit');
             $table->string('Item_Name')->comment('The name of the unit');

@@ -54,10 +54,14 @@ class HasRecipeCosts extends Model
         'Ingredients',
         'AP_Quantity',
         'AP_Recipe_Unit',
+        'AP_Recipe_Unit_Name',
         'AP_Unit_Cost',
         'EP_Recipe_Unit',
+        'EP_Recipe_Unit_Name',
         'EP_Unit_Cost',
         'EP_Yield',
+        'Extension',
+        'Total_Extension',
     ];
 
     /**
@@ -92,4 +96,13 @@ class HasRecipeCosts extends Model
         //Menus_Id
         return $this->hasMany(RecipeCosts::class);
     }
+
+    /**
+     * The Wirting All Function 
+     */
+
+    /**
+     * Nutrition Facts
+     * Calculator Carbs Serving
+     */
 }

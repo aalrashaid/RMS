@@ -46,7 +46,7 @@ class Supplier extends Model
      * @var array
      */
     protected $fillable = [
-        'Supplier_UID',
+        //'Supplier_UID',
         'Name_Supplier',
         'Company_Name',
         'Brand_Logo',

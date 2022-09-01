@@ -49,7 +49,7 @@ class Inventory extends Model
         'User_Id',
         'Brands_Id',
         'Supplier_Id',
-        'Inventory_UID',
+        //'Inventory_UID',
         'Name_Item',
         'Description_Item',
         'SKU',

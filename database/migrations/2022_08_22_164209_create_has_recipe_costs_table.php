@@ -25,15 +25,18 @@ return new class extends Migration
             $table->foreignId('Recipe_Costs_Id')->references('id')->on('recipe_costs')
             ->onUpdate('cascade')->onDelete('cascade')->comment('');
 
-            //$table->string('AP_Quantity');
+            //$table->string('Extension');
             $table->string('Ingredients')->nullable()->comment('');
             $table->integer('AP_Quantity')->nullable()->comment('');
             $table->float('AP_Recipe_Unit')->nullable()->comment('');
+            $table->string('AP_Recipe_Unit_Name')->nullable()->comment('');
             $table->double('AP_Unit_Cost')->nullable()->comment('');
             $table->float('EP_Recipe_Unit')->nullable()->comment('');
+            $table->string('EP_Recipe_Unit_Name');
             $table->double('EP_Unit_Cost')->nullable()->comment('');
             $table->float('EP_Yield')->nullable()->comment('');
-            //$table->string('Total');
+            $table->string('Extension')->nullable()->comment('');
+            $table->string('Total_Extension')->nullable()->comment('');
 
             $table->timestamps();
             $table->softDeletes($column = 'deleted_at', $precision = 0);

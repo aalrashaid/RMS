@@ -5,6 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+use App\Models\HasRecipeCosts;
+
 use Cviebrock\EloquentSluggable\Sluggable;
 
 class RecipeCosts extends Model
@@ -50,7 +52,7 @@ class RecipeCosts extends Model
         'Brands_Id',
         'Category_Id',
         'Menus_Id',
-        'Recipe_UID',
+        //'Recipe_UID',
         'Recipe_Name',
         'Date_At',
         'Patch',
@@ -124,5 +126,9 @@ class RecipeCosts extends Model
         //Menus_Id
         return $this->hasOne(Menu::class);
     }
+
+    /**
+     * The Wirting All Function 
+     */
     
 }

@@ -25,8 +25,16 @@ return new class extends Migration
             ->onUpdate('cascade')
             ->onDelete('cascade')
             ->comment('The foreign Key Id in Taleb In User');
+            
             $table->foreignId('Brands_Id')->references('id')->on('brands')
-            ->onUpdate('cascade')->onDelete('cascade')->comment('');
+            ->onUpdate('cascade')
+            ->onDelete('cascade')
+            ->comment('');
+
+            $table->foreignId('Thumbnail_Id')->references('id')->on('thumbnails')
+                ->onUpdate('cascade')
+                ->onDelete('cascade')
+                ->comment('');
             
             //$table->text('Description');
             $table->string('Supplier_UID')->comment('The name of the unit');

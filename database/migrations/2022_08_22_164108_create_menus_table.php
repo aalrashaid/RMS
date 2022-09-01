@@ -26,12 +26,21 @@ return new class extends Migration
             ->onUpdate('cascade')
                 ->onDelete('cascade')
                 ->comment('');
+
             $table->foreignId('Brands_Id')->references('id')->on('brands')
                 ->onUpdate('cascade')
                 ->onDelete('cascade')
                 ->comment('');
-            //$table->foreignId('Category_Id')->references('id')->on('categories')
-            //   ->onUpdate('cascade')->onDelete('cascade')->comment('');
+
+            $table->foreignId('Category_Id')->references('id')->on('categories')
+                ->onUpdate('cascade')
+                ->onDelete('cascade')
+                ->comment('');
+
+            $table->foreignId('Thumbnail_Id')->references('id')->on('thumbnails')
+            ->onUpdate('cascade')
+            ->onDelete('cascade')
+            ->comment('');
 
             $table->foreignId('Recipe_Cards_Id')->references('id')->on('Recipe_Cards')
             ->onUpdate('cascade')

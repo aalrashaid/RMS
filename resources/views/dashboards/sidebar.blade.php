@@ -8,43 +8,43 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('Brands.index')}}">
+                <a class="nav-link" href="{{ route('Brands.index') }}">
                     <span data-feather="file" class="align-text-bottom"></span>
                     Brands
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{{ route('Inventory.index') }}">
                     <span data-feather="shopping-cart" class="align-text-bottom"></span>
                     Inventory
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{{ route('Menu.index') }}">
                     <span data-feather="users" class="align-text-bottom"></span>
                     Menu
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{{ route('RecipeCard.index')}}">
                     <span data-feather="bar-chart-2" class="align-text-bottom"></span>
                     Recipe Card
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{{ route('RecipeCosts.index')}}">
                     <span data-feather="layers" class="align-text-bottom"></span>
                     Recipe Costs
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{{route('Supplier.index')}}">
                     <span data-feather="layers" class="align-text-bottom"></span>
                     Supplier
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{{route('SupplierItem.index')}}">
                     <span data-feather="layers" class="align-text-bottom"></span>
                     Supplier Item
                 </a>

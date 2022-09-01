@@ -51,10 +51,10 @@ class HasNutritionFactsRecipeCards extends Model
      */
     protected $fillable = [
         'Recipe_Cards_Id',
-        'Calories_Serving',
-        'Carbs_Serving',
-        'Protein_Serving',
-        'Fat_Serving',
+        //'Calories_Serving',
+        //'Carbs_Serving',
+        //'Protein_Serving',
+        //'Fat_Serving',
         'Ingredients_Name',
         'Calories_Unit',
         'Calories_Unit_Name',
@@ -105,4 +105,5 @@ class HasNutritionFactsRecipeCards extends Model
     /**
      * 
      */
+    
 }

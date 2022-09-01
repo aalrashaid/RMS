@@ -1,13 +1,15 @@
 @extends('layouts.dashboards')
 
 @section('content')
+<h1>Recipe Card</h1>
+<a href="{{ route('RecipeCard.create')}}"> Create</a>
     <table class="table">
         <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
+                <th scope="col">Recipe UID</th>
+                <th scope="col">Title</th>
+                <th scope="col">Description</th>
             </tr>
         </thead>
         <tbody class="table-group-divider">

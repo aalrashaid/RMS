@@ -35,9 +35,10 @@ return new class extends Migration
             $table->foreignId('Thumbnail_Id')->references('id')->on('thumbnails')
                 ->onUpdate('cascade')
                 ->onDelete('cascade')
-                ->comment('');
+                ->comment('The foreign Key Id in Taleb In thumbnails');
 
             $table->string('Slug')->nullable()->unique()->comment('the Slug Links of Business Name Brands');
+            $table->string('Brand_UID')->nullable()->unique()->comment('the Brand Unique identifier');
             $table->string('Name_Brand')->nullable()->unique()->comment('the Business Name Brands');
             $table->text('Description')->nullable()->comment('Description Text 288 Characters ');
             $table->string('Brand_Loga')->nullable()->comment('the Files images brands Loags ');

@@ -26,27 +26,35 @@ return new class extends Migration
 
             //Foreing Key id
             $table->foreignId('User_Id')->references('id')->on('users')
-            ->onUpdate('cascade')->onDelete('cascade')->comment('');
-            $table->foreignId('Brands_Id')->references('id')->on('brands')
-            ->onUpdate('cascade')->onDelete('cascade')->comment('');
-            $table->foreignId('Supplier_Items_ID')->references('id')->on('Supplier_Items')
-            ->onUpdate('cascade')->onDelete('cascade')->comment('');
+                ->onUpdate('cascade')
+                ->onDelete('cascade')
+                ->comment('');
 
-            $table->string('Inventory_UID')->nullable()->unique()->comment('The name of the unit');
-            $table->string('Name_Item')->nullable()->comment('The name of the unit');
+            $table->foreignId('Brands_Id')->references('id')->on('brands')
+                ->onUpdate('cascade')
+                ->onDelete('cascade')
+                ->comment('');
+
+            $table->foreignId('Supplier_Items_ID')->references('id')->on('Supplier_Items')
+            ->onUpdate('cascade')
+                ->onDelete('cascade')
+                ->comment('');
+
+            $table->string('Inventory_UID')->nullable()->unique()->comment('Inventory of Unique identifier');
+            $table->string('Name_Item')->nullable()->comment('The Name Item');
             //$table->string('Description_Item')->comment('The name of the unit');
-            $table->string('SKU')->nullable()->unique()->comment('The name of the unit');
-            $table->integer('Barcode')->nullable()->unique()->comment('The name of the unit');
-            $table->integer('Serial_Number')->nullable()->unique()->comment('The name of the unit');
-            $table->string('Category_Item')->nullable()->comment('The name of the unit');
-            $table->string('Item_Size')->nullable()->comment('The name of the unit');
-            $table->double('Unit_Price')->nullable()->comment('The name of the unit');
-            $table->integer('Quantity_In_Stock')->nullable()->comment('The name of the unit');
-            $table->integer('Inventory_Value')->nullable()->comment('The name of the unit');
-            $table->enum('Stock_Status', ['In Stock', 'Only %s left in stock', 'Can be Backordered', 'Available On Backorder', 'Out Of Stock'])->nullable()->comment('The name of the unit');
-            $table->string('Reorder_Level')->nullable()->comment('The name of the unit');
-            $table->integer('Reorder_Time_In_Days')->nullable()->comment('The name of the unit');
-            $table->integer('Quantity_In_Reorder')->nullable()->comment('The name of the unit');
+            $table->string('SKU')->nullable()->unique()->comment(' SKU for Inventory - Stock Keeping Unit (SKU)? SKU (pronounced “skew”), short for stock keeping unit, is used by retailers to identify and track its inventory, or stock. A SKU is a unique code consisting of letters and numbers that identify characteristics about each product, such as manufacturer, brand, style, color, and size');
+            $table->integer('Barcode')->nullable()->unique()->comment(' for Barcode Inventory');
+            $table->integer('Serial_Number')->nullable()->unique()->comment('for Barcode Inventoryt');
+            $table->string('Category_Item')->nullable()->comment('for  Category Item Inventoryt');
+            $table->string('Item_Size')->nullable()->comment('for Inventory The Item OF Size  Bag, Box, Lb, Oz, etc. ');
+            $table->double('Unit_Price')->nullable()->comment('for Inventory Unit Price');
+            $table->integer('Quantity_In_Stock')->nullable()->comment('for Inventory Quantity In Stock');
+            $table->integer('Inventory_Value')->nullable()->comment(' For Inventory Value');
+            $table->enum('Stock_Status', ['In Stock', 'Only %s left in stock', 'Can be Backordered', 'Available On Backorder', 'Out Of Stock'])->nullable()->comment('Stock Status');
+            $table->string('Reorder_Level')->nullable()->comment(' For Inventory Reorder Level');
+            $table->integer('Reorder_Time_In_Days')->nullable()->comment('For Inventory ');
+            $table->integer('Quantity_In_Reorder')->nullable()->comment('For Inventory ');
 
             $table->timestamps();
             $table->softDeletes($column = 'deleted_at', $precision = 0);

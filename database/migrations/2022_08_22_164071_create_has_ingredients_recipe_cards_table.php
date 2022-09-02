@@ -26,7 +26,7 @@ return new class extends Migration
             $table->foreignId('Recipe_Card_Id')->references('id')->on('recipe_cards')
             ->onUpdate('cascade')
                 ->onDelete('cascade')
-                ->comment('The foreign Key Id in Taleb In cuisines');
+            ->comment('The foreign Key Id in Taleb In recipe cards');
 
             $table->string('Ingredients_Name')->nullable()->comment('The Name of Ingredients ');
             $table->float('Ingredients_Unit')->nullable()->comment('The Unit Number of Ingredients (0.800 g) ');

@@ -25,22 +25,22 @@ return new class extends Migration
             $table->foreignId('User_Id')->references('id')->on('users')
             ->onUpdate('cascade')
             ->onDelete('cascade')
-            ->comment('');
+                ->comment('The foreign Key Id in Taleb In users');
 
             $table->foreignId('Brands_Id')->references('id')->on('brands')
                 ->onUpdate('cascade')
                 ->onDelete('cascade')
-                ->comment('');
-
-            $table->foreignId('Thumbnail_Id')->references('id')->on('thumbnails')
-                ->onUpdate('cascade')
-                ->onDelete('cascade')
-                ->comment('');
+                ->comment('The foreign Key Id in Taleb In brands');
 
             $table->foreignId('Cuisine_id')->nullable()->references('id')->on('cuisines')
                 ->onUpdate('cascade')
                 ->onDelete('cascade')
-                ->comment('The foreign Key Id in Taleb In cuisines');
+            ->comment('The foreign Key Id in Taleb In cuisines');
+
+            $table->foreignId('Thumbnail_Id')->references('id')->on('thumbnails')
+                ->onUpdate('cascade')
+                ->onDelete('cascade')
+                ->comment('The foreign Key Id in Taleb In thumbnails');
 
             $table->string('Title')->nullable()->comment('The title Of Recipe Cards and be Name  ');
             $table->string('Slug')->nullable()->unique()->comment(' The Slugs to used for Links and routes');

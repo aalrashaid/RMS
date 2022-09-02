@@ -25,32 +25,32 @@ return new class extends Migration
             $table->foreignId('User_Id')->references('id')->on('users')
             ->onUpdate('cascade')
                 ->onDelete('cascade')
-                ->comment('');
-
-            $table->foreignId('Brands_Id')->references('id')->on('brands')
-                ->onUpdate('cascade')
-                ->onDelete('cascade')
-                ->comment('');
+            ->comment('The foreign Key Id in Taleb In recipe cards');
 
             $table->foreignId('Category_Id')->references('id')->on('categories')
                 ->onUpdate('cascade')
                 ->onDelete('cascade')
-                ->comment('');
+                ->comment('The foreign Key Id in Taleb In recipe cards');
 
             $table->foreignId('Thumbnail_Id')->references('id')->on('thumbnails')
-            ->onUpdate('cascade')
-            ->onDelete('cascade')
-            ->comment('');
+                ->onUpdate('cascade')
+                ->onDelete('cascade')
+                ->comment('The foreign Key Id in Taleb In recipe cards');
+
+            $table->foreignId('Brands_Id')->references('id')->on('brands')
+                ->onUpdate('cascade')
+                ->onDelete('cascade')
+                ->comment('The foreign Key Id in Taleb In recipe cards');
 
             $table->foreignId('Recipe_Cards_Id')->references('id')->on('Recipe_Cards')
             ->onUpdate('cascade')
-            ->onDelete('cascade')
-            ->comment('');
+                ->onDelete('cascade')
+                ->comment('The foreign Key Id in Taleb In recipe cards');
 
-            $table->string('Name')->nullable()->comment('');
-            $table->string('Slug')->nullable()->unique()->comment('');
-            $table->text('Description')->nullable()->comment('');
-            $table->double('Price')->nullable()->comment('');
+            $table->string('Name')->nullable()->commentُ('the Name of Reicpe ');
+            $table->string('Slug')->nullable()->unique()->comment('The SLugs for Menu to route links used ');
+            $table->text('Description')->nullable()->comment('The Reicpe of Description ');
+            $table->double('Price')->nullable()->comment('The Price  of Reicpe');
             $table->timestamps();
             $table->softDeletes($column = 'deleted_at', $precision = 0);
         });

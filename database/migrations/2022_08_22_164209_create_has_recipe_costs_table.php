@@ -21,22 +21,24 @@ return new class extends Migration
             $table->id()->comment('The primary Key');
 
             //Foreing Key id
-            
+
             $table->foreignId('Recipe_Costs_Id')->references('id')->on('recipe_costs')
-            ->onUpdate('cascade')->onDelete('cascade')->comment('');
+            ->onUpdate('cascade')
+            ->onDelete('cascade')
+                ->comment('');
 
             //$table->string('Extension');
-            $table->string('Ingredients')->nullable()->comment('');
-            $table->integer('AP_Quantity')->nullable()->comment('');
-            $table->float('AP_Recipe_Unit')->nullable()->comment('');
-            $table->string('AP_Recipe_Unit_Name')->nullable()->comment('');
-            $table->double('AP_Unit_Cost')->nullable()->comment('');
-            $table->float('EP_Recipe_Unit')->nullable()->comment('');
-            $table->string('EP_Recipe_Unit_Name');
-            $table->double('EP_Unit_Cost')->nullable()->comment('');
-            $table->float('EP_Yield')->nullable()->comment('');
-            $table->string('Extension')->nullable()->comment('');
-            $table->string('Total_Extension')->nullable()->comment('');
+            $table->string('Ingredients')->nullable()->comment('any of the foods or substances that are combined to make a particular dish.');
+            $table->integer('AP_Quantity')->nullable()->comment('As purchased (AP) is the portion of food that is in the raw state before any cutting, processing, or cooking has occurred.');
+            $table->float('AP_Recipe_Unit')->nullable()->comment('The Number of Ingredients  wieht 700 g');
+            $table->string('AP_Recipe_Unit_Name')->nullable()->comment('The Unit of Ingredients  gram or else ');
+            $table->double('AP_Unit_Cost')->nullable()->comment('The  Costing of Ingredients');
+            $table->float('EP_Recipe_Unit')->nullable()->comment('Some ingredients are used As Purchased (AP) – Flour, sugar, butter, ground beef. • For others, we use only the Edible Portion (EP)');
+            $table->string('EP_Recipe_Unit_Name')->nullable()->comment('The Number of Ingredients  wieht 700 g  As Purchased  ');
+            $table->double('EP_Unit_Cost')->nullable()->comment('The Unit of Ingredients  gram or else ');
+            $table->float('EP_Yield_Percentage')->nullable()->comment('Get your yield percentage by converting the edible product weight into a percentage. The formula is EP weight ÷ AP weight × 100 = yield %');
+            $table->string('Extension')->nullable()->comment('Calculating recipes costs can be an eye opening experience.');
+            $table->string('Total_Extension')->nullable()->comment('Calculating recipes costs Total experience. ');
 
             $table->timestamps();
             $table->softDeletes($column = 'deleted_at', $precision = 0);

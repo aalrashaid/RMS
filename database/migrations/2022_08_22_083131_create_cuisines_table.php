@@ -24,7 +24,7 @@ return new class extends Migration
             $table->id()->comment('The primary Key');
 
             $table->string('Name')->nullable()->comment('Name Of Cuisines');
-            $table->string('Slug')->unique()->comment('Slug Of Cuisines');
+            $table->string('Slug')->unique()->comment('Slug Of Cuisines links in Route');
             $table->text('Description')->nullable()->comment('the Description  of Cuisines');
 
             $table->timestamps();

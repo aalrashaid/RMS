@@ -43,7 +43,9 @@ return new class extends Migration
                 ->comment('The foreign Key Id in Taleb In menus');
 
             $table->foreignId('Recipe_Card_Id')->references('id')->on('recipe_cards')
-            ->onUpdate('cascade')->onDelete('cascade')->comment('The foreign Key Id in Taleb In recipe cards');
+            ->onUpdate('cascade')
+                ->onDelete('cascade')
+                ->comment('The foreign Key Id in Taleb In recipe cards');
 
             $table->string('Recipe_UID')->nullable()->unique()->comment('Recipe Unique identifier ');
             $table->string('Recipe_Name')->nullable()->comment('The Recipe Name ');

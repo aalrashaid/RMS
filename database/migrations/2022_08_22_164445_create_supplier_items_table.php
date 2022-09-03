@@ -52,7 +52,7 @@ return new class extends Migration
             $table->string('Barcode')->nullable()->comment('A barcode or bar code is a method of representing data in a visual, machine-readable form. Initially, barcodes represented data by varying the widths, spacings and sizes of parallel lines.');
             $table->string('Serial_Number')->nullable()->comment('A serial number is a unique identifier assigned incrementally or sequentially to an item, to uniquely identify it. Serial numbers need not be strictly numerical. They may contain letters and other typographical symbols, or may consist entirely of a character string');
 
-            // $table->double('Price')->comment('The name of the unit');
+            $table->double('Item_Unit_Price')->comment('The name of the unit');
             //$table->integer('Quantity')->comment('The name of the unit');
             //$table->double('Total')->comment('The name of the unit');
 

@@ -51,8 +51,11 @@ class Brands extends Model
      */
     protected $fillable = [
         'user_id',
-        'Name_Brand',
+        'Cuisine_id',
+        'Thumbnail_Id',
         'Slug',
+        'Brand_UID',
+        'Name_Brand',
         'Description',
         'Brand_Logas',
         'Address',

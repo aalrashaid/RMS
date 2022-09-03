@@ -48,7 +48,7 @@ return new class extends Migration
             $table->integer('Serial_Number')->nullable()->unique()->comment('for Barcode Inventoryt');
             $table->string('Category_Item')->nullable()->comment('for  Category Item Inventoryt');
             $table->string('Item_Size')->nullable()->comment('for Inventory The Item OF Size  Bag, Box, Lb, Oz, etc. ');
-            $table->double('Unit_Price')->nullable()->comment('for Inventory Unit Price');
+            $table->double('Item_Unit_Price')->nullable()->comment('for Inventory Unit Price');
             $table->integer('Quantity_In_Stock')->nullable()->comment('for Inventory Quantity In Stock');
             $table->integer('Inventory_Value')->nullable()->comment(' For Inventory Value');
             $table->enum('Stock_Status', ['In Stock', 'Only %s left in stock', 'Can be Backordered', 'Available On Backorder', 'Out Of Stock'])->nullable()->comment('Stock Status');

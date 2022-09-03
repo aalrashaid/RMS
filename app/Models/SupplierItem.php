@@ -47,8 +47,10 @@ class SupplierItem extends Model
      */
     protected $fillable = [
         'User_Id',
+        'Thumbnail_Id',
         'Brands_Id',
         'Supplier_Id',
+        'Item_UID',
         'Item_Name',
         'Item_Description',
         'Category_Item',
@@ -56,6 +58,7 @@ class SupplierItem extends Model
         'SKU',
         'UPC',
         'Barcode',
+        'Serial_Number',
         'Item_Unit_Price',
         
         //'Price',

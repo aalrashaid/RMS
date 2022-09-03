@@ -49,6 +49,7 @@ class Menu extends Model
         'User_Id',
         'Brands_Id',
         'Category_Id',
+        'Thumbnail_Id',
         'Recipe_Cards_Id',
         'Name',
         'Slug',

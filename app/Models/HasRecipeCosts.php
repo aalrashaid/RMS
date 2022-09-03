@@ -51,6 +51,7 @@ class HasRecipeCosts extends Model
      */
     protected $fillable = [
         'Recipe_Costs_Id',
+
         'Ingredients',
         'AP_Quantity',
         'AP_Recipe_Unit',
@@ -59,7 +60,7 @@ class HasRecipeCosts extends Model
         'EP_Recipe_Unit',
         'EP_Recipe_Unit_Name',
         'EP_Unit_Cost',
-        'EP_Yield',
+        'EP_Yield_Percentage',
         'Extension',
         'Total_Extension',
     ];

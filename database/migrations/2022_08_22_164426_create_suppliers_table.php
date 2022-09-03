@@ -31,10 +31,10 @@ return new class extends Migration
                 ->onDelete('cascade')
                 ->comment('The foreign Key Id in Taleb In thumbnails');
 
-            $table->foreignId('Brands_Id')->references('id')->on('brands')
-            ->onUpdate('cascade')
-            ->onDelete('cascade')
-            ->comment('The foreign Key Id in Taleb In brands');
+            // $table->foreignId('Brands_Id')->references('id')->on('brands')
+            // ->onUpdate('cascade')
+            // ->onDelete('cascade')
+            // ->comment('The foreign Key Id in Taleb In brands');
 
             //$table->text('Description');
             $table->string('Slug')->nullable()->unique()->comment('the Slug Links of Business Name Suppliers');

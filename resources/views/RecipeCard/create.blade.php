@@ -116,11 +116,11 @@
         </div>
 
         <div class="form-floating mb-3">
-            <input type="text" name="Servings" id="Servings"
-                class="form-control @error('Servings') is-invalid @enderror" value="{{ old('Servings') }}"
-                placeholder="Servings" required>
-            <label for="Servings">Servings:</label>
-            @error('Servings')
+            <input type="text" name="Serves" id="Serves"
+                class="form-control @error('Serves') is-invalid @enderror" value="{{ old('Serves') }}"
+                placeholder="Serves" required>
+            <label for="Serves">Serves:</label>
+            @error('Serves')
                 <span class="text-danger">{{ $message }}</span>
             @enderror
         </div>
@@ -199,7 +199,7 @@
                 <div class="form-floating mb-3">
                     <input type="text" name="Calories_Serving" id="Calories_Serving"
                         class="form-control @error('Calories_Serving') is-invalid @enderror"
-                        value="{{ old('Calories_Serving') }}" placeholder="Calories_Serving">
+                        value="{{ old('Calories_Serving') }}" placeholder="Calories Serving Automatic">
                     <label for="Calories_Serving">Calories Serving:</label>
                     @error('Calories_Serving')
                         <span class="text-danger">{{ $message }}</span>
@@ -209,7 +209,7 @@
                 <div class="form-floating mb-3">
                     <input type="text" name="Carbs_Serving" id="Carbs_Serving"
                         class="form-control @error('Carbs_Serving') is-invalid @enderror"
-                        value="{{ old('Carbs_Serving') }}" placeholder="Carbs_Serving" >
+                        value="{{ old('Carbs_Serving') }}" placeholder="Carbs Serving Automatic" >
                     <label for="Carbs_Serving">Carbs Serving:</label>
                     @error('Carbs_Serving')
                         <span class="text-danger">{{ $message }}</span>
@@ -219,7 +219,7 @@
                 <div class="form-floating mb-3">
                     <input type="text" name="Protein_Serving" id="Protein_Serving"
                         class="form-control @error('Protein_Serving') is-invalid @enderror"
-                        value="{{ old('Protein_Serving') }}" placeholder="Protein_Serving" >
+                        value="{{ old('Protein_Serving') }}" placeholder="Protein Serving Automatic" >
                     <label for="Protein_Serving">Protein Serving:</label>
                     @error('Protein_Serving')
                         <span class="text-danger">{{ $message }}</span>
@@ -239,7 +239,7 @@
                 <div class="form-floating mb-3">
                     <input type="text" name="Ingredients_Name" id="Ingredients_Name"
                         class="form-control @error('Ingredients_Name') is-invalid @enderror"
-                        value="{{ old('Ingredients_Name') }}" placeholder="Ingredients_Name" required>
+                        value="{{ old('Ingredients_Name') }}" placeholder="Ingredients Name" required>
                     <label for="Ingredients_Name">Ingredients Name:</label>
                     @error('Ingredients_Name')
                         <span class="text-danger">{{ $message }}</span>
@@ -249,7 +249,7 @@
                 <div class="form-floating mb-3">
                     <input type="text" name="Calories_Unit" id="Calories_Unit"
                         class="form-control @error('Calories_Unit') is-invalid @enderror"
-                        value="{{ old('Calories_Unit') }}" placeholder="Calories_Unit" required>
+                        value="{{ old('Calories_Unit') }}" placeholder="Calories Unit" required>
                     <label for="Calories_Unit">Calories Unit:</label>
                     @error('Calories_Unit')
                         <span class="text-danger">{{ $message }}</span>
@@ -259,7 +259,7 @@
                 <div class="form-floating mb-3">
                     <input type="text" name="Calories_Unit_Name" id="Calories_Unit_Name"
                         class="form-control @error('Calories_Unit_Name') is-invalid @enderror"
-                        value="{{ old('Calories_Unit_Name') }}" placeholder="Calories_Unit_Name" required>
+                        value="{{ old('Calories_Unit_Name') }}" placeholder="Calories Unit Name" required>
                     <label for="Calories_Unit_Name">Calories Unit Name:</label>
                     @error('Calories_Unit_Name')
                         <span class="text-danger">{{ $message }}</span>
@@ -269,7 +269,7 @@
                 <div class="form-floating mb-3">
                     <input type="text" name="Carbs_Unit" id="Carbs_Unit"
                         class="form-control @error('Carbs_Unit') is-invalid @enderror" value="{{ old('Carbs_Unit') }}"
-                        placeholder="Carbs_Unit" required>
+                        placeholder="Carbs Unit" required>
                     <label for="Carbs_Unit">Carbs Unit:</label>
                     @error('Carbs_Unit')
                         <span class="text-danger">{{ $message }}</span>
@@ -279,9 +279,9 @@
                 <div class="form-floating mb-3">
                     <input type="text" name="Carbs_Unit_Name" id="Carbs_Unit_Name"
                         class="form-control @error('Carbs_Unit_Name') is-invalid @enderror"
-                        value="{{ old('Carbs_Unit_Name') }}" placeholder="Carbs_Unit_Name" required>
+                        value="{{ old('Carbs_Unit_Name') }}" placeholder="Carbs Unit Name" required>
                     <label for="Carbs_Unit_Name">Carbs Unit Name:</label>
-                    @error('Carbs_Unit')
+                    @error('Carbs_Unit_Name')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
                 </div>
@@ -289,7 +289,7 @@
                 <div class="form-floating mb-3">
                     <input type="text" name="Protein_Unit" id="Protein_Unit"
                         class="form-control @error('Protein_Unit') is-invalid @enderror"
-                        value="{{ old('Protein_Unit') }}" placeholder="Protein_Unit" required>
+                        value="{{ old('Protein_Unit') }}" placeholder="Protein Unit" required>
                     <label for="Protein_Unit">Protein Unit:</label>
                     @error('Protein_Unit')
                         <span class="text-danger">{{ $message }}</span>
@@ -299,7 +299,7 @@
                 <div class="form-floating mb-3">
                     <input type="text" name="Protein_Unit_Name" id="Protein_Unit_Name"
                         class="form-control @error('Protein_Unit_Name') is-invalid @enderror"
-                        value="{{ old('Protein_Unit_Name') }}" placeholder="Protein_Unit_Name" required>
+                        value="{{ old('Protein_Unit_Name') }}" placeholder="Protein Unit Name" required>
                     <label for="Protein_Unit_Name">Protein Unit Name:</label>
                     @error('Protein_Unit_Name')
                         <span class="text-danger">{{ $message }}</span>
@@ -309,7 +309,7 @@
                 <div class="form-floating mb-3">
                     <input type="text" name="Fat_Unit" id="Fat_Unit"
                         class="form-control @error('Fat_Unit') is-invalid @enderror" value="{{ old('Fat_Unit') }}"
-                        placeholder="Fat_Unit" required>
+                        placeholder="Fat Unit" required>
                     <label for="Fat_Unit">Fat Unit:</label>
                     @error('Fat_Unit')
                         <span class="text-danger">{{ $message }}</span>
@@ -319,7 +319,7 @@
                 <div class="form-floating mb-3">
                     <input type="text" name="Fat_Unit_Name" id="Fat_Unit_Name"
                         class="form-control @error('Fat_Unit_Name') is-invalid @enderror"
-                        value="{{ old('Fat_Unit_Name') }}" placeholder="Fat_Unit_Name" required>
+                        value="{{ old('Fat_Unit_Name') }}" placeholder="Fat Unit Name" required>
                     <label for="Fat_Unit_Name">Fat Unit Name:</label>
                     @error('Fat_Unit_Name')
                         <span class="text-danger">{{ $message }}</span>

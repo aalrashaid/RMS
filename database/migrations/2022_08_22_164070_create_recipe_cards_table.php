@@ -52,7 +52,7 @@ return new class extends Migration
             $table->dateTime('Prep_Time')->nullable()->comment('The Time for prep 00:25 only minit ');
             $table->dateTime('Cook_Time')->nullable()->comment('The Time for Cooking  00:25 only minit');
             $table->dateTime('Time_Total')->nullable()->comment('The Total of Time prep + Cooking ');
-            $table->integer('Servings')->nullable()->comment('the number of peoples of serving 1 to 10  ');
+            $table->integer('Serves')->nullable()->comment('the number of peoples of serving 1 to 10  ');
             //$table->string('yield')->nullable()->comment('');
             //$table->text('ingredients')->nullable()->comment('');
             $table->text('Directions')->nullable()->comment('direction is knowledge of where you are going and how to get where you want to end up');

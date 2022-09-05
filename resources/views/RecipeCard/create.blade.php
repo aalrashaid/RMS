@@ -18,11 +18,12 @@
 
         @csrf
 
+        {{-- this will be disabled --}}
         <div class="form-floating mb-3">
             <input type="text" name="Recipe_UID" id="Recipe_UID"
                 class="form-control @error('Recipe_UID') is-invalid @enderror" value="{{ old('Recipe_UID') }}"
-                placeholder="Recipe_UID" disabled>
-            <label for="Recipe_UID">Recipe UID:</label>
+                placeholder="Recipe_UID" >
+            <label for="Recipe UID">Recipe UID:</label>
             @error('Recipe_UID')
                 <span class="text-danger">{{ $message }}</span>
             @enderror
@@ -194,41 +195,41 @@
             <form name="" id="" action="" method="post">
 
                 @csrf
-
+                {{-- this text will be Disabled --}}
                 <div class="form-floating mb-3">
                     <input type="text" name="Calories_Serving" id="Calories_Serving"
                         class="form-control @error('Calories_Serving') is-invalid @enderror"
-                        value="{{ old('Calories_Serving') }}" placeholder="Calories_Serving" disabled>
+                        value="{{ old('Calories_Serving') }}" placeholder="Calories_Serving">
                     <label for="Calories_Serving">Calories Serving:</label>
                     @error('Calories_Serving')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
                 </div>
-
+                {{-- this text will be Disabled --}}
                 <div class="form-floating mb-3">
                     <input type="text" name="Carbs_Serving" id="Carbs_Serving"
                         class="form-control @error('Carbs_Serving') is-invalid @enderror"
-                        value="{{ old('Carbs_Serving') }}" placeholder="Carbs_Serving" disabled>
+                        value="{{ old('Carbs_Serving') }}" placeholder="Carbs_Serving" >
                     <label for="Carbs_Serving">Carbs Serving:</label>
                     @error('Carbs_Serving')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
                 </div>
-
+                {{-- this text will be Disabled --}}
                 <div class="form-floating mb-3">
                     <input type="text" name="Protein_Serving" id="Protein_Serving"
                         class="form-control @error('Protein_Serving') is-invalid @enderror"
-                        value="{{ old('Protein_Serving') }}" placeholder="Protein_Serving" disabled>
+                        value="{{ old('Protein_Serving') }}" placeholder="Protein_Serving" >
                     <label for="Protein_Serving">Protein Serving:</label>
                     @error('Protein_Serving')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
                 </div>
-
+                {{-- this text will be Disabled --}}
                 <div class="form-floating mb-3">
                     <input type="text" name="Fat_Serving" id="Fat_Serving"
                         class="form-control @error('Fat_Serving') is-invalid @enderror" value="{{ old('Fat_Serving') }}"
-                        placeholder="Fat Serving Automatic" aria-label="Disabled input example" disabled>
+                        placeholder="Fat Serving Automatic" aria-label="Disabled input example" >
                     <label for="Fat_Serving">Fat Serving:</label>
                     @error('Fat_Serving')
                         <span class="text-danger">{{ $message }}</span>

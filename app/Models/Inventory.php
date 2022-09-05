@@ -51,7 +51,7 @@ class Inventory extends Model
         'Supplier_Items_ID',
         'Inventory_UID',
         'Name_Item',
-        'Description_Item',
+        //'Description_Item',
         'SKU',
         'Barcode',
         'Serial_Number',

@@ -18,6 +18,16 @@
                 @csrf
 
                 <div class="form-floating mb-3">
+                    <input type="text" name="Brand_UID" id="Brand_UID"
+                        class="form-control @error('Brand_UID') is-invalid @enderror" value="{{ old('Brand_UID') }}"
+                        placeholder="Brand UID" autocomplete="on" required>
+                    <label for="Brand_UID">Brand_UID:</label>
+                    @error('Brand_UID')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
+
+                <div class="form-floating mb-3">
                     <input type="text" name="Name_Brand" id="Name_Brand"
                         class="form-control @error('Name_Brand') is-invalid @enderror" value="{{ old('Name_Brand') }}"
                         placeholder="Name Brand" autocomplete="on" required>
@@ -39,8 +49,8 @@
 
 
                 <div class="form-floating mb-3">
-                    <textarea name="text" name="Description" id="Description"
-                        class="form-control @error('Description') is-invalid @enderror" placeholder="Leave a comment here"></textarea>
+                    <textarea name="Description" id="Description"
+                        class="form-control @error('Description') is-invalid @enderror" placeholder="Leave a Description here"></textarea>
                     <label for="Description">Description:</label>
                     @error('Description')
                         <span class="text-danger">{{ $message }}</span>
@@ -55,6 +65,22 @@
                     @error('Brand_Loga')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
+                </div>
+
+                <div class="form-floating mb-3">
+                    <select class="form-select" name="Cuisine_id" id="Cuisine_id"
+                        aria-label="Floating label select example" required>
+                        <option selected>Open this select menu</option>
+                        @foreach ($Cuisines as $Cuisine)
+                            <option value="{{ $Cuisine->id }}">
+                                {{ $Cuisine->Name }}
+                            </option>
+                        @endforeach
+                    </select>
+                    <label for="Cuisine_id">Cuisines:</label>
+                    {{-- @error('Country')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror --}}
                 </div>
 
                 <div class="form-floating mb-3">
@@ -107,7 +133,7 @@
                             </option>
                         @endforeach
                     </select>
-                    <label for="Country">Country:</label>
+                    <label for="Country">Countries:</label>
                     {{-- @error('Country')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror --}}

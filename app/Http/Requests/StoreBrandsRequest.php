@@ -25,9 +25,15 @@ class StoreBrandsRequest extends FormRequest
     {
         return [
             //
+            'Brand_UID' => ['required', 'unique:Brands,Brand_UID', 'min:5', 'max:255',],
             'Name_Brand' => ['required', 'unique:Brands,Name_Brand', 'min:5', 'max:255',],
             'Description' => ['required', 'min:5', 'max:280',],
-            'Brand_Loga' => ['required', 'image', 'size:5120', 'mimes:jpeg,png,jpg,'],
+            'Brand_Loga' => [
+                'required', 'image',
+                /**'size:5120',*/
+                'mimes:jpeg,png,jpg,'
+            ],
+            
             'Address' => ['required', 'min:5', 'max:255',],
             'City' => ['required', 'min:5', 'max:255',],
             'State' => ['required', 'min:5', 'max:255',],

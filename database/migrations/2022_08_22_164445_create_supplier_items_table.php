@@ -56,7 +56,7 @@ return new class extends Migration
             //$table->integer('Quantity')->comment('The name of the unit');
             //$table->double('Total')->comment('The name of the unit');
 
-            $table->string('Item_Unit_Price');
+            //$table->string('Item_Unit_Price');
 
             $table->timestamps();
             $table->softDeletes($column = 'deleted_at', $precision = 0);

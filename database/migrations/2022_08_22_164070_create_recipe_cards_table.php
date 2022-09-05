@@ -42,9 +42,9 @@ return new class extends Migration
                 ->onDelete('cascade')
                 ->comment('The foreign Key Id in Taleb In thumbnails');
 
-            $table->string('Title')->nullable()->comment('The title Of Recipe Cards and be Name  ');
             $table->string('Slug')->nullable()->unique()->comment(' The Slugs to used for Links and routes');
             $table->string('Recipe_UID')->nullable()->unique()->comment('Recipe Unique identifier ');
+            $table->string('Title')->nullable()->comment('The title Of Recipe Cards and be Name  ');    
             $table->text('Description')->nullable()->comment('The Description of Recipe and be short word max 280 ');
             $table->string('Youtube_Video')->nullable()->comment('the Youtube links  post show ');
             $table->string('Recipe_Method')->nullable()->comment('method meaning in cooking There are three basic cooking methods, dry heat cooking method, medium of fat or oil, and medium of liquids or moist heat cooking method');

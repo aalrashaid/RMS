@@ -57,7 +57,7 @@ class Brands extends Model
         'Brand_UID',
         'Name_Brand',
         'Description',
-        'Brand_Logas',
+        'Brand_Loga',
         'Address',
         'City',
         'State',
@@ -94,6 +94,30 @@ class Brands extends Model
      */
 
     /**
+     * Get the Thumbnails that owns the Brands.
+     */
+    public function Thumbnails()
+    {
+        return $this->belongsTo(Thumbnails::class);
+    }
+
+    /**
+     * Get the Cuisine that owns the Brands.
+     */
+    public function Cuisine()
+    {
+        return $this->belongsTo(Cuisine::class);
+    }
+
+    /**
+     * Get the Countries that owns the Brands.
+     */
+    public function Countries()
+    {
+        return $this->belongsTo(Countries::class);
+    }
+
+    /**
      * Get the Inventory that owns the Brands.
      */
     public function inventory()
@@ -102,7 +126,7 @@ class Brands extends Model
     }
 
     /**
-     * Get the Menu that owns the user.
+     * Get the Menu that owns the Brands.
      */
     public function menu()
     {
@@ -110,7 +134,7 @@ class Brands extends Model
     }
 
     /**
-     * Get the RecipeCard that owns the user.
+     * Get the RecipeCard that owns the Brands.
      */
     public function recipecard()
     {
@@ -118,7 +142,7 @@ class Brands extends Model
     }
 
     /**
-     * Get the user that owns the RecipeCosts.
+     * Get the RecipeCosts that owns the Brands.
      */
     public function RecipeCosts()
     {
@@ -126,19 +150,11 @@ class Brands extends Model
     }
 
     /**
-     * Get the SupplierItem that owns the user.
+     * Get the SupplierItem that owns the Brands.
      */
     public function SupplierItem()
     {
         return $this->belongsTo(SupplierItem::class);
-    }
-
-    /**
-     * Get the SupplierItem that owns the user.
-     */
-    public function Thumbnails()
-    {
-        return $this->belongsTo(Thumbnails::class);
     }
 
     /**

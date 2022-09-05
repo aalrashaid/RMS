@@ -6,10 +6,13 @@ use App\Http\Requests\StoreBrandsRequest;
 use App\Http\Requests\UpdateBrandsRequest;
 
 use App\Models\Brands;
+use App\Models\Cuisine;
 use App\Models\Countries;
 
+use Illuminate\Support\Facades\DB;
 use \Cviebrock\EloquentSluggable\Services\SlugService;
 use Illuminate\Support\Facades\Auth;
+use Exception;
 
 class BrandsController extends Controller
 {
@@ -38,8 +41,9 @@ class BrandsController extends Controller
     public function create()
     {
         //
+        $Cuisines = Cuisine::all();
         $Countries = Countries::all();
-        return view('Brands.create', compact('Countries'));
+        return view('Brands.create', compact('Countries', 'Cuisines'));
     }
 
     /**
@@ -58,29 +62,50 @@ class BrandsController extends Controller
         // validator fails
 
         // Store the Brands
-        $Brands = new Brands;
+        DB::transaction(function () use ($request) {
 
-        $Brands->User_id = $request->user()->id;
-        $Brands->Slug = SlugService::createSlug(Brands::class, 'slug', $request->Name_Brand);
-        $Brands->Name_Brand =  $request->Name_Brand;
-        $Brands->Description = $request->Description;
-        $Brands->Brand_Logas = $request->Brand_Logas;
-        $Brands->Address = $request->City;
-        $Brands->State = $request->State;
-        $Brands->Zip_Code = $request->Zip_Code;
-        $Brands->Country = $request->Country;
-        $request->Moblie = $request->Moblie;
-        $request->Whatsapp = $request->Whatsapp;
-        $request->Email = $request->Email;
-        $Brands->Web = $request->Web;
-        $Brands->Facebook = $request->Facebook;
-        $Brands->Youtube = $request->Youtube;
-        $Brands->Instagram = $request->Instagram;
-        $Brands->Twitter = $request->Twitter;
+            try {
 
-        //dd($Brands);
+                // Do your SQL here
+                Auth::user()
+                    ->Brands()
+                    ->create($request->except('csrf_token'));
+                DB::commit();
+            } catch (Exception $e) {
+                return $e;
+            }
+        });
+        
+        // $Brands = new Brands;
 
-        $Brands->saveOrFail();
+        // $Brands->User_id = $request->user()->id;
+        // $Brands->Cuisine_id = $request->Cuisine_id;
+        // $Brands->Thumbnail_Id = $request->Thumbnail_Id;
+        // $Brands->Slug = SlugService::createSlug(Brands::class, 'slug', $request->Name_Brand);
+
+        // $Brands->Brand_UID =  $request->Brand_UID;
+        // $Brands->Name_Brand =  $request->Name_Brand;
+        // $Brands->Description = $request->Description;
+        // $Brands->Brand_Loga = $request->Brand_Loga;
+
+        // $Brands->Address = $request->Address;
+        // $Brands->City = $request->City;
+        // $Brands->State = $request->State;
+        // $Brands->Zip_Code = $request->Zip_Code;
+        // $Brands->Country = $request->Country;
+        // $Brands->Moblie = $request->Moblie;
+        // $Brands->Whatsapp = $request->Whatsapp;
+        // $Brands->Email = $request->Email;
+        // $Brands->Web = $request->Web;
+        
+        // $Brands->Facebook = $request->Facebook;
+        // $Brands->Youtube = $request->Youtube;
+        // $Brands->Instagram = $request->Instagram;
+        // $Brands->Twitter = $request->Twitter;
+
+        // dd($Brands);
+
+        // $Brands->saveOrFail();
 
         // $Brands = Brands::create([
         //     ['user_id' => auth()->user()->id],
@@ -144,6 +169,20 @@ class BrandsController extends Controller
     public function update(UpdateBrandsRequest $request, Brands $brands)
     {
         //
+
+        DB::transaction(function () use ($request) {
+
+            try {
+
+                // Do your SQL here
+                Auth::user()
+                    ->Brands()
+                    ->update($request->except('csrf_token'));
+                DB::commit();
+            } catch (Exception $e) {
+                return $e;
+            }
+        });
     }
 
     /**

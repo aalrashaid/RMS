@@ -48,4 +48,23 @@ class Countries extends Model
         'Numeric',
         'Phone_Code',
     ];
+
+    /**
+     * Eloquent Relationships
+     * Type:belongsTo
+     */
+
+    /**
+     * Eloquent Relationships
+     * Type: Has One  or Has Many
+     */
+
+    /**
+     * Get the Brands associated with the RecipeCosts.
+     */
+    public function brands()
+    {
+        //Brands_Id
+        return $this->hasOne(Brands::class);
+    }
 }

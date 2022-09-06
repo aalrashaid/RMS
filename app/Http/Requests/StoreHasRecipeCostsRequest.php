@@ -29,10 +29,14 @@ class StoreHasRecipeCostsRequest extends FormRequest
             'Ingredients' => ['required'],
             'AP_Quantity' => ['required'],
             'AP_Recipe_Unit' => ['required'],
+            'AP_Recipe_Unit_Name' => ['required'],
             'AP_Unit_Cost' => ['required'],
             'EP_Recipe_Unit' => ['required'],
+            'EP_Recipe_Unit_Name' => ['required'],
             'EP_Unit_Cost' => ['required'],
-            'EP_Yield' => ['required'],
+            'EP_Yield_Percentage' => ['required'],
+            'Extension' => ['required'],
+            'Total_Extension' => ['required'],
 
         ];
     }
@@ -46,13 +50,17 @@ class StoreHasRecipeCostsRequest extends FormRequest
     {
         return [
             //
-            'Ingredients.required' => ['Ingredients Required'],
-            'AP_Quantity.required' => ['AP Quantity Required'],
-            'AP_Recipe_Unit.required' => ['AP Recipe Unit Required'],
-            'AP_Unit_Cost.required' => ['AP Unit Cost Required'],
-            'EP_Recipe_Unit.required' => ['EP Recipe Unit Required'],
-            'EP_Unit_Cost.required' => ['EP Unit Cost Required'],
-            'EP_Yield.required' => ['EP Yield Required'],
+            'Ingredients.required' => ['Ingredients'],
+            'AP_Quantity.required' => ['AP_Quantity'],
+            'AP_Recipe_Unit.required' => ['AP_Recipe_Unit'],
+            'AP_Recipe_Unit_Name.required' => ['AP_Recipe_Unit_Name'],
+            'AP_Unit_Cost.required' => ['AP_Unit_Cost'],
+            'EP_Recipe_Unit.required' => ['EP_Recipe_Unit'],
+            'EP_Recipe_Unit_Name.required' => ['EP_Recipe_Unit_Name'],
+            'EP_Unit_Cost.required' => ['EP_Unit_Cost'],
+            'EP_Yield_Percentage.required' => ['EP_Yield_Percentage'],
+            'Extension.required' => ['Extension'],
+            'Total_Extension.required' => ['Total_Extension'],
         ];
     }
 

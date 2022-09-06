@@ -33,7 +33,7 @@ class StoreBrandsRequest extends FormRequest
                 /**'size:5120',*/
                 'mimes:jpeg,png,jpg,'
             ],
-            
+
             'Address' => ['required', 'min:5', 'max:255',],
             'City' => ['required', 'min:5', 'max:255',],
             'State' => ['required', 'min:5', 'max:255',],

@@ -58,7 +58,7 @@ class StoreHasNutritionFactsRecipeCardsRequest extends FormRequest
             'Calories_Unit.required' => ['Calories Unit Required'],
             'Calories_Unit_Name.required' => ['Calories Unit Name Required'],
             'Carbs_Unit.required' => ['Carbs Unit Required'],
-            'Carbs_Unit_Name.required' => ['Carbs_Unit_Name Required'],
+            'Carbs_Unit_Name.required' => ['Carbs Unit Name Required'],
             'Protein_Unit.required' => ['Protein Unit Required'],
             'Protein_Unit_Name.required' => ['Protein Unit Name Required'],
             'Fat_Unit.required' => ['Fat Unit Required'],

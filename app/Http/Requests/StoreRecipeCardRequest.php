@@ -35,7 +35,7 @@ class StoreRecipeCardRequest extends FormRequest
             'Prep_Time' => ['required'],
             'Cook_Time' => ['required'],
             'Time_Total' => ['required'],
-            'Servings' => ['required'],
+            'Serves' => ['required'],
             'Directions' => ['required'],
         ];
     }

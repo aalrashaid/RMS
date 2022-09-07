@@ -7,8 +7,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstarp/bootstrap.css') }} " media="all">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}" media="all">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstarp/bootstrap.css') }} " media="all">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/app.css') }}" media="all">
 </head>
 
 <body>

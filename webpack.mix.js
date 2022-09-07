@@ -17,19 +17,19 @@ const mix = require('laravel-mix');
 //     ]);
 
 // In the build files, there is JS
-mix.js('resources/js/app.js', 'public/js')
-    .js('resources/js/dashboard.js', 'public/js/dashboards');
+mix.js('resources/js/app.js', 'public/assets/js')
+    .js('resources/js/dashboard.js', 'public/assets/js/dashboards');
 
 // In the build files, there is Sass
-mix.sass('resources/sass/app.scss', 'public/css')
-    .sass('resources/sass/dashboards/dashboard.scss', 'public/css/dashboards')
-    .sass('resources/sass/bootstrap/scss/bootstrap.scss', 'public/css/bootstarp');
+mix.sass('resources/sass/app.scss', '/public/assets/css')
+    .sass('resources/sass/dashboards/dashboard.scss', 'public/assets/css/dashboards')
+    .sass('resources/sass/bootstrap/scss/bootstrap.scss', 'public/assets/css/bootstarp');
 
 
 //mix.copy('node_modules/vendor/fonts', 'public');
 //mix.copyDirectory('node_modules/vendor/fonts', 'public');
 
 // The copy and Directory
-//mix.copyDirectory('resources/fonts', 'public/fonts');
-//mix.copyDirectory('resources/imgs', 'public/imgs');
- //mix.copyDirectory('resources/sass/bootstrap-icons', 'public/bootstrap-icons');
+//mix.copyDirectory('resources/fonts', 'public/assets/fonts');
+//mix.copyDirectory('resources/imgs', 'public/assets/imgs');
+ //mix.copyDirectory('resources/sass/bootstrap-icons', 'public/assets/bootstrap-icons');

@@ -51,7 +51,7 @@ class RecipeCosts extends Model
         'User_Id',
         'Brands_Id',
         'Category_Id',
-        'Menus_Id',
+        //'Menus_Id',
         'Recipe_Card_Id',
 
         'Recipe_UID',

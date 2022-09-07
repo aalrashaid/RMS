@@ -56,6 +56,11 @@
             @enderror
         </div>
 
+        <div class="mb-3">
+            <label for="formFile" class="form-label">Default file input example</label>
+            <input name="Thumbnail_Id" id="Thumbnail_Id" class="form-control" type="file" id="formFile">
+        </div>
+
         <div class="form-floating mb-3">
             <input type="text" name="Youtube_Video" id="Youtube_Video"
                 class="form-control @error('Youtube_Video') is-invalid @enderror" value="{{ old('Youtube_Video') }}"

@@ -1,7 +1,7 @@
 {
-    "/js/app.js": "/js/app.js",
-    "/js/dashboards/dashboard.js": "/js/dashboards/dashboard.js",
-    "/css/bootstarp/bootstrap.css": "/css/bootstarp/bootstrap.css",
-    "/css/dashboards/dashboard.css": "/css/dashboards/dashboard.css",
-    "/css/app.css": "/css/app.css"
+    "/assets/js/app.js": "/assets/js/app.js",
+    "/assets/js/dashboards/dashboard.js": "/assets/js/dashboards/dashboard.js",
+    "/assets/css/bootstarp/bootstrap.css": "/assets/css/bootstarp/bootstrap.css",
+    "/assets/css/dashboards/dashboard.css": "/assets/css/dashboards/dashboard.css",
+    "/assets/css/app.css": "/assets/css/app.css"
 }

@@ -38,6 +38,13 @@
             @enderror
         </div>
 
+        <select name="Category_Id" id="Category_Id" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+            <option selected>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+        </select>
+
         <div class="form-floating mb-3">
             <input type="text" name="Patch" id="Patch"
                 class="form-control @error('Patch') is-invalid @enderror" value="{{ old('Patch') }}"

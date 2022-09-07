@@ -51,7 +51,7 @@ class RecipeCard extends Model
     protected $fillable = [
         'User_Id',
         'Brands_Id',
-        'Cuisine_id',
+        //'Cuisine_id',
         'Thumbnail_Id',
         'Recipe_UID',
         'Title',

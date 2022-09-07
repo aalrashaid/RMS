@@ -36,6 +36,18 @@
             @enderror
         </div>
 
+        <select name="Category_Id" id="Category_Id" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+            <option selected>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+        </select>
+
+        <div class="mb-3">
+            <label for="formFile" class="form-label">Default file input example</label>
+            <input name="Thumbnail_Id" id="Thumbnail_Id" class="form-control" type="file" id="formFile">
+        </div>
+
         <div class="mb-3">
             <label for="Description" class="form-label">Description</label>
             <textarea class="form-control" name="Description" id="Description" rows="8"></textarea>

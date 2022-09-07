@@ -32,10 +32,10 @@ return new class extends Migration
                 ->onDelete('cascade')
                 ->comment('The foreign Key Id in Taleb In brands');
 
-            $table->foreignId('Cuisine_id')->nullable()->references('id')->on('cuisines')
-                ->onUpdate('cascade')
-                ->onDelete('cascade')
-            ->comment('The foreign Key Id in Taleb In cuisines');
+            // $table->foreignId('Cuisine_id')->nullable()->references('id')->on('cuisines')
+            //     ->onUpdate('cascade')
+            //     ->onDelete('cascade')
+            // ->comment('The foreign Key Id in Taleb In cuisines');
 
             $table->foreignId('Thumbnail_Id')->references('id')->on('thumbnails')
                 ->onUpdate('cascade')

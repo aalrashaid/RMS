@@ -1,4 +1,5 @@
-@import 'element/asterisk';
-@import 'element/clearfix';
-@import 'element/html';
-@import 'element/body';
+@use 'files/asterisk';
+@import 'files/clearfix';
+@import 'files/html';
+@import 'files/body';
+@import 'files/anchor';

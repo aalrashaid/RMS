@@ -62,20 +62,20 @@ class BrandsController extends Controller
         // validator fails
 
         // Store the Brands
-        // DB::transaction(function () use ($request) {
+         DB::transaction(function () use ($request) {
 
-        //     try {
+             try {
 
-        //         // Do your SQL here
-        //         Auth::user()
-        //             ->Brands()
-        //             ->create($request->except('csrf_token'));
-        //         DB::commit();
-        //     } catch (Exception $e) {
-        //         return $e;
-        //     }
-        // });
-        
+                 // Do your SQL here
+                 Auth::user()
+                     ->Brands()
+                     ->create($request->except('csrf_token'));
+                 DB::commit();
+             } catch (Exception $e) {
+                 return $e;
+             }
+         });
+
         // $Brands = new Brands;
 
         // $Brands->User_id = $request->user()->id;
@@ -97,7 +97,7 @@ class BrandsController extends Controller
         // $Brands->Whatsapp = $request->Whatsapp;
         // $Brands->Email = $request->Email;
         // $Brands->Web = $request->Web;
-        
+
         // $Brands->Facebook = $request->Facebook;
         // $Brands->Youtube = $request->Youtube;
         // $Brands->Instagram = $request->Instagram;

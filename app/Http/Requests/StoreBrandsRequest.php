@@ -25,6 +25,10 @@ class StoreBrandsRequest extends FormRequest
     {
         return [
             //
+            //'cuisine_id' => ['required', 'integer', 'exists:cuisines,id'],
+            //'category_id' => ['required', 'integer', 'exists:categories,id'],
+            //'thumbnail_id' => ['required', 'file', 'max:10240', 'mimes:jpg,jpeg,png,bmp,tiff'],
+
             'Brand_UID' => ['required', 'unique:Brands,Brand_UID', 'min:5', 'max:255',],
             'Name_Brand' => ['required', 'unique:Brands,Name_Brand', 'min:5', 'max:255',],
             'Description' => ['required', 'min:5', 'max:280',],

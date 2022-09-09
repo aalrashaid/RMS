@@ -5,7 +5,7 @@ $roboto-font-path: "../fonts/";
 
 @font-face {
     font-family: "Roboto";
-    src: local("/fonts/Roboto-Regular.ttf") format('truetype');
+    src: local($roboto-font-path + "Roboto-Regular.ttf") format('truetype');
     font-weight: 400;
     font-style: normal;
 }
@@ -14,7 +14,7 @@ $roboto-font-path: "../fonts/";
 
 @font-face {
     font-family: "Roboto";
-    src: local('/fonts/Roboto-Italic.ttf') format('truetype');        
+    src: local('/fonts/Roboto-Italic.ttf') format('truetype');
     font-weight: 400;
     font-style: italic;
 }

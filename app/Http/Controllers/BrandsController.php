@@ -41,9 +41,9 @@ class BrandsController extends Controller
     public function create()
     {
         //
-        $Cuisines = Cuisine::all();
-        $Countries = Countries::all();
-        return view('Brands.create', compact('Countries', 'Cuisines'));
+        $data['Cuisines'] = Cuisine::all();
+        $data['Countries'] = Countries::all();
+        return view('Brands.create', compact('data'));
     }
 
     /**

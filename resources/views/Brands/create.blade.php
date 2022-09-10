@@ -71,7 +71,7 @@
                     <select class="form-select" name="Cuisine_id" id="Cuisine_id"
                         aria-label="Floating label select example" required>
                         <option selected>Open this select menu</option>
-                        @foreach ($Cuisines as $Cuisine)
+                        @foreach ($data['Cuisines'] as $Cuisine)
                             <option value="{{ $Cuisine->id }}">
                                 {{ $Cuisine->Name }}
                             </option>
@@ -127,7 +127,7 @@
                     <select class="form-select" name="Country" id="Country"
                         aria-label="Floating label select example" required>
                         <option selected>Open this select menu</option>
-                        @foreach ($Countries as $Country)
+                        @foreach ($data['Countries'] as $Country)
                             <option value="{{ $Country->id }}">
                                 {{ $Country->Name }}
                             </option>

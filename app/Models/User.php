@@ -48,62 +48,6 @@ class User extends Authenticatable
      */
 
     /**
-     * Get the Brands that owns the user.
-     */
-    public function brands()
-    {
-        return $this->belongsTo(Brands::class);
-    }
-
-    /**
-     * Get the Inventory that owns the user.
-     */
-    public function inventory()
-    {
-        return $this->belongsTo(Inventory::class);
-    }
-
-    /**
-     * Get the Menu that owns the user.
-     */
-    public function Menu()
-    {
-        return $this->belongsTo(Menu::class);
-    }
-
-    /**
-     * Get the RecipeCard that owns the user.
-     */
-    public function recipecard()
-    {
-        return $this->belongsTo(RecipeCard::class);
-    }
-
-    /**
-     * Get the user that owns the RecipeCosts.
-     */
-    public function RecipeCosts()
-    {
-        return $this->belongsTo(RecipeCosts::class);
-    }
-
-    /**
-     * Get the SupplierItem that owns the user.
-     */
-    public function SupplierItem()
-    {
-        return $this->belongsTo(SupplierItem::class);
-    }
-
-    /**
-     * Get the SupplierItem that owns the user.
-     */
-    public function Thumbnails()
-    {
-        return $this->belongsTo(Thumbnails::class);
-    }
-
-    /**
      * Eloquent Relationships
      * Type: Has One  or Has Many
      */

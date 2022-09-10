@@ -70,13 +70,6 @@ class Category extends Model
      * Type:belongsTo
      */
 
-    /**
-     * Get the user that owns the RecipeCosts.
-     */
-    public function RecipeCosts()
-    {
-        return $this->belongsTo(RecipeCosts::class);
-    }
 
     /**
      * Eloquent Relationships

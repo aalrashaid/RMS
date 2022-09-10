@@ -60,7 +60,7 @@ class SupplierItem extends Model
         'Barcode',
         'Serial_Number',
         'Item_Unit_Price',
-        
+
         //'Price',
         //'Quantity',
         //'Total',
@@ -90,30 +90,6 @@ class SupplierItem extends Model
      * Type: Has One or Has Many
      */
 
-    /**
-     * Get the user associated with the RecipeCosts.
-     */
-    public function user()
-    {
-        return $this->hasOne(RecipeCosts::class);
-    }
 
-    /**
-     * Get the Brands associated with the RecipeCosts.
-     */
-    public function brands()
-    {
-        //Brands_Id
-        return $this->hasOne(Brands::class);
-    }
 
-    /**
-     * Get the Brands associated with the RecipeCosts.
-     */
-    public function supplier()
-    {
-        //Brands_Id
-        return $this->hasOne(Supplier::class);
-    }
-    
 }

@@ -89,22 +89,6 @@ class Supplier extends Model
      */
 
     /**
-     * Get the Inventory that owns the Supplier.
-     */
-    public function inventory()
-    {
-        return $this->belongsTo(Inventory::class);
-    }
-
-    /**
-     * Get the SupplierItem that owns the user.
-     */
-    public function SupplierItem()
-    {
-        return $this->belongsTo(SupplierItem::class);
-    }
-
-    /**
      * Eloquent Relationships
      * Type: Has One or Has Many
      */

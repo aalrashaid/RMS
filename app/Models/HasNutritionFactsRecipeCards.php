@@ -90,20 +90,14 @@ class HasNutritionFactsRecipeCards extends Model
      * Type: Has One or Has Many
      */
 
-    /**
-     * Get the Recipe Card associated with the Has Nutrition Facts Recipe Cards.
-     */
-    public function recipecard()
-    {
-        return $this->hasMany(RecipeCard::class);
-    }
+
 
     /**
-     * The Wirting All Function 
+     * The Wirting All Function
      */
 
     /**
-     * 
+     *
      */
-    
+
 }

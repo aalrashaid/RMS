@@ -90,16 +90,7 @@ class HasRecipeCosts extends Model
      */
 
     /**
-     * Get the RecipeCosts associated with the Has Recipe Costs.
-     */
-    public function recipeCosts()
-    {
-        //Menus_Id
-        return $this->hasMany(RecipeCosts::class);
-    }
-
-    /**
-     * The Wirting All Function 
+     * The Wirting All Function
      */
 
     /**

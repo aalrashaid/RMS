@@ -27,6 +27,11 @@ return new class extends Migration
                 ->onDelete('cascade')
                 ->comment('The foreign Key Id in Taleb In User');
 
+            $table->foreignId('Countries_id')->nullable()->references('id')->on('Countries')
+                ->onUpdate('cascade')
+                ->onDelete('cascade')
+                ->comment('The foreign Key Id in Taleb In Countries');
+
             $table->foreignId('Cuisine_id')->nullable()->references('id')->on('cuisines')
                 ->onUpdate('cascade')
                 ->onDelete('cascade')
@@ -47,7 +52,7 @@ return new class extends Migration
             $table->string('State')->nullable()->comment('Province of Country');
             $table->integer('Zip_Code')->nullable()->comment(' The Number Zip Code of City 5 Number');
             //$table->string('Region')->nullable()->comment('The Region of Country');
-            $table->string('Country')->nullable()->comment('The Country');
+            //$table->string('Country')->nullable()->comment('The Country');
             $table->integer('Moblie')->nullable()->comment('The Account Moblie Business');
             $table->integer('Whatsapp')->nullable()->comment('The Accunt Email Business');
             $table->string('Email')->nullable()->comment('The Accunt Email Business');

@@ -81,38 +81,4 @@ class Menu extends Model
      * Type: Has One or Has Many
      */
 
-    /**
-     * Get the user associated with the Menu.
-     */
-    public function user()
-    {
-        return $this->hasOne(User::class);
-    }
-
-    /**
-     * Get the Brands associated with the Menu.
-     */
-    public function brands()
-    {
-        //Brands_Id
-        return $this->hasOne(Brands::class);
-    }
-
-    /**
-     * Get the user associated with the Menu.
-     */
-    public function category()
-    {
-        return $this->hasOne(Category::class);
-    }
-
-    /**
-     * Get the Brands associated with the Menu.
-     */
-    public function recipecards()
-    {
-        //Brands_Id
-        return $this->hasOne(RecipeCards::class);
-    }
-
 }

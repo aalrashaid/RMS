@@ -25,23 +25,17 @@ class StoreBrandsRequest extends FormRequest
     {
         return [
             //
-            //'cuisine_id' => ['required', 'integer', 'exists:cuisines,id'],
-            //'category_id' => ['required', 'integer', 'exists:categories,id'],
-            //'thumbnail_id' => ['required', 'file', 'max:10240', 'mimes:jpg,jpeg,png,bmp,tiff'],
+            'cuisine_id' => ['required', 'integer', 'exists:cuisines,id'],
+            'category_id' => ['required', 'integer', 'exists:categories,id'],
+            'thumbnail_id' => ['required', 'file', 'max:10240', 'mimes:jpg,jpeg,png,bmp,tiff'],
 
-            'Brand_UID' => ['required', 'unique:Brands,Brand_UID', 'min:5', 'max:255',],
+            'Brand_UID' => ['required', 'unique:Brands,Brand_UID', 'exists:Brands,Brand_UID','min:5', 'max:255',],
             'Name_Brand' => ['required', 'unique:Brands,Name_Brand', 'min:5', 'max:255',],
             'Description' => ['required', 'min:5', 'max:280',],
-            'Brand_Loga' => [
-                'required', 'image',
-                /**'size:5120',*/
-                'mimes:jpeg,png,jpg,'
-            ],
-
             'Address' => ['required', 'min:5', 'max:255',],
             'City' => ['required', 'min:5', 'max:255',],
             'State' => ['required', 'min:5', 'max:255',],
-            'Zip_Code' => ['required', 'min:5', 'max:10',],
+            'Zip_Code' => ['required', 'min:4', 'max:5',],
             'Country' => ['required', 'min:5', 'max:255',],
             'Moblie' => ['required', 'digits:10', 'min:7', 'max:12',],
             'Whatsapp' => ['required', 'digits:10', 'min:7', 'max:12',],

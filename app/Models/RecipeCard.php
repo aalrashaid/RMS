@@ -65,7 +65,7 @@ class RecipeCard extends Model
         'Time_Total',
         'Serves',
         'Directions',
-        
+
     ];
 
     /**
@@ -87,62 +87,15 @@ class RecipeCard extends Model
      * Type:belongsTo
      */
 
-    /**
-     * Get the user that owns the RecipeCard.
-     */
-    public function HasIngredientsRecipeCards()
-    {
-        return $this->belongsTo(HasIngredientsRecipeCards::class);
-    }
-
-    /**
-     * Get the user that owns the RecipeCard.
-     */
-    public function HasNutritionFactsRecipeCards()
-    {
-        return $this->belongsTo(HasNutritionFactsRecipeCards::class);
-    }
-
-    /**
-     * Get the Menu that owns the RecipeCard.
-     */
-    public function Menu()
-    {
-        return $this->belongsTo(Menu::class);
-    }
 
     /**
      * Eloquent Relationships
      * Type: Has One or Has Many
      */
 
-    /**
-     * Get the user associated with the RecipeCard.
-     */
-    public function user()
-    {
-        return $this->hasOne(User::class);
-    }
 
     /**
-     * Get the Brands associated with the RecipeCard.
-     */
-    public function brands()
-    {
-        //Brands_Id
-        return $this->hasOne(Brands::class);
-    }
-
-    /**
-     * Get the thumbnail associated with the RecipeCard.
-     */
-    public function thumbnail()
-    {
-        return $this->hasOne(Thumbnails::class);
-    }
-
-    /**
-     * The Wirting All Function 
+     * The Wirting All Function
      */
 
     /**
@@ -158,7 +111,7 @@ class RecipeCard extends Model
     }
 
     /**
-     * Recipe UID 
+     * Recipe UID
      * Store in Tables function
      */
     public function storeRecipeUID()
@@ -185,5 +138,5 @@ class RecipeCard extends Model
      * Nutrition Facts
      * Calculator Fat Serving
      */
-    
+
 }

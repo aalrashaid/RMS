@@ -33,8 +33,8 @@ Route::resource('Menu', MenuController::class);
 Route::resource('RecipeCard', RecipeCardController::class);
 Route::resource('RecipeCosts', RecipeCostsController::class);
 Route::resource('Supplier', SupplierController::class);
-Route::resource('SupplierItem', SupplierItemController::class);   
-    
+Route::resource('SupplierItem', SupplierItemController::class);
+
 // });
 
 
@@ -45,6 +45,10 @@ Route::get('/', function () {
 
 Route::get('/readme', function () {
     return view('readme');
+});
+
+Route::get('/info', function () {
+    return view('info');
 });
 
 Route::get('/Cheatsheet', function () {

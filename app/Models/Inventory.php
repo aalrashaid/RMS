@@ -90,34 +90,9 @@ class Inventory extends Model
      * Type: Has One or Has Many
      */
 
-    /**
-     * Get the user associated with the Inventory.
-     */
-    public function user()
-    {
-        return $this->hasOne(User::class);
-    }
 
     /**
-     * Get the Brands associated with the Inventory.
-     */
-    public function brands()
-    {
-        //Brands_Id
-        return $this->hasOne(Brands::class);
-    }
-
-    /**
-     * Get the suppliers associated with the Inventory.
-     */
-    public function suppliers()
-    {
-        //Brands_Id
-        return $this->hasOne(Suppliers::class);
-    }
-
-    /**
-     * The Wirting All Function 
+     * The Wirting All Function
      */
 
     /**

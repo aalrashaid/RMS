@@ -55,7 +55,7 @@ class HasIngredientsRecipeCards extends Model
         'Ingredients_Name',
         'Ingredients_Unit',
         'Ingredients_Unit_Name',
-        
+
     ];
 
     /**
@@ -82,17 +82,9 @@ class HasIngredientsRecipeCards extends Model
      * Type: Has One or Has Many
      */
 
-    /**
-     * Get the Recipe Card associated with the Has Ingredients Recipe Cards.
-     */
-    public function recipecard()
-    {
-
-        return $this->hasMany(RecipeCard::class);
-    }
 
     /**
-     * The Wirting All Function 
+     * The Wirting All Function
      */
-    
+
 }

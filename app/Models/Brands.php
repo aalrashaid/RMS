@@ -51,6 +51,7 @@ class Brands extends Model
      */
     protected $fillable = [
         'user_id',
+        'Countries_id',
         'Cuisine_id',
         'Thumbnail_Id',
         'Slug',
@@ -94,84 +95,14 @@ class Brands extends Model
      */
 
     /**
-     * Get the Thumbnails that owns the Brands.
-     */
-    public function Thumbnails()
-    {
-        return $this->belongsTo(Thumbnails::class);
-    }
-
-    /**
-     * Get the Cuisine that owns the Brands.
-     */
-    public function Cuisine()
-    {
-        return $this->belongsTo(Cuisine::class);
-    }
-
-    /**
-     * Get the Countries that owns the Brands.
-     */
-    public function Countries()
-    {
-        return $this->belongsTo(Countries::class);
-    }
-
-    /**
-     * Get the Inventory that owns the Brands.
-     */
-    public function inventory()
-    {
-        return $this->belongsTo(Inventory::class);
-    }
-
-    /**
-     * Get the Menu that owns the Brands.
-     */
-    public function menu()
-    {
-        return $this->belongsTo(Menu::class);
-    }
-
-    /**
-     * Get the RecipeCard that owns the Brands.
-     */
-    public function recipecard()
-    {
-        return $this->belongsTo(RecipeCard::class);
-    }
-
-    /**
-     * Get the RecipeCosts that owns the Brands.
-     */
-    public function RecipeCosts()
-    {
-        return $this->belongsTo(RecipeCosts::class);
-    }
-
-    /**
-     * Get the SupplierItem that owns the Brands.
-     */
-    public function SupplierItem()
-    {
-        return $this->belongsTo(SupplierItem::class);
-    }
-
-    /**
      * Eloquent Relationships
      * Type: Has One or Has Many
      */
 
-    /**
-     * Get the user associated with the Brands.
-     */
-    public function user()
-    {
-        return $this->hasOne(User::class);
-    }
+
 
     /**
-     * The Wirting All Function 
+     * The Wirting All Function
      */
 
     /**

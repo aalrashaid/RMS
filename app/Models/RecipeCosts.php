@@ -96,43 +96,9 @@ class RecipeCosts extends Model
      * Type: Has One or Has Many
      */
 
-    /**
-     * Get the user associated with the RecipeCosts.
-     */
-    public function user()
-    {
-        return $this->hasOne(RecipeCosts::class);
-    }
 
     /**
-     * Get the Brands associated with the RecipeCosts.
+     * The Wirting All Function
      */
-    public function brands()
-    {
-        //Brands_Id
-        return $this->hasOne(Brands::class);
-    }
 
-    /**
-     * Get the Category associated with the RecipeCosts.
-     */
-    public function category()
-    {
-        //Category_Id
-        return $this->hasOne(Category::class);
-    }
-
-    /**
-     * Get the Menu associated with the RecipeCosts.
-     */
-    public function menu()
-    {
-        //Menus_Id
-        return $this->hasOne(Menu::class);
-    }
-
-    /**
-     * The Wirting All Function 
-     */
-    
 }

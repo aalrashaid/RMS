@@ -12,15 +12,17 @@ use App\Models\Countries;
 use Illuminate\Support\Facades\DB;
 use \Cviebrock\EloquentSluggable\Services\SlugService;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
+use Illuminate\View\View;
 use Exception;
 
 class BrandsController extends Controller
 {
 
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
 
     /**
      * Display a listing of the resource.
@@ -51,6 +53,7 @@ class BrandsController extends Controller
      *
      * @param  \App\Http\Requests\StoreBrandsRequest  $request
      * @return \Illuminate\Http\Response
+     *
      */
     public function store(StoreBrandsRequest $request)
     {
@@ -64,17 +67,26 @@ class BrandsController extends Controller
         // Store the Brands
          DB::transaction(function () use ($request) {
 
-             try {
-
-                 // Do your SQL here
-                 Auth::user()
+            Auth::user()
                      ->Brands()
                      ->create($request->except('csrf_token'));
-                 DB::commit();
-             } catch (Exception $e) {
-                 return $e;
-             }
+                // DB::commit();
+
+            //  try {
+
+            //      // Do your SQL here
+            //      Auth::user()
+            //          ->Brands()
+            //          ->create($request->except('csrf_token'));
+            //      DB::commit();
+            //  } catch (Exception $e) {
+            //      return $e;
+            //  }
          });
+
+
+
+         dd($request);
 
         // $Brands = new Brands;
 

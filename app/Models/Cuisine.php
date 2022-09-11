@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 use Cviebrock\EloquentSluggable\Sluggable;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Cuisine extends Model
 {
@@ -74,5 +76,16 @@ class Cuisine extends Model
      * Eloquent Relationships
      * Type: Has One  or Has Many
      */
+
+     /**
+     * Get the Recipes associated with the Cuisine.
+     * Eloquent Relationships: Cuisine model has One Recipes model.
+     *
+     * @return HasOne
+     */
+    public function Recipes(): HasOne
+    {
+        return $this->hasOne(Recipe::class,'Cuisine_id', 'id');
+    }
 
 }

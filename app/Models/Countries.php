@@ -5,9 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+use Cviebrock\EloquentSluggable\Sluggable;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
+
 class Countries extends Model
 {
     use HasFactory;
+    use Sluggable;
 
     /**
      * The table associated with the model.
@@ -49,6 +54,20 @@ class Countries extends Model
         'Phone_Code',
     ];
 
+     /**
+     * Return the sluggable configuration array for this model.
+     *
+     * @return array
+     */
+    public function sluggable(): array
+    {
+        return [
+            'Slug' => [
+                'source' => 'Name'
+            ]
+        ];
+    }
+
     /**
      * Eloquent Relationships
      * Type:belongsTo
@@ -58,5 +77,16 @@ class Countries extends Model
      * Eloquent Relationships
      * Type: Has One  or Has Many
      */
+
+      /**
+     * Get the Recipes associated with the Countries.
+     * Eloquent Relationships: Countries model has One Recipes model.
+     *
+     * @return HasOne
+     */
+    public function Recipes(): HasOne
+    {
+        return $this->hasOne(Recipe::class,'Countries_id', 'id');
+    }
 
 }

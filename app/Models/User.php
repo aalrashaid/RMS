@@ -8,6 +8,10 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
+
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
+
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
@@ -51,5 +55,16 @@ class User extends Authenticatable
      * Eloquent Relationships
      * Type: Has One  or Has Many
      */
+
+     /**
+     * Get the Recipes associated with the user.
+     * Eloquent Relationships: User model has One Recipes model.
+     *
+     * @return HasOne
+     */
+    public function Recipes(): HasOne
+    {
+        return $this->hasOne(Recipe::class,'user_id', 'id');
+    }
 
 }

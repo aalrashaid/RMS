@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 use Cviebrock\EloquentSluggable\Sluggable;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Thumbnails extends Model
 {
@@ -77,5 +79,16 @@ class Thumbnails extends Model
      * Eloquent Relationships
      * Type: Has One  or Has Many
      */
+
+    /**
+     * Get the Recipes associated with the Thumbnail.
+     * Eloquent Relationships: Thumbnail model has One Recipes model.
+     *
+     * @return HasOne
+     */
+    public function Recipes(): HasOne
+    {
+        return $this->hasOne(Recipe::class,'Thumbnail_Id', 'id');
+    }
 
 }

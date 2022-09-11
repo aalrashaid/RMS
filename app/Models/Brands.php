@@ -5,6 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\File;
@@ -96,6 +99,50 @@ class Brands extends Model
      * Eloquent Relationships
      * Type:belongsTo
      */
+
+    /**
+     * Recipe model has one user model.
+     * Eloquent Relationships: User belongsTo
+     *
+     * @return BelongsTo
+     */
+    public function user()
+    {
+        return $this->belongsTo(User::class,'Countries_id');
+    }
+
+    /**
+     * Recipe model has one Cuisine model.
+     * Eloquent Relationships: Cuisine belongsTo
+     *
+     * @return BelongsTo
+     */
+    public function Cuisine()
+    {
+        return $this->belongsTo(Cuisine::class, 'Cuisine_id');
+    }
+
+    /**
+     * Recipe model has one Thumbnail model.
+     * Eloquent Relationships: Thumbnail belongsTo
+     *
+     * @return BelongsTo
+     */
+    public function Thumbnail()
+    {
+        return $this->belongsTo(Thumbnails::class,'Thumbnail_Id');
+    }
+
+    /**
+     * Recipe model has one Countries model.
+     * Eloquent Relationships: Countries belongsTo
+     *
+     * @return BelongsTo
+     */
+    public function Countries()
+    {
+        return $this->belongsTo(Countries::class, '');
+    }
 
     /**
      * Eloquent Relationships

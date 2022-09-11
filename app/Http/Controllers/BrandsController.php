@@ -12,8 +12,10 @@ use App\Models\Countries;
 use Illuminate\Support\Facades\DB;
 use \Cviebrock\EloquentSluggable\Services\SlugService;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Http\Request;
-use Illuminate\View\View;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rule;
+// use Illuminate\Http\Request;
+// use Illuminate\View\View;
 use Exception;
 
 class BrandsController extends Controller
@@ -43,8 +45,9 @@ class BrandsController extends Controller
     public function create()
     {
         //
-        $data['Cuisines'] = Cuisine::all();
-        $data['Countries'] = Countries::all();
+        $data['Cuisines'] = Cuisine::get();
+        $data['Countries'] = Countries::get();
+
         return view('Brands.create', compact('data'));
     }
 
@@ -65,11 +68,13 @@ class BrandsController extends Controller
         // validator fails
 
         // Store the Brands
-         DB::transaction(function () use ($request) {
 
+         DB::transaction(function () use ($request) {
+           // dd($request);
             Auth::user()
                      ->Brands()
                      ->create($request->except('csrf_token'));
+            dd($request);
                 // DB::commit();
 
             //  try {
@@ -83,10 +88,6 @@ class BrandsController extends Controller
             //      return $e;
             //  }
          });
-
-
-
-         dd($request);
 
         // $Brands = new Brands;
 

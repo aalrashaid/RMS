@@ -76,6 +76,7 @@ return new class extends Migration
         Schema::table('Supplier_Items', function (Blueprint $table) {
             //the drop Foreing key
             $table->dropForeign('Supplier_Items_User_Id_foreign');
+            $table->dropForeign('Supplier_Items_Thumbnail_Id_foreign');
             $table->dropForeign('Supplier_Items_Brands_Id_foreign');
             $table->dropForeign('Supplier_Items_Supplier_Id_foreign');
         });

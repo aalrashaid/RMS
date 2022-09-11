@@ -50,21 +50,24 @@ class Brands extends Model
      * @var array
      */
     protected $fillable = [
+
         'user_id',
+
         'Countries_id',
         'Cuisine_id',
         'Thumbnail_Id',
+
         'Slug',
         'Brand_UID',
         'Name_Brand',
         'Description',
-        'Brand_Loga',
+        //'Brand_Loga',
         'Address',
         'City',
         'State',
         'Zip_Code',
         //'Region',
-        'Country',
+        //'Country',
         'Moblie',
         'Whatsapp',
         'Email',

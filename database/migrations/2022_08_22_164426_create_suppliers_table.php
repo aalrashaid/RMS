@@ -26,6 +26,11 @@ return new class extends Migration
             ->onDelete('cascade')
             ->comment('The foreign Key Id in Taleb In User');
 
+            $table->foreignId('Countries_id')->nullable()->references('id')->on('Countries')
+                ->onUpdate('cascade')
+                ->onDelete('cascade')
+                ->comment('The foreign Key Id in Taleb In Countries');
+
             $table->foreignId('Thumbnail_Id')->references('id')->on('thumbnails')
                 ->onUpdate('cascade')
                 ->onDelete('cascade')
@@ -41,13 +46,13 @@ return new class extends Migration
             $table->string('Supplier_UID')->nullable()->unique()->comment('the Brand Unique identifier');
             $table->string('Name_Supplier')->nullable()->unique()->comment('The name of Suppliers ');
             $table->string('Company_Name')->nullable()->comment('The name of Company');
-            $table->string('Brand_Logo')->nullable()->comment('The Suppliers Files images Brand Logo');
+            //$table->string('Brand_Logo')->nullable()->comment('The Suppliers Files images Brand Logo');
             $table->string('Address')->nullable()->comment('Address Business Localtion');
             $table->string('City')->nullable()->comment('City');
             $table->string('State')->nullable()->comment('Province of Country');
             $table->integer('Zip_Code')->nullable()->comment(' The Number Zip Code of City 5 Number');
             //$table->string('Region')->nullable()->comment('The Region of Country');
-            $table->string('Country')->nullable()->comment('The Country');
+            //$table->string('Country')->nullable()->comment('The Country');
             $table->integer('Moblie')->nullable()->comment('The Account Moblie Business');
             $table->integer('Whatsapp')->nullable()->comment('The Accunt Email Business');
             $table->string('Email')->nullable()->comment('The Accunt Email Business');
@@ -73,7 +78,8 @@ return new class extends Migration
         Schema::table('Suppliers', function (Blueprint $table) {
             //the drop Foreing key
             $table->dropForeign('Suppliers_User_id_foreign');
-            $table->dropForeign('Suppliers_Brands_Id_foreign');
+            $table->dropForeign('Suppliers_Countries_id_foreign');
+            $table->dropForeign('Suppliers_Thumbnail_Id_foreign');
         });
     }
 };

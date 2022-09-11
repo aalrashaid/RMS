@@ -84,7 +84,7 @@ return new class extends Migration
             $table->dropForeign('Recipe_Costs_User_Id_foreign');
             $table->dropForeign('Recipe_Costs_Brands_Id_foreign');
             $table->dropForeign('Recipe_Costs_Category_Id_foreign');
-            $table->dropForeign('Recipe_Costs_Menus_Id_foreign');
+            $table->dropForeign('Recipe_Costs_Recipe_Card_Id_foreign');
         });
     }
 };

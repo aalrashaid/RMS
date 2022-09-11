@@ -80,9 +80,9 @@ return new class extends Migration
         Schema::table('Brands', function (Blueprint $table) {
             //the drop Foreing key
             $table->dropForeign('Brands_User_id_foreign');
-            //$table->dropForeign('Brands_cuisines_id_foreign');
-            //$table->dropForeign('Brands_category_id_foreign');
-            //$table->dropForeign('Brands_thumbnail_id_foreign');
+            $table->dropForeign('Brands_Countries_id_foreign');
+            $table->dropForeign('Brands_Cuisine_id_foreign');
+            $table->dropForeign('Brands_Thumbnail_Id_foreign');
         });
     }
 };

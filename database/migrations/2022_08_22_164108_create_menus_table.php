@@ -74,9 +74,12 @@ return new class extends Migration
         Schema::table('Menus', function (Blueprint $table) {
             //the drop Foreing key
             $table->dropForeign('Menus_User_Id_foreign');
+            $table->dropForeign('Menus_Category_Id_foreign');
+            $table->dropForeign('Menus_Thumbnail_Id_foreign');
             $table->dropForeign('Menus_Brands_Id_foreign');
-            // $table->dropForeign('Menus_Category_Id_foreign');
             $table->dropForeign('Menus_Recipe_Cards_Id_foreign');
+            $table->dropForeign('Menus_Recipe_Costs_Id_foreign');
+            //$table->dropForeign('Menus_Recipe_Cards_Id_foreign');
         });
     }
 };

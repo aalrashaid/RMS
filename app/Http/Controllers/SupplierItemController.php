@@ -6,6 +6,8 @@ use App\Http\Requests\StoreSupplierItemRequest;
 use App\Http\Requests\UpdateSupplierItemRequest;
 use App\Models\SupplierItem;
 
+use App\Models\Supplier;
+
 class SupplierItemController extends Controller
 {
     /**
@@ -27,7 +29,9 @@ class SupplierItemController extends Controller
     public function create()
     {
         //
-        return view('SupplierItem.create');
+        $data['Suppliers'] = Supplier::get();
+
+        return view('SupplierItem.create', compact('Suppliers'));
     }
 
     /**

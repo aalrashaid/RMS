@@ -62,7 +62,7 @@ class RecipeCard extends Model
         'Difficulty',
         'Prep_Time',
         'Cook_Time',
-        'Time_Total',
+        //'Time_Total',
         'Serves',
         'Directions',
 

@@ -78,15 +78,6 @@ class Countries extends Model
      * Type: Has One  or Has Many
      */
 
-      /**
-     * Get the Recipes associated with the Countries.
-     * Eloquent Relationships: Countries model has One Recipes model.
-     *
-     * @return HasOne
-     */
-    public function Recipes(): HasOne
-    {
-        return $this->hasOne(Recipe::class,'Countries_id', 'id');
-    }
+
 
 }

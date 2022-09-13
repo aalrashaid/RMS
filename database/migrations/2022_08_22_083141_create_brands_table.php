@@ -46,7 +46,7 @@ return new class extends Migration
             $table->string('Brand_UID')->nullable()->unique()->comment('the Brand Unique identifier');
             $table->string('Name_Brand')->nullable()->unique()->comment('the Business Name Brands');
             $table->text('Description')->nullable()->comment('Description Text 288 Characters ');
-            $table->string('Brand_Loga')->nullable()->comment('the Files images brands Loags ');
+            //$table->string('Brand_Loga')->nullable()->comment('the Files images brands Loags ');
             $table->string('Address')->nullable()->comment('Address Business Localtion');
             $table->string('City')->nullable()->comment('City');
             $table->string('State')->nullable()->comment('Province of Country');

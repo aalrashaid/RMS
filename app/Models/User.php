@@ -56,15 +56,6 @@ class User extends Authenticatable
      * Type: Has One  or Has Many
      */
 
-     /**
-     * Get the Recipes associated with the user.
-     * Eloquent Relationships: User model has One Recipes model.
-     *
-     * @return HasOne
-     */
-    public function Recipes(): HasOne
-    {
-        return $this->hasOne(Recipe::class,'user_id', 'id');
-    }
+
 
 }

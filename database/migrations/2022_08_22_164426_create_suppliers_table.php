@@ -44,7 +44,7 @@ return new class extends Migration
             //$table->text('Description');
             $table->string('Slug')->nullable()->unique()->comment('the Slug Links of Business Name Suppliers');
             $table->string('Supplier_UID')->nullable()->unique()->comment('the Brand Unique identifier');
-            $table->string('Name_Supplier')->nullable()->unique()->comment('The name of Suppliers ');
+            //$table->string('Name_Supplier')->nullable()->unique()->comment('The name of Suppliers ');
             $table->string('Company_Name')->nullable()->comment('The name of Company');
             //$table->string('Brand_Logo')->nullable()->comment('The Suppliers Files images Brand Logo');
             $table->string('Address')->nullable()->comment('Address Business Localtion');

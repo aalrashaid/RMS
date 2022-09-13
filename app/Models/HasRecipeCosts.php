@@ -62,7 +62,7 @@ class HasRecipeCosts extends Model
         'EP_Unit_Cost',
         'EP_Yield_Percentage',
         'Extension',
-        'Total_Extension',
+        //'Total_Extension',
     ];
 
     /**

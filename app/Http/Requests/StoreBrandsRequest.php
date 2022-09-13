@@ -25,11 +25,13 @@ class StoreBrandsRequest extends FormRequest
     {
         return [
             //
-            'Cuisine_id' => ['required', 'integer', 'exists:cuisines,id'],
-            'Countries_id' => ['required', 'integer', 'exists:Countries_id,id'],
+            //'User_id' => ['required', 'integer', 'exists:Brands,User_id'],
+            'Cuisine_id' => ['required', 'integer'],
+            'Countries_id' => ['required', 'integer'],
             'thumbnail_id' => ['required', 'file', 'max:10240', 'mimes:jpg,jpeg,png,bmp,tiff'],
-            'Slug' => ['required','exists:Brands,Slug' ],
-            'Brand_UID' => ['required', 'unique:Brands,Brand_UID', 'exists:Brands,Brand_UID','min:5', 'max:255',],
+
+            'Slug' => ['required'],
+            //'Brand_UID' => ['required', 'unique:Brands,Brand_UID', 'exists:Brands,Brand_UID','min:5', 'max:255',],
             'Name_Brand' => ['required', 'unique:Brands,Name_Brand', 'min:5', 'max:255',],
             'Description' => ['required', 'min:5', 'max:280',],
             'Address' => ['required', 'min:5', 'max:255',],

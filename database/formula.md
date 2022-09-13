@@ -17,3 +17,6 @@ we need formula
 Yield percentage in food refers to the amount of usable food produced after trimming or cooking losses. ... This means the recipe ingredient is in EP form.
 
 Get your yield percentage by converting the edible product weight into a percentage. The formula is EP weight ÷ AP weight × 100 = yield %.
+-----
+
+The formula is: AP weight – waste = EP weight. Get your yield percentage by converting the edible product weight into a percentage. The formula is EP weight ÷ AP weight × 100 = yield %.

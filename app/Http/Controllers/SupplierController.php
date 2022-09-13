@@ -6,6 +6,8 @@ use App\Http\Requests\StoreSupplierRequest;
 use App\Http\Requests\UpdateSupplierRequest;
 use App\Models\Supplier;
 
+use App\Models\Countries;
+
 class SupplierController extends Controller
 {
     /**
@@ -27,7 +29,9 @@ class SupplierController extends Controller
     public function create()
     {
         //
-        return view('Suppliers.create');
+        $data['Countries'] = Countries::get();
+
+        return view('Suppliers.create',compact('data'));
     }
 
     /**

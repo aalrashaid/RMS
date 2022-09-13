@@ -80,15 +80,6 @@ class Thumbnails extends Model
      * Type: Has One  or Has Many
      */
 
-    /**
-     * Get the Recipes associated with the Thumbnail.
-     * Eloquent Relationships: Thumbnail model has One Recipes model.
-     *
-     * @return HasOne
-     */
-    public function Recipes(): HasOne
-    {
-        return $this->hasOne(Recipe::class,'Thumbnail_Id', 'id');
-    }
+
 
 }

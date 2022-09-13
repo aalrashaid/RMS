@@ -6,6 +6,8 @@ use App\Http\Requests\StoreRecipeCostsRequest;
 use App\Http\Requests\UpdateRecipeCostsRequest;
 use App\Models\RecipeCosts;
 
+use App\Models\Category;
+
 class RecipeCostsController extends Controller
 {
     /**
@@ -27,7 +29,9 @@ class RecipeCostsController extends Controller
     public function create()
     {
         //
-        return view('RecipeCosts.create');
+        $data['Categories'] = Category::get();
+
+        return view( 'RecipeCosts.create' , compact('data') );
     }
 
     /**

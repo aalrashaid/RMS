@@ -27,7 +27,8 @@ class DatabaseSeeder extends Seeder
             CountriesSeeder::class,
             GendersSeeder::class,
             currencySeeder::class,
-            LanguagesSeeder::class
+            LanguagesSeeder::class,
+            unitsOfMeasureSeeder::class
         ]);
 
         $this->command->info('Cuisine Seeder table seeded !,  created successfully.');

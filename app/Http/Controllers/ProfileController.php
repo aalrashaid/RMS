@@ -6,6 +6,11 @@ use App\Http\Requests\StoreProfileRequest;
 use App\Http\Requests\UpdateProfileRequest;
 use App\Models\Profile;
 
+use App\Models\Countries;
+use App\Models\Currency;
+use App\Models\Languages;
+use App\Models\UnitsOfMeasure;
+
 class ProfileController extends Controller
 {
     /**
@@ -16,6 +21,12 @@ class ProfileController extends Controller
     public function index()
     {
         //
+        $data['Countries'] = Countries::all();
+        $data['Currency'] = Currency::all();
+        $data['Languages'] = Languages::all();
+        $data['UnitsOfMeasure'] = UnitsOfMeasure::all();
+
+        return view('Profile.index',compact('data'));
     }
 
     /**
@@ -26,6 +37,13 @@ class ProfileController extends Controller
     public function create()
     {
         //
+        $data['Countries'] = Countries::all();
+        $data['Currency'] = Currency::all();
+        $data['Languages'] = Languages::all();
+        $data['UnitsOfMeasure'] = UnitsOfMeasure::all();
+
+        return view('Profile.create',compact('data'));
+
     }
 
     /**

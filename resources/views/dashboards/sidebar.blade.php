@@ -49,6 +49,12 @@
                     Supplier Item
                 </a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('Profile.index')}}">
+                    <span data-feather="layers" class="align-text-bottom"></span>
+                    Profile
+                </a>
+            </li>
         </ul>
 
         {{-- <h6

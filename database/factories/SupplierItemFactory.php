@@ -18,6 +18,20 @@ class SupplierItemFactory extends Factory
     {
         return [
             //
+            'User_Id',
+            'Thumbnail_Id',
+            'Brands_Id',
+            'Supplier_Id',
+            'Item_UID',
+            'Item_Name',
+            'Item_Description',
+            'Category_Item',
+            'Item_Size',
+            'SKU',
+            'UPC',
+            'Barcode',
+            'Serial_Number',
+            'Item_Unit_Price',
         ];
     }
 }

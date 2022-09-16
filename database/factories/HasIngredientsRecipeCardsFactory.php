@@ -18,6 +18,11 @@ class HasIngredientsRecipeCardsFactory extends Factory
     {
         return [
             //
+            'Recipe_Card_Id',
+
+            'Ingredients_Name',
+            'Ingredients_Unit',
+            'Ingredients_Unit_Name',
         ];
     }
 }

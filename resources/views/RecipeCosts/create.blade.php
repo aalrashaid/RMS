@@ -52,7 +52,7 @@
                 </div>
 
                 <select name="Category_Id" id="Category_Id" class="form-select form-select-lg mb-3"
-                    aria-label=".form-select-lg example">
+                    aria-label=".form-select-lg">
 
                     <option selected>Open this select menu</option>
 

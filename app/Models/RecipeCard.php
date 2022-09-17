@@ -83,14 +83,25 @@ class RecipeCard extends Model
     }
 
     /**
-     * Eloquent Relationships
-     * Type:belongsTo
-     */
-
+    *
+    * Eloquent Relationships belongsTo
+    *
+    */
 
     /**
-     * Eloquent Relationships
-     * Type: Has One or Has Many
+    *
+    * Get the user that owns the Recipe Card.
+    * Defining Relationships: belongsTo
+    */
+    public function user()
+    {
+        return $this->belongsTo(User::class,'User_Id','Id');
+    }
+
+    /**
+     *
+     * Eloquent Relationships Has One or Has Many
+     *
      */
 
 

@@ -87,13 +87,25 @@ class RecipeCosts extends Model
     }
 
     /**
-     * Eloquent Relationships
-     * Type:belongsTo
-     */
+    *
+    * Eloquent Relationships Type:belongsTo
+    *
+    */
 
     /**
-     * Eloquent Relationships
-     * Type: Has One or Has Many
+    *
+    * Get the user that owns the Menu.
+    * Defining Relationships: belongsTo
+    */
+    public function user()
+    {
+        return $this->belongsTo(User::class,'User_Id','Id');
+    }
+
+    /**
+     *
+     * Eloquent Relationships Type: Has One or Has Many
+     *
      */
 
 

@@ -4,7 +4,7 @@
 @section('content')
     <h1>Profile Setting</h1>
     <hr>
-    <a href="{{route('Profile.create')}}"> Setting</a>
+    <a href="{{ route('Profile.create') }}"> Setting</a>
     <hr>
     <div class="form-check form-switch">
         <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
@@ -20,47 +20,58 @@
     </div>
 
     <div>
-        <label class="form-check-label" for="exampleRadios1">
+        <label class="form-check-label" for="Countries">
             Country
         </label>
-        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+        <select name="Countries" id="Countries" class="form-select form-select-lg mb-3"
+            aria-label=".form-select-lg Countries">
             <option selected>Open this select menu</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+            @foreach ($data['Countries'] as $Country)
+                <option value="{{ $Country->id }}">{{ $Country->Name }}</option>
+            @endforeach
         </select>
     </div>
+
     <div>
-        <label class="form-check-label" for="exampleRadios1">
+        <label class="form-check-label" for="Languages">
             Languages
         </label>
-        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+        <select name="Languages" id="Languages" class="form-select form-select-lg mb-3"
+            aria-label=".form-select-lg Languages">
             <option selected>Open this select menu</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+            @foreach ($data['Languages'] as $Language)
+                <option value="{{ $Language->Id }}">{{ $Language->Name }}</option>
+            @endforeach
+
         </select>
     </div>
+
     <div>
-        <label class="form-check-label" for="exampleRadios1">
+        <label class="form-check-label" for="Currency">
             Currency
         </label>
-        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+        <select name="Currency" id="Currency" class="form-select form-select-lg mb-3"
+            aria-label=".form-select-lg Currency">
             <option selected>Open this select menu</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+            @foreach ($data['Currency'] as $Currency)
+                <option value="{{ $Currency->Id }}">{{ $Currency->Currency }}</option>
+            @endforeach
         </select>
     </div>
+
     <div>
-        <label class="form-check-label" for="exampleRadios1">
+        <label class="form-check-label" for="UnitsOfMeasure">
             Units Of Measure
         </label>
-        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+        <select name="UnitsOfMeasure" id="UnitsOfMeasure" class="form-select form-select-lg mb-3"
+            aria-label=".form-select-lg UnitsOfMeasure">
             <option selected>Open this select menu</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+            @foreach ($data['UnitsOfMeasure'] as $Unit)
+                <option value="{{ $Unit->Id }}">{{ $Unit->Region }}</option>
+            @endforeach
         </select>
     </div>
+
+    <hr>
+
 @endsection

@@ -81,19 +81,30 @@ class Inventory extends Model
     }
 
     /**
-     * Eloquent Relationships
-     * Type:belongsTo
-     */
+    *
+    * Eloquent Relationships belongsTo
+    *
+    */
 
     /**
-     * Eloquent Relationships
-     * Type: Has One or Has Many
-     */
+    * Get the user that owns the Inventory.
+    * Defining Relationships: belongsTo.
+    */
+    public function user()
+    {
+        return $this->belongsTo(User::class,'user_id','id');
+    }
+
+    /**
+    *
+    * Eloquent Relationships Has One or Has Many
+    *
+    */
 
 
     /**
-     * The Wirting All Function
-     */
+    * The Wirting All Function
+    */
 
     /**
      * Inventory UID

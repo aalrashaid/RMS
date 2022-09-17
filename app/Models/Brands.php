@@ -100,12 +100,22 @@ class Brands extends Model
      * Type:belongsTo
      */
 
+    /**
+     *
+     * Get the user that owns the Brands.
+     * Defining Relationships: belongsTo
+     */
+    public function user()
+    {
+        return $this->belongsTo(User::class,'user_id','Id');
+    }
 
 
     /**
      * Eloquent Relationships
      * Type: Has One or Has Many
      */
+
 
 
 

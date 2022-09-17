@@ -72,4 +72,69 @@
             </select>
         </div>
     </form>
+
+    <hr>
+
+    <h1>Change Password</h1>
+
+    <form method="POST" action="">
+
+        @csrf
+
+        <div class="form-floating mb-3">
+
+            <input type="password" class="form-control" id="password" name="password" value="{{ old('password') }}"
+                placeholder="password" required autocomplete="current-password">
+
+            <label for="password">Old Password</label>
+
+            @error('password')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+            @enderror
+        </div>
+
+        <div class="form-floating mb-3">
+
+            <input type="password" class="form-control" id="password" name="password" value="{{ old('password') }}"
+                placeholder="password" required autocomplete="current-password">
+
+            <label for="password">New Password</label>
+
+            @error('password')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+            @enderror
+        </div>
+
+        <div class="form-floating mb-3">
+
+            <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" value="{{ old('password_confirmation') }}"
+                placeholder="password_confirmation" required autocomplete="new-password">
+
+            <label for="password_confirmation">Password Confirmation</label>
+
+            @error('password')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+            @enderror
+        </div>
+
+        <button type="submit" value="Submit" class="btn btn-dark">{{ __('Confirm') }}</button>
+    </form>
+
+    <hr>
+
+    <h1>2-Step Verification</h1>
+
+    <h2>Setting Up</h2>
+    <h2>2-step verification</h2>
+
+    <hr>
+
+    <h1>Browser Sessions</h1>
+
 @endsection

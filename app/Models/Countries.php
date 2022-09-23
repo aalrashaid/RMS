@@ -69,14 +69,43 @@ class Countries extends Model
     }
 
     /**
-     * Eloquent Relationships
-     * Type:belongsTo
-     */
+    *
+    * Eloquent Relationships Type:belongsTo
+    *
+    */
 
     /**
-     * Eloquent Relationships
-     * Type: Has One  or Has Many
-     */
+    *
+    * Get the Category that owns the Recipe Costs.
+    * Defining Relationships: belongsTo
+    */
+
+    /**
+    *
+    * Eloquent Relationships Type: Has One  or Has Many
+    *
+    */
+
+    /**
+    *
+    * Get the Brands associated with the Countries.
+    * Defining Relationships: has Many
+    */
+    public function Brands()
+    {
+        return $this->hasMany(Brands::class,'Countries_id','id');
+    }
+
+    /**
+    *
+    * Get the Supplier associated with the Countries.
+    * Defining Relationships: has Many
+    */
+    public function Supplier()
+    {
+        return $this->hasOne(Supplier::class,'Countries_id','id');
+    }
+
 
 
 

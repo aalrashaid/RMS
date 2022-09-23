@@ -68,12 +68,14 @@ class session extends Model
     }
 
     /**
-     * Eloquent Relationships
-     * Type:belongsTo
-     */
+    *
+    * Eloquent Relationships Type:belongsTo
+    *
+    */
 
     /**
-     * Eloquent Relationships
-     * Type: Has One or Has Many
-     */
+    *
+    * Eloquent Relationships Type: Has One or Has Many
+    *
+    */
 }

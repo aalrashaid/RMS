@@ -92,7 +92,7 @@ class Supplier extends Model
 
     /**
     *
-    * Get the user that owns the Menu.
+    * Get the user that owns the Supplier.
     * Defining Relationships: belongsTo
     */
     public function user()
@@ -102,7 +102,29 @@ class Supplier extends Model
 
     /**
     *
+    * Get the Countries that owns the Supplier.
+    * Defining Relationships: belongsTo
+    */
+    public function Countries()
+    {
+        return $this->belongsTo(Countries::class,'Countries_id','id');
+    }
+
+    /**
+    *
     * Eloquent Relationships Type: Has One or Has Many
     *
     */
+
+    /**
+    *
+    * Get the Supplier Items associated with the Supplier.
+    * Eloquent Relationships: Supplier Items model has Many Supplier model.
+    *
+    * @return HasMany
+    */
+    public function supplierItem()
+    {
+        return $this->hanMany(SupplierItem::class,'Supplier_Id','Id');
+    }
 }

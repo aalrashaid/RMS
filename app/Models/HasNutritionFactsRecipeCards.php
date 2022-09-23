@@ -50,11 +50,14 @@ class HasNutritionFactsRecipeCards extends Model
      * @var array
      */
     protected $fillable = [
+
         'Recipe_Cards_Id',
+
         'Calories_Serving',
         'Carbs_Serving',
         'Protein_Serving',
         'Fat_Serving',
+
         'Ingredients_Name',
         'Calories_Unit',
         'Calories_Unit_Name',
@@ -81,14 +84,32 @@ class HasNutritionFactsRecipeCards extends Model
     }
 
     /**
-     * Eloquent Relationships
-     * Type:belongsTo
-     */
+    *
+    * Eloquent Relationships Type:belongsTo
+    *
+    */
 
     /**
-     * Eloquent Relationships
-     * Type: Has One or Has Many
-     */
+    *
+    * Get the Recipe Card that owns the Has Nutrition Facts Recipe Cards.
+    * Defining Relationships: belongsTo
+    */
+    public function recipeCard()
+    {
+        return $this->belongsTo(RecipeCard::class,'Recipe_Cards_Id','id');
+    }
+
+    /**
+    *
+    * Eloquent Relationships Type: Has One or Has Many
+    *
+    */
+
+    /**
+    *
+    * Get the Inventory associated with the Brands.
+    * Defining Relationships: has Many
+    */
 
 
 
@@ -97,7 +118,7 @@ class HasNutritionFactsRecipeCards extends Model
      */
 
     /**
-     *
-     */
+    *
+    */
 
 }

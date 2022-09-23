@@ -46,9 +46,11 @@ class Inventory extends Model
      * @var array
      */
     protected $fillable = [
+
         'User_Id',
         'Brands_Id',
         'Supplier_Items_ID',
+
         'Inventory_UID',
         'Name_Item',
         //'Description_Item',
@@ -93,6 +95,15 @@ class Inventory extends Model
     public function user()
     {
         return $this->belongsTo(User::class,'user_id','id');
+    }
+
+    /**
+    * Get the Brands that owns the Inventory.
+    * Defining Relationships: belongsTo.
+    */
+    public function brands()
+    {
+        return $this->belongsTo(Brands::class,'Brands_Id' , 'id');
     }
 
     /**

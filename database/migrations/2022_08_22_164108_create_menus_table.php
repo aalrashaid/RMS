@@ -27,17 +27,17 @@ return new class extends Migration
                 ->onDelete('cascade')
             ->comment('The foreign Key Id in Taleb In recipe cards');
 
+            $table->foreignId('Brands_Id')->references('id')->on('brands')
+                ->onUpdate('cascade')
+                ->onDelete('cascade')
+                ->comment('The foreign Key Id in Taleb In recipe cards');
+
             $table->foreignId('Category_Id')->references('id')->on('categories')
                 ->onUpdate('cascade')
                 ->onDelete('cascade')
                 ->comment('The foreign Key Id in Taleb In recipe cards');
 
             $table->foreignId('Thumbnail_Id')->references('id')->on('thumbnails')
-                ->onUpdate('cascade')
-                ->onDelete('cascade')
-                ->comment('The foreign Key Id in Taleb In recipe cards');
-
-            $table->foreignId('Brands_Id')->references('id')->on('brands')
                 ->onUpdate('cascade')
                 ->onDelete('cascade')
                 ->comment('The foreign Key Id in Taleb In recipe cards');

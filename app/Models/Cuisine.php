@@ -68,21 +68,36 @@ class Cuisine extends Model
     }
 
     /**
-     * Eloquent Relationships
-     * Type:belongsTo
-     */
+    *
+    * Eloquent Relationships Type:belongsTo
+    *
+    */
 
     /**
-     * Eloquent Relationships
-     * Type: Has One  or Has Many
-     */
+    *
+    * Eloquent Relationships Type: Has One  or Has Many
+    *
+    */
 
-     /**
-     * Get the Recipes associated with the Cuisine.
-     * Eloquent Relationships: Cuisine model has One Recipes model.
-     *
-     * @return HasOne
-     */
+    /**
+    *
+    * Get the Brands associated with the Cuisine.
+    * Eloquent Relationships: Cuisine model has One Recipes model.
+    *
+    * @return HasOne
+    */
+    public function Brands(): HasOne
+    {
+        return $this->hasOne(Brands::class,'Cuisine_id','id');
+    }
+
+    /**
+    *
+    * Get the Recipes associated with the Cuisine.
+    * Eloquent Relationships: Cuisine model has One Recipes model.
+    *
+    * @return HasOne
+    */
     public function Recipes(): HasOne
     {
         return $this->hasOne(Recipe::class,'Cuisine_id', 'id');

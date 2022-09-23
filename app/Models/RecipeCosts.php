@@ -94,7 +94,7 @@ class RecipeCosts extends Model
 
     /**
     *
-    * Get the user that owns the Menu.
+    * Get the user that owns the Recipe Costs.
     * Defining Relationships: belongsTo
     */
     public function user()
@@ -103,10 +103,52 @@ class RecipeCosts extends Model
     }
 
     /**
-     *
-     * Eloquent Relationships Type: Has One or Has Many
-     *
-     */
+    *
+    * Get the Brands that owns the Recipe Costs.
+    * Defining Relationships: belongsTo
+    */
+    public function brands()
+    {
+        return $this->belongsTo(Brands::class,'Brands_Id','id');
+    }
+
+    /**
+    *
+    * Get the Category that owns the Recipe Costs.
+    * Defining Relationships: belongsTo
+    */
+    public function Category()
+    {
+        return $this->belongsTo(Category::class,'Category_Id','id');
+    }
+
+    /**
+    *
+    * Get the Recipe Card that owns the Recipe Costs.
+    * Defining Relationships: belongsTo
+    */
+    public function RecipeCard()
+    {
+        return $this->belongsTo(RecipeCard::class,'Recipe_Card_Id','id');
+    }
+
+    /**
+    *
+    * Eloquent Relationships Type: Has One or Has Many
+    *
+    */
+
+    /**
+    *
+    * Get the Has Recipe Costs associated with the Recipe Costs.
+    * Eloquent Relationships: Has Recipe Costs model has Many Recipe Costs model.
+    *
+    * @return HasMany
+    */
+    public function HasRecipeCosts()
+    {
+        return $this->hanMany(HasRecipeCosts::class,'Recipe_Costs_Id','id');
+    }
 
 
     /**

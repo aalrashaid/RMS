@@ -66,14 +66,35 @@ class Category extends Model
     }
 
     /**
-     * Eloquent Relationships
-     * Type:belongsTo
-     */
+    *
+    * Eloquent Relationships Type:belongsTo
+    *
+    */
 
 
     /**
-     * Eloquent Relationships
-     * Type: Has One or Has Many
-     */
+    *
+    * Eloquent Relationships Type: Has One  or Has Many
+    *
+    */
 
+    /**
+    *
+    * Get the Menu associated with the Category.
+    * Defining Relationships: has Many
+    */
+    public function Menu()
+    {
+        return $this->hasMany(Menu::class,'Category_Id','id');
+    }
+
+    /**
+    *
+    * Get the Recipe Costs associated with the Category.
+    * Defining Relationships: has Many
+    */
+    public function RecipeCosts()
+    {
+        return $this->hasMany(RecipeCosts::class,'Category_Id','id');
+    }
 }

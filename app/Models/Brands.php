@@ -96,26 +96,97 @@ class Brands extends Model
     }
 
     /**
-     * Eloquent Relationships
-     * Type:belongsTo
-     */
+    *
+    * Eloquent Relationships Type:belongsTo
+    *
+    */
 
     /**
-     *
-     * Get the user that owns the Brands.
-     * Defining Relationships: belongsTo
-     */
+    *
+    * Get the user that owns the Brands.
+    * Defining Relationships: belongsTo
+    */
     public function user()
     {
         return $this->belongsTo(User::class,'user_id','Id');
     }
 
+    /**
+    *
+    * Get the Countries that owns the Brands.
+    * Defining Relationships: belongsTo
+    */
+    public function Countries()
+    {
+        return $this->belongsTo(Countries::class,'Countries_id','id');
+    }
 
     /**
-     * Eloquent Relationships
-     * Type: Has One or Has Many
-     */
+    *
+    * Get the Cuisine that owns the Brands.
+    * Defining Relationships: belongsTo
+    */
+    public function Cuisine()
+    {
+        return $this->belongsTo(Cuisine::class,'Cuisine_id','id');
+    }
 
+
+    /**
+    *
+    * Eloquent Relationships Type: Has One or Has Many
+    *
+    */
+
+    /**
+    *
+    * Get the Inventory associated with the Brands.
+    * Defining Relationships: has Many
+    */
+    public function inventory()
+    {
+        return $this->hasMany(Inventory::class, 'Brands_Id' ,'id');
+    }
+
+    /**
+    *
+    * Get the Menu associated with the Brands.
+    * Defining Relationships: has Many
+    */
+    public function menu()
+    {
+        return $this->hasOne(Menu::class, 'Brands_Id','id');
+    }
+
+    /**
+    *
+    * Get the Recipe Card associated with the Brands.
+    * Defining Relationships: has Many
+    */
+    public function recipeCard()
+    {
+        return $this->hasOne(RecipeCard::class,'Brands_Id','id');
+    }
+
+    /**
+    *
+    * Get the Recipe Card associated with the Brands.
+    * Defining Relationships: has Many
+    */
+    public function recipeCosts()
+    {
+        return $this->hasMany(RecipeCosts::class,'Brands_Id','id');
+    }
+
+    /**
+    *
+    * Get the Supplier Item associated with the Brands.
+    * Defining Relationships: has Many
+    */
+    public function SupplierItem()
+    {
+        return $this->hasMany(SupplierItem::class,'Brands_Id','Id');
+    }
 
 
 

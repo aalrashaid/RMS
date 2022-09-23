@@ -46,11 +46,13 @@ class Menu extends Model
      * @var array
      */
     protected $fillable = [
+
         'User_Id',
         'Brands_Id',
         'Category_Id',
         'Thumbnail_Id',
         'Recipe_Cards_Id',
+
         'Name',
         'Slug',
         'Description',
@@ -85,6 +87,29 @@ class Menu extends Model
     public function user()
     {
         return $this->belongsTo(User::class,'User_Id','Id');
+    }
+
+    /**
+    *
+    * Get the Brands that owns the Menu.
+    * Defining Relationships: belongsTo
+    */
+
+    public function brands()
+    {
+        return $this->belongsTo(Brands::class,'Brands_Id','id');
+    }
+
+    /**
+    *
+    * Get the Category that owns the Menu.
+    * Defining Relationships: belongsTo
+    *
+    */
+
+    public function Category()
+    {
+        return $this->belongsTo(Category::class,'Category_Id','id');
     }
 
     /**

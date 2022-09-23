@@ -51,7 +51,9 @@ class HasIngredientsRecipeCards extends Model
      * @var array
      */
     protected $fillable = [
+
         'Recipe_Card_Id',
+
         'Ingredients_Name',
         'Ingredients_Unit',
         'Ingredients_Unit_Name',
@@ -73,18 +75,39 @@ class HasIngredientsRecipeCards extends Model
     }
 
     /**
-     * Eloquent Relationships
-     * Type:belongsTo
-     */
+    *
+    * Eloquent Relationships Type:belongsTo
+    *
+    */
 
     /**
-     * Eloquent Relationships
-     * Type: Has One or Has Many
-     */
+    *
+    * Get the Recipe Card that owns the Has Ingredients Recipe Cards.
+    * Defining Relationships: belongsTo
+    */
+    public function recipeCard()
+    {
+        return $this->belongsTo(RecipeCard::class,'Recipe_Cards_Id','id');
+    }
+
+    /**
+    *
+    * Eloquent Relationships Type: Has One or Has Many
+    *
+    */
+
+    /**
+    *
+    * Get the Inventory associated with the Brands.
+    * Defining Relationships: has Many
+    */
+
 
 
     /**
-     * The Wirting All Function
-     */
+    *
+    * The Wirting All Function
+    *
+    */
 
 }

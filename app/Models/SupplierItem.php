@@ -46,10 +46,12 @@ class SupplierItem extends Model
      * @var array
      */
     protected $fillable = [
+
         'User_Id',
-        'Thumbnail_Id',
         'Brands_Id',
         'Supplier_Id',
+        'Thumbnail_Id',
+
         'Item_UID',
         'Item_Name',
         'Item_Description',
@@ -88,12 +90,32 @@ class SupplierItem extends Model
 
     /**
     *
-    * Get the user that owns the Menu.
+    * Get the user that owns the Supplier Item.
     * Defining Relationships: belongsTo
     */
     public function user()
     {
         return $this->belongsTo(User::class,'User_Id','Id');
+    }
+
+    /**
+    *
+    * Get the Brands that owns the Supplier Item.
+    * Defining Relationships: belongsTo
+    */
+    public function brands()
+    {
+        return $this->belongsTo(Brands::class,'Brands_Id','id');
+    }
+
+    /**
+    *
+    * Get the Supplier that owns the Supplier Item.
+    * Defining Relationships: belongsTo
+    */
+    public function supplier()
+    {
+        return $this->belongsTo(Supplier::class,'Supplier_Id','id');
     }
 
     /**

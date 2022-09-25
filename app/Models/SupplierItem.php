@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 use Cviebrock\EloquentSluggable\Sluggable;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class SupplierItem extends Model
 {
@@ -92,8 +93,10 @@ class SupplierItem extends Model
     *
     * Get the user that owns the Supplier Item.
     * Defining Relationships: belongsTo
+    *
+    * @return belongsTo
     */
-    public function user()
+    public function user() : BelongsTo
     {
         return $this->belongsTo(User::class,'User_Id','Id');
     }
@@ -102,8 +105,10 @@ class SupplierItem extends Model
     *
     * Get the Brands that owns the Supplier Item.
     * Defining Relationships: belongsTo
+    *
+    * @return belongsTo
     */
-    public function brands()
+    public function brands() : BelongsTo
     {
         return $this->belongsTo(Brands::class,'Brands_Id','id');
     }
@@ -112,15 +117,18 @@ class SupplierItem extends Model
     *
     * Get the Supplier that owns the Supplier Item.
     * Defining Relationships: belongsTo
+    *
+    * @return belongsTo
     */
-    public function supplier()
+    public function supplier() : BelongsTo
     {
         return $this->belongsTo(Supplier::class,'Supplier_Id','id');
     }
 
     /**
     *
-    * Eloquent Relationships Type: Has One or Has Many
+    * Eloquent Relationships
+    * Defining Relationships: Has One Or has Many
     *
     */
 

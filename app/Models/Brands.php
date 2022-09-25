@@ -20,38 +20,38 @@ class Brands extends Model
     use Sluggable;
 
     /**
-     * The table associated with the model.
-     *
-     * @var string
-     */
+    * The table associated with the model.
+    *
+    * @var string
+    */
     protected $table = 'Brands';
 
     /**
-     * The primary key associated with the table.
-     *
-     * @var string
-     */
+    * The primary key associated with the table.
+    *
+    * @var string
+    */
     protected $primaryKey = 'id';
 
     /**
-     * Indicates if the model's ID is auto-incrementing.
-     *
-     * @var bool
-     */
+    * Indicates if the model's ID is auto-incrementing.
+    *
+    * @var bool
+    */
     public $incrementing = true;
 
     /**
-     * Indicates if the model should be timestamped.
-     *
-     * @var bool
-     */
+    * Indicates if the model should be timestamped.
+    *
+    * @var bool
+    */
     public $timestamps = true;
 
     /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
+    * The attributes that are mass assignable.
+    *
+    * @var array
+    */
     protected $fillable = [
 
         'user_id',
@@ -82,10 +82,11 @@ class Brands extends Model
     ];
 
     /**
-     * Return the sluggable configuration array for this model.
-     *
-     * @return array
-     */
+    *
+    * Return the sluggable configuration array for this model.
+    *
+    * @return array
+    */
     public function sluggable(): array
     {
         return [
@@ -97,16 +98,19 @@ class Brands extends Model
 
     /**
     *
-    * Eloquent Relationships Type:belongsTo
+    * Eloquent Relationships
+    * Defining Relationships: belongsTo
     *
     */
 
     /**
     *
     * Get the user that owns the Brands.
-    * Defining Relationships: belongsTo
+    * Relationships: belongsTo
+    *
+    * @return BelongsTo
     */
-    public function user()
+    public function user(): BelongsTo
     {
         return $this->belongsTo(User::class,'user_id','Id');
     }
@@ -114,9 +118,11 @@ class Brands extends Model
     /**
     *
     * Get the Countries that owns the Brands.
-    * Defining Relationships: belongsTo
+    * Relationships: belongsTo
+    *
+    * @return BelongsTo
     */
-    public function Countries()
+    public function Countries() : BelongsTo
     {
         return $this->belongsTo(Countries::class,'Countries_id','id');
     }
@@ -124,9 +130,11 @@ class Brands extends Model
     /**
     *
     * Get the Cuisine that owns the Brands.
-    * Defining Relationships: belongsTo
+    * Relationships: belongsTo
+    *
+    * @return BelongsTo
     */
-    public function Cuisine()
+    public function Cuisine() :BelongsTo
     {
         return $this->belongsTo(Cuisine::class,'Cuisine_id','id');
     }
@@ -134,16 +142,19 @@ class Brands extends Model
 
     /**
     *
-    * Eloquent Relationships Type: Has One or Has Many
+    * Eloquent Relationships
+    * Defining Relationships: Has One Or has Many
     *
     */
 
     /**
     *
     * Get the Inventory associated with the Brands.
-    * Defining Relationships: has Many
+    * Relationships: has Many
+    *
+    * @return HasMany
     */
-    public function inventory()
+    public function inventory() : HasMany
     {
         return $this->hasMany(Inventory::class, 'Brands_Id' ,'id');
     }
@@ -151,9 +162,11 @@ class Brands extends Model
     /**
     *
     * Get the Menu associated with the Brands.
-    * Defining Relationships: has Many
+    * Relationships: has One
+    *
+    * @return HasOne
     */
-    public function menu()
+    public function menu() : HasOne
     {
         return $this->hasOne(Menu::class, 'Brands_Id','id');
     }
@@ -161,9 +174,11 @@ class Brands extends Model
     /**
     *
     * Get the Recipe Card associated with the Brands.
-    * Defining Relationships: has Many
+    * Relationships: has One
+    *
+    * @return HasOne
     */
-    public function recipeCard()
+    public function recipeCard() : HasOne
     {
         return $this->hasOne(RecipeCard::class,'Brands_Id','id');
     }
@@ -171,9 +186,11 @@ class Brands extends Model
     /**
     *
     * Get the Recipe Card associated with the Brands.
-    * Defining Relationships: has Many
+    * Relationships: has Many
+    *
+    * @return HasMany
     */
-    public function recipeCosts()
+    public function recipeCosts() : HasMany
     {
         return $this->hasMany(RecipeCosts::class,'Brands_Id','id');
     }
@@ -181,9 +198,11 @@ class Brands extends Model
     /**
     *
     * Get the Supplier Item associated with the Brands.
-    * Defining Relationships: has Many
+    * Relationships: has Many
+    *
+    * @return HasMany
     */
-    public function SupplierItem()
+    public function SupplierItem() : HasMany
     {
         return $this->hasMany(SupplierItem::class,'Brands_Id','Id');
     }
@@ -191,13 +210,15 @@ class Brands extends Model
 
 
     /**
-     * The Wirting All Function
-     */
+    *
+    * The Wirting All Function
+    *
+    */
 
     /**
-     * Uploads Logo For in Create froms
-     * @param  App\Http\Requests
-     */
+    * Uploads Logo For in Create froms
+    * @param  App\Http\Requests
+    */
     public function logoUplaod($request)
     {
         if ($request->hasFile('thumbnails')) {
@@ -206,10 +227,5 @@ class Brands extends Model
         }
     }
 
-    /**
-     * The set Logo For profile Brand
-     */
-    public function setLoga()
-    {
-    }
+
 }

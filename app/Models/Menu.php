@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 use Cviebrock\EloquentSluggable\Sluggable;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Menu extends Model
 {
@@ -75,16 +76,19 @@ class Menu extends Model
 
     /**
     *
-    * Eloquent Relationships belongsTo
+    * Eloquent Relationships
+    * Defining Relationships: belongsTo
     *
     */
 
     /**
     *
     * Get the user that owns the Menu.
-    * Defining Relationships: belongsTo
+    * Relationships: belongsTo
+    *
+    * @return BelongsTo
     */
-    public function user()
+    public function user() : BelongsTo
     {
         return $this->belongsTo(User::class,'User_Id','Id');
     }
@@ -92,10 +96,12 @@ class Menu extends Model
     /**
     *
     * Get the Brands that owns the Menu.
-    * Defining Relationships: belongsTo
+    * Relationships: belongsTo
+    *
+    * @return BelongsTo
     */
 
-    public function brands()
+    public function brands(): BelongsTo
     {
         return $this->belongsTo(Brands::class,'Brands_Id','id');
     }
@@ -103,18 +109,21 @@ class Menu extends Model
     /**
     *
     * Get the Category that owns the Menu.
-    * Defining Relationships: belongsTo
+    * Relationships: belongsTo
+    *
+    * @return BelongsTo
     *
     */
 
-    public function Category()
+    public function Category() : BelongsTo
     {
         return $this->belongsTo(Category::class,'Category_Id','id');
     }
 
     /**
     *
-    * Eloquent Relationships Has One or Has Many
+    * Eloquent Relationships
+    * Defining Relationships: Has One Or has Many
     *
     */
 

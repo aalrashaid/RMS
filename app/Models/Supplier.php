@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 use Cviebrock\EloquentSluggable\Sluggable;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Supplier extends Model
 {
@@ -13,38 +15,38 @@ class Supplier extends Model
     use Sluggable;
 
     /**
-     * The table associated with the model.
-     *
-     * @var string
-     */
+    * The table associated with the model.
+    *
+    * @var string
+    */
     protected $table = 'Suppliers';
 
     /**
-     * The primary key associated with the table.
-     *
-     * @var string
-     */
+    * The primary key associated with the table.
+    *
+    * @var string
+    */
     protected $primaryKey = 'id';
 
     /**
-     * Indicates if the model's ID is auto-incrementing.
-     *
-     * @var bool
-     */
+    * Indicates if the model's ID is auto-incrementing.
+    *
+    * @var bool
+    */
     public $incrementing = true;
 
     /**
-     * Indicates if the model should be timestamped.
-     *
-     * @var bool
-     */
+    * Indicates if the model should be timestamped.
+    *
+    * @var bool
+    */
     public $timestamps = true;
 
     /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
+    * The attributes that are mass assignable.
+    *
+    * @var array
+    */
     protected $fillable = [
         'User_id',
         'Thumbnail_Id',
@@ -71,10 +73,10 @@ class Supplier extends Model
     ];
 
     /**
-     * Return the sluggable configuration array for this model.
-     *
-     * @return array
-     */
+    * Return the sluggable configuration array for this model.
+    *
+    * @return array
+    */
     public function sluggable(): array
     {
         return [
@@ -86,16 +88,19 @@ class Supplier extends Model
 
     /**
     *
-    * Eloquent Relationships Type: belongsTo
+    * Eloquent Relationships
+    * Defining Relationships: belongsTo
     *
     */
 
     /**
     *
     * Get the user that owns the Supplier.
-    * Defining Relationships: belongsTo
+    * Relationships: belongsTo
+    *
+    * @return belongsTo
     */
-    public function user()
+    public function user() : BelongsTo
     {
         return $this->belongsTo(User::class,'User_Id','Id');
     }
@@ -103,16 +108,19 @@ class Supplier extends Model
     /**
     *
     * Get the Countries that owns the Supplier.
-    * Defining Relationships: belongsTo
+    * Relationships: belongsTo
+    *
+    * @return belongsTo
     */
-    public function Countries()
+    public function Countries() : BelongsTo
     {
         return $this->belongsTo(Countries::class,'Countries_id','id');
     }
 
     /**
     *
-    * Eloquent Relationships Type: Has One or Has Many
+    * Eloquent Relationships
+    * Relationships: Has One Or has Many
     *
     */
 
@@ -123,7 +131,7 @@ class Supplier extends Model
     *
     * @return HasMany
     */
-    public function supplierItem()
+    public function supplierItem() : HasMany
     {
         return $this->hanMany(SupplierItem::class,'Supplier_Id','Id');
     }

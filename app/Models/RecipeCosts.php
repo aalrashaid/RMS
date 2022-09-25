@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\HasRecipeCosts;
 
 use Cviebrock\EloquentSluggable\Sluggable;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class RecipeCosts extends Model
 {
@@ -88,16 +90,19 @@ class RecipeCosts extends Model
 
     /**
     *
-    * Eloquent Relationships Type:belongsTo
+    * Eloquent Relationships
+    * Defining Relationships: belongsTo
     *
     */
 
     /**
     *
     * Get the user that owns the Recipe Costs.
-    * Defining Relationships: belongsTo
+    * Relationships: belongsTo
+    *
+    * @return BelongsTo
     */
-    public function user()
+    public function user() : BelongsTo
     {
         return $this->belongsTo(User::class,'User_Id','Id');
     }
@@ -105,9 +110,11 @@ class RecipeCosts extends Model
     /**
     *
     * Get the Brands that owns the Recipe Costs.
-    * Defining Relationships: belongsTo
+    * Relationships: belongsTo
+    *
+    * @return BelongsTo
     */
-    public function brands()
+    public function brands() : BelongsTo
     {
         return $this->belongsTo(Brands::class,'Brands_Id','id');
     }
@@ -115,9 +122,11 @@ class RecipeCosts extends Model
     /**
     *
     * Get the Category that owns the Recipe Costs.
-    * Defining Relationships: belongsTo
+    * Relationships: belongsTo
+    *
+    * @return BelongsTo
     */
-    public function Category()
+    public function Category() : BelongsTo
     {
         return $this->belongsTo(Category::class,'Category_Id','id');
     }
@@ -125,16 +134,19 @@ class RecipeCosts extends Model
     /**
     *
     * Get the Recipe Card that owns the Recipe Costs.
-    * Defining Relationships: belongsTo
+    * Relationships: belongsTo
+    *
+    * @return BelongsTo
     */
-    public function RecipeCard()
+    public function RecipeCard() : BelongsTo
     {
         return $this->belongsTo(RecipeCard::class,'Recipe_Card_Id','id');
     }
 
     /**
     *
-    * Eloquent Relationships Type: Has One or Has Many
+    * Eloquent Relationships
+    * Defining Relationships: Has One Or has Many
     *
     */
 
@@ -145,7 +157,7 @@ class RecipeCosts extends Model
     *
     * @return HasMany
     */
-    public function HasRecipeCosts()
+    public function HasRecipeCosts() : HasMany
     {
         return $this->hanMany(HasRecipeCosts::class,'Recipe_Costs_Id','id');
     }

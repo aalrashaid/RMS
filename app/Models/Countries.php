@@ -15,30 +15,31 @@ class Countries extends Model
     use Sluggable;
 
     /**
-     * The table associated with the model.
-     *
-     * @var string
-     */
+    * The table associated with the model.
+    *
+    * @var string
+    */
     protected $table = 'Countries';
 
     /**
-     * The primary key associated with the table.
-     *
-     * @var string
-     */
+    * The primary key associated with the table.
+    *
+    * @var string
+    */
     protected $primaryKey = 'id';
+
     /**
-     * Indicates if the model's ID is auto-incrementing.
-     *
-     * @var bool
-     */
+    * Indicates if the model's ID is auto-incrementing.
+    *
+    * @var bool
+    */
     public $incrementing = true;
 
     /**
-     * Indicates if the model should be timestamped.
-     *
-     * @var bool
-     */
+    * Indicates if the model should be timestamped.
+    *
+    * @var bool
+    */
     public $timestamps = true;
 
     /**
@@ -54,11 +55,11 @@ class Countries extends Model
         'Phone_Code',
     ];
 
-     /**
-     * Return the sluggable configuration array for this model.
-     *
-     * @return array
-     */
+    /**
+    * Return the sluggable configuration array for this model.
+    *
+    * @return array
+    */
     public function sluggable(): array
     {
         return [
@@ -70,28 +71,27 @@ class Countries extends Model
 
     /**
     *
-    * Eloquent Relationships Type:belongsTo
-    *
-    */
-
-    /**
-    *
-    * Get the Category that owns the Recipe Costs.
+    * Eloquent Relationships
     * Defining Relationships: belongsTo
+    *
     */
+
 
     /**
     *
-    * Eloquent Relationships Type: Has One  or Has Many
+    * Eloquent Relationships
+    * Defining Relationships: Has One Or has Many
     *
     */
 
     /**
     *
     * Get the Brands associated with the Countries.
-    * Defining Relationships: has Many
+    * Relationships: has Many
+    *
+    * @return HasMany
     */
-    public function Brands()
+    public function Brands() : HasMany
     {
         return $this->hasMany(Brands::class,'Countries_id','id');
     }
@@ -99,9 +99,11 @@ class Countries extends Model
     /**
     *
     * Get the Supplier associated with the Countries.
-    * Defining Relationships: has Many
+    * Relationships: has One
+    *
+    * @return HasOne
     */
-    public function Supplier()
+    public function Supplier() : HasOne
     {
         return $this->hasOne(Supplier::class,'Countries_id','id');
     }

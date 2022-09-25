@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 use Cviebrock\EloquentSluggable\Sluggable;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class HasIngredientsRecipeCards extends Model
 {
@@ -18,38 +19,38 @@ class HasIngredientsRecipeCards extends Model
     use Sluggable;
 
     /**
-     * The table associated with the model.
-     *
-     * @var string
-     */
+    * The table associated with the model.
+    *
+    * @var string
+    */
     protected $table = 'Has_Ingredients_Recipe_Cards';
 
     /**
-     * The primary key associated with the table.
-     *
-     * @var string
-     */
+    * The primary key associated with the table.
+    *
+    * @var string
+    */
     protected $primaryKey = 'id';
 
     /**
-     * Indicates if the model's ID is auto-incrementing.
-     *
-     * @var bool
-     */
+    * Indicates if the model's ID is auto-incrementing.
+    *
+    * @var bool
+    */
     public $incrementing = true;
 
     /**
-     * Indicates if the model should be timestamped.
-     *
-     * @var bool
-     */
+    * Indicates if the model should be timestamped.
+    *
+    * @var bool
+    */
     public $timestamps = true;
 
     /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
+    * The attributes that are mass assignable.
+    *
+    * @var array
+    */
     protected $fillable = [
 
         'Recipe_Card_Id',
@@ -61,10 +62,10 @@ class HasIngredientsRecipeCards extends Model
     ];
 
     /**
-     * Return the sluggable configuration array for this model.
-     *
-     * @return array
-     */
+    * Return the sluggable configuration array for this model.
+    *
+    * @return array
+    */
     public function sluggable(): array
     {
         return [
@@ -76,7 +77,8 @@ class HasIngredientsRecipeCards extends Model
 
     /**
     *
-    * Eloquent Relationships Type:belongsTo
+    * Eloquent Relationships
+    * Defining Relationships: belongsTo
     *
     */
 
@@ -84,22 +86,27 @@ class HasIngredientsRecipeCards extends Model
     *
     * Get the Recipe Card that owns the Has Ingredients Recipe Cards.
     * Defining Relationships: belongsTo
+    *
+    * @return BelongsTo
     */
-    public function recipeCard()
+    public function recipeCard(): BelongsTo
     {
         return $this->belongsTo(RecipeCard::class,'Recipe_Cards_Id','id');
     }
 
     /**
     *
-    * Eloquent Relationships Type: Has One or Has Many
+    * Eloquent Relationships
+    * Defining Relationships: Has One Or has Many
     *
     */
 
     /**
     *
-    * Get the Inventory associated with the Brands.
-    * Defining Relationships: has Many
+    * Get the [Name Model] associated with the  Has Ingredients Recipe Cards.
+    * Defining Relationships: return [ HasOne Or HasMany ]
+    *
+    * @return HasOne
     */
 
 

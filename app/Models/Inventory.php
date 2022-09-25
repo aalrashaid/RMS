@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 use Cviebrock\EloquentSluggable\Sluggable;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Inventory extends Model
 {
@@ -13,38 +14,38 @@ class Inventory extends Model
     use Sluggable;
 
     /**
-     * The table associated with the model.
-     *
-     * @var string
-     */
+    * The table associated with the model.
+    *
+    * @var string
+    */
     protected $table = 'Inventories';
 
     /**
-     * The primary key associated with the table.
-     *
-     * @var string
-     */
+    * The primary key associated with the table.
+    *
+    * @var string
+    */
     protected $primaryKey = 'id';
 
     /**
-     * Indicates if the model's ID is auto-incrementing.
-     *
-     * @var bool
-     */
+    * Indicates if the model's ID is auto-incrementing.
+    *
+    * @var bool
+    */
     public $incrementing = true;
 
     /**
-     * Indicates if the model should be timestamped.
-     *
-     * @var bool
-     */
+    * Indicates if the model should be timestamped.
+    *
+    * @var bool
+    */
     public $timestamps = true;
 
     /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
+    * The attributes that are mass assignable.
+    *
+    * @var array
+    */
     protected $fillable = [
 
         'User_Id',
@@ -69,10 +70,10 @@ class Inventory extends Model
     ];
 
     /**
-     * Return the sluggable configuration array for this model.
-     *
-     * @return array
-     */
+    * Return the sluggable configuration array for this model.
+    *
+    * @return array
+    */
     public function sluggable(): array
     {
         return [
@@ -84,31 +85,37 @@ class Inventory extends Model
 
     /**
     *
-    * Eloquent Relationships belongsTo
+    * Eloquent Relationships
+    * Defining Relationships: belongsTo
     *
     */
 
     /**
     * Get the user that owns the Inventory.
-    * Defining Relationships: belongsTo.
+    * Relationships: belongsTo
+    *
+    * @return BelongsTo
     */
-    public function user()
+    public function user() : BelongsTo
     {
         return $this->belongsTo(User::class,'user_id','id');
     }
 
     /**
     * Get the Brands that owns the Inventory.
-    * Defining Relationships: belongsTo.
+    * Relationships: belongsTo
+    *
+    * @return BelongsTo
     */
-    public function brands()
+    public function brands() : BelongsTo
     {
         return $this->belongsTo(Brands::class,'Brands_Id' , 'id');
     }
 
     /**
     *
-    * Eloquent Relationships Has One or Has Many
+    * Eloquent Relationships
+    * Defining Relationships: Has One Or has Many
     *
     */
 

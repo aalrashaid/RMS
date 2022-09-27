@@ -135,4 +135,10 @@ class Supplier extends Model
     {
         return $this->hanMany(SupplierItem::class,'Supplier_Id','Id');
     }
+
+    /**
+    *
+    * The Wirting All Function
+    *
+    */
 }

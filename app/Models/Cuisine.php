@@ -106,4 +106,10 @@ class Cuisine extends Model
         return $this->hasOne(Recipe::class,'Cuisine_id', 'id');
     }
 
+    /**
+    *
+    * The Wirting All Function
+    *
+    */
+
 }

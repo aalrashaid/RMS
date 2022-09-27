@@ -60,4 +60,10 @@ class Profile extends Model
     *
     */
 
+    /**
+    *
+    * The Wirting All Function
+    *
+    */
+
 }

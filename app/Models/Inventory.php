@@ -121,7 +121,9 @@ class Inventory extends Model
 
 
     /**
+    *
     * The Wirting All Function
+    *
     */
 
     /**

@@ -80,4 +80,10 @@ class notifications extends Model
     * Defining Relationships: Has One Or has Many
     *
     */
+
+    /**
+    *
+    * The Wirting All Function
+    *
+    */
 }

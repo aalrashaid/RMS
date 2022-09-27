@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Cviebrock\EloquentSluggable\Sluggable;
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\File;
 use Illuminate\Http\Response;
@@ -216,15 +217,51 @@ class Brands extends Model
     */
 
     /**
+    *
+    * Function: The Brand UID  Generator Name
+    *
+    *
+    */
+    public function generatorBrandUID()
+    {
+        // Most Be Year-SYS-Number Unique
+        $nameRandom = Str::random(25);
+    }
+
+    /**
+    *
+    * Function: The Brand UID Save Name in DB
+    *
+    *
+    */
+    public function BrandUID()
+    {
+        //
+
+    }
+
+    /**
     * Uploads Logo For in Create froms
     * @param  App\Http\Requests
     */
     public function logoUplaod($request)
     {
-        if ($request->hasFile('thumbnails')) {
-            $name = $request->file('thumbnails')->getClientOriginalName();
-            $path = $request->file('thumbnails')->storeAs('public/Brands/Logos', $name);
-        }
+        // if ($request->hasFile('thumbnails')) {
+        //     $name = $request->file('thumbnails')->getClientOriginalName();
+        //     $path = $request->file('thumbnails')->storeAs('public/Brands/Logos', $name);
+        // }
+
+        // Storage::disk($path)->put('thumbnails', 'Contents');
+
+        // $contents = Storage::get('Contents');
+
+        // if (Storage::disk($path)->exists('Contents')) {
+        //      // ...
+        // }
+
+        // if (Storage::disk($path)->missing('Contents')) {
+        //     // ...
+        // }
     }
 
 

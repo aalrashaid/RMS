@@ -104,4 +104,11 @@ class Category extends Model
     {
         return $this->hasMany(RecipeCosts::class,'Category_Id','id');
     }
+
+    /**
+    *
+    * The Wirting All Function
+    *
+    */
+
 }

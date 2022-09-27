@@ -111,7 +111,8 @@ class HasRecipeCosts extends Model
      */
 
     /**
-     * Nutrition Facts
-     * Calculator Carbs Serving
-     */
+    *
+    * Nutrition Facts
+    * Calculator Carbs Serving
+    */
 }

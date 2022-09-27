@@ -126,8 +126,6 @@ class HasNutritionFactsRecipeCards extends Model
     *
     */
 
-    /**
-    *
-    */
+
 
 }

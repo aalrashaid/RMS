@@ -181,4 +181,10 @@ class User extends Authenticatable
         return $this->hasMany(Thumbnails::class,  'User_Id','id' );
     }
 
+    /**
+    *
+    * The Wirting All Function
+    *
+    */
+
 }

@@ -164,7 +164,9 @@ class RecipeCard extends Model
 
 
     /**
+    *
     * The Wirting All Function
+    *
     */
 
     /**

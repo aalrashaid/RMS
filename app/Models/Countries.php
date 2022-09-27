@@ -108,6 +108,12 @@ class Countries extends Model
         return $this->hasOne(Supplier::class,'Countries_id','id');
     }
 
+    /**
+    *
+    * The Wirting All Function
+    *
+    */
+
 
 
 

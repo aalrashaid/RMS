@@ -50,11 +50,11 @@ return new class extends Migration
             $table->string('Address')->nullable()->comment('Address Business Localtion');
             $table->string('City')->nullable()->comment('City');
             $table->string('State')->nullable()->comment('Province of Country');
-            $table->integer('Zip_Code')->nullable()->comment(' The Number Zip Code of City 5 Number');
+            $table->string('Zip_Code')->nullable()->comment(' The Number Zip Code of City 5 Number');
             //$table->string('Region')->nullable()->comment('The Region of Country');
             //$table->string('Country')->nullable()->comment('The Country');
-            $table->integer('Moblie')->nullable()->comment('The Account Moblie Business');
-            $table->integer('Whatsapp')->nullable()->comment('The Accunt Email Business');
+            $table->string('Moblie')->nullable()->comment('The Account Moblie Business');
+            $table->string('Whatsapp')->nullable()->comment('The Accunt Email Business');
             $table->string('Email')->nullable()->comment('The Accunt Email Business');
             $table->string('Web')->nullable()->comment('The Accunt Web Business');
             $table->string('Facebook')->nullable()->comment('The Accunt Facebook Business');

@@ -29,7 +29,7 @@ return new class extends Migration
 
             //$table->string('Extension');
             $table->string('Ingredients')->nullable()->comment('any of the foods or substances that are combined to make a particular dish.');
-            $table->integer('AP_Quantity')->nullable()->comment('As purchased (AP) is the portion of food that is in the raw state before any cutting, processing, or cooking has occurred.');
+            $table->string('AP_Quantity')->nullable()->comment('As purchased (AP) is the portion of food that is in the raw state before any cutting, processing, or cooking has occurred.');
             $table->float('AP_Recipe_Unit')->nullable()->comment('The Number of Ingredients  wieht 700 g');
             $table->string('AP_Recipe_Unit_Name')->nullable()->comment('The Unit of Ingredients  gram or else ');
             $table->double('AP_Unit_Cost')->nullable()->comment('The  Costing of Ingredients');

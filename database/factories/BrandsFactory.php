@@ -8,6 +8,7 @@ use App\Models\User;
 use App\Models\Countries;
 use App\Models\Category;
 use App\Models\Cuisine;
+use App\Models\Thumbnails;
 use Cviebrock\EloquentSluggable\Services\SlugService;
 
 /**
@@ -24,13 +25,10 @@ class BrandsFactory extends Factory
     {
         return [
             //
-        'user_id'=> User::all()->random()->id,
-
-        //'Countries_id' =>  $this->faker->numberBetween($min = 1, $max = 4),
-        'Countries_id' => Countries::all()->random()->id,
-       // 'Cuisine_id' => $this->faker->numberBetween($min = 1, $max = 5) ,
-       'Cuisine_id' => Cuisine::all()->random()->id,
-        //'Thumbnail_Id' => $this->faker->numberBetween($min = 1, $max = 5),
+        'user_id'=> User::all()->fake()->random()->id,
+        'Countries_id' => Countries::all()->fake()->random()->id,
+        'Cuisine_id' => Cuisine::all()->fake()->random()->id,
+        'Thumbnail_Id' => Thumbnails::all()->faker()->random()->id,
 
         'Slug' => $this->faker->slug(), //This fixed the (SlugService) calls for Models later,
         'Brand_UID' => $this->faker->numberBetween($min = 1, $max = 9000),
@@ -48,6 +46,7 @@ class BrandsFactory extends Factory
         'Youtube'=> $this->faker->url(),
         'Instagram'=> $this->faker->url(),
         'Twitter'=> $this->faker->url(),
+
         ];
     }
 }

@@ -18,11 +18,11 @@ class ThumbnailsFactory extends Factory
     {
         return [
             //
-            'Brands_id'=>$this->faker->numberBetween($min = 1000, $max = 9000) ,
-            'User_id'=>$this->faker->numberBetween($min = 1, $max = 35) ,
+            //'Brands_id'=>$this->faker->numberBetween($min = 1000, $max = 9000) ,
+            //'User_id'=>$this->faker->numberBetween($min = 1, $max = 35) ,
             'File_Name'=>$this->faker->imageUrl(), //$width, $height, 'cats'
-            'File_Size'=>$this->faker->numberBetween($min = 1000, $max = 9000),
-            'File_Path'=>$this->faker->file(),//$sourceDir, $targetDir, false
+            //'File_Size'=>$this->faker->numberBetween($min = 1000, $max = 9000),
+            //'File_Path'=>$this->faker->file(),//$sourceDir, $targetDir, false
         ];
     }
 }

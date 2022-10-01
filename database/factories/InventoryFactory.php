@@ -4,6 +4,11 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
+use App\Models\User;
+use App\Models\Brands;
+use App\Models\SupplierItem;
+
+
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Inventory>
  */
@@ -18,24 +23,25 @@ class InventoryFactory extends Factory
     {
         return [
             //
-            'User_Id',
-            'Brands_Id',
-            'Supplier_Items_ID',
-            'Inventory_UID',
-            'Name_Item',
+            'User_Id '=> User::all()->fake()->random()->id,
+            'Brands_Id' => Brands::all()->fake()->random()->id,
+            'Supplier_Items_ID' => SupplierItem::all()->fake()->random()->id,
+
+            'Inventory_UID'  => $this->faker->randomDigit(),
+            'Name_Item' => $this->faker->name($gender = null|'male'|'female'),
             //'Description_Item',
-            'SKU',
-            'Barcode',
-            'Serial_Number',
-            'Category_Item',
-            'Item_Size',
-            'Item_Unit_Price',
-            'Quantity_In_Stock',
-            'Inventory_Value',
-            'Stock_Status',
-            'Reorder_Level',
-            'Reorder_Time_In_Days',
-            'Quantity_In_Reorder',
+            'SKU' => $this->faker->randomDigit(),
+            'Barcode'  => $this->faker->randomDigit(),
+            'Serial_Number' => $this->faker->randomDigit(),
+            'Category_Item'  => $this->faker->name($gender = null|'male'|'female'),
+            'Item_Size'  => $this->faker->randomDigit(),
+            'Item_Unit_Price'  => $this->faker->randomDigit(),
+            'Quantity_In_Stock'  => $this->faker->randomDigit(),
+            'Inventory_Value'  => $this->faker->randomDigit(),
+            'Stock_Status'  => $this->faker->randomDigit(),
+            'Reorder_Level'  => $this->faker->randomDigit(),
+            'Reorder_Time_In_Days'  => $this->faker->randomDigit(),
+            'Quantity_In_Reorder'  => $this->faker->randomDigit(),
         ];
     }
 }

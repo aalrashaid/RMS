@@ -98,7 +98,7 @@ class Inventory extends Model
     */
     public function user() : BelongsTo
     {
-        return $this->belongsTo(User::class,'user_id','id');
+        return $this->belongsTo(User::class);
     }
 
     /**
@@ -109,7 +109,7 @@ class Inventory extends Model
     */
     public function brands() : BelongsTo
     {
-        return $this->belongsTo(Brands::class,'Brands_Id' , 'id');
+        return $this->belongsTo(Brands::class);
     }
 
     /**

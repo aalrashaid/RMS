@@ -98,7 +98,7 @@ class SupplierItem extends Model
     */
     public function user() : BelongsTo
     {
-        return $this->belongsTo(User::class,'User_Id','Id');
+        return $this->belongsTo(User::class);
     }
 
     /**
@@ -110,7 +110,7 @@ class SupplierItem extends Model
     */
     public function brands() : BelongsTo
     {
-        return $this->belongsTo(Brands::class,'Brands_Id','id');
+        return $this->belongsTo(Brands::class);
     }
 
     /**
@@ -122,7 +122,7 @@ class SupplierItem extends Model
     */
     public function supplier() : BelongsTo
     {
-        return $this->belongsTo(Supplier::class,'Supplier_Id','id');
+        return $this->belongsTo(Supplier::class);
     }
 
     /**

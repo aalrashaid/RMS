@@ -91,7 +91,7 @@ class HasIngredientsRecipeCards extends Model
     */
     public function recipeCard(): BelongsTo
     {
-        return $this->belongsTo(RecipeCard::class,'Recipe_Cards_Id','id');
+        return $this->belongsTo(RecipeCard::class);
     }
 
     /**

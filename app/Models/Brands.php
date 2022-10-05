@@ -55,7 +55,7 @@ class Brands extends Model
     */
     protected $fillable = [
 
-        'user_id',
+        'User_id',
 
         'Countries_id',
         'Cuisine_id',
@@ -113,7 +113,7 @@ class Brands extends Model
     */
     public function user(): BelongsTo
     {
-        return $this->belongsTo(User::class,'user_id','Id');
+        return $this->belongsTo(User::class);
     }
 
     /**
@@ -125,7 +125,7 @@ class Brands extends Model
     */
     public function Countries() : BelongsTo
     {
-        return $this->belongsTo(Countries::class,'Countries_id','id');
+        return $this->belongsTo(Countries::class);
     }
 
     /**
@@ -137,7 +137,7 @@ class Brands extends Model
     */
     public function Cuisine() :BelongsTo
     {
-        return $this->belongsTo(Cuisine::class,'Cuisine_id','id');
+        return $this->belongsTo(Cuisine::class);
     }
 
 

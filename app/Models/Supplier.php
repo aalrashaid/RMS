@@ -102,7 +102,7 @@ class Supplier extends Model
     */
     public function user() : BelongsTo
     {
-        return $this->belongsTo(User::class,'User_Id','Id');
+        return $this->belongsTo(User::class);
     }
 
     /**
@@ -114,7 +114,7 @@ class Supplier extends Model
     */
     public function Countries() : BelongsTo
     {
-        return $this->belongsTo(Countries::class,'Countries_id','id');
+        return $this->belongsTo(Countries::class);
     }
 
     /**

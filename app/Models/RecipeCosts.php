@@ -104,7 +104,7 @@ class RecipeCosts extends Model
     */
     public function user() : BelongsTo
     {
-        return $this->belongsTo(User::class,'User_Id','Id');
+        return $this->belongsTo(User::class);
     }
 
     /**
@@ -116,7 +116,7 @@ class RecipeCosts extends Model
     */
     public function brands() : BelongsTo
     {
-        return $this->belongsTo(Brands::class,'Brands_Id','id');
+        return $this->belongsTo(Brands::class);
     }
 
     /**
@@ -128,7 +128,7 @@ class RecipeCosts extends Model
     */
     public function Category() : BelongsTo
     {
-        return $this->belongsTo(Category::class,'Category_Id','id');
+        return $this->belongsTo(Category::class);
     }
 
     /**

@@ -103,7 +103,7 @@ class Menu extends Model
 
     public function brands(): BelongsTo
     {
-        return $this->belongsTo(Brands::class,'Brands_Id','id');
+        return $this->belongsTo(Brands::class);
     }
 
     /**
@@ -117,7 +117,7 @@ class Menu extends Model
 
     public function Category() : BelongsTo
     {
-        return $this->belongsTo(Category::class,'Category_Id','id');
+        return $this->belongsTo(Category::class);
     }
 
     /**

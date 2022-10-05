@@ -9,6 +9,9 @@ use App\Models\Countries;
 use App\Models\Category;
 use App\Models\Cuisine;
 use App\Models\Thumbnails;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Cviebrock\EloquentSluggable\Services\SlugService;
 
 /**

@@ -100,7 +100,7 @@ class RecipeCard extends Model
     */
     public function user()
     {
-        return $this->belongsTo(User::class,'User_Id','Id');
+        return $this->belongsTo(User::class);
     }
 
     /**

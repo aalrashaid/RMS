@@ -22,22 +22,22 @@ return new class extends Migration
             $table->id()->comment('The primary Key');
 
             //the foring key id
-            $table->foreignId('User_id')->nullable()->references('id')->on('users')
+            $table->foreignId('User_id')->nullable()->unsigned()->references('id')->on('users')
                 ->onUpdate('cascade')
                 ->onDelete('cascade')
                 ->comment('The foreign Key Id in Taleb In User');
 
-            $table->foreignId('Countries_id')->nullable()->references('id')->on('Countries')
+            $table->foreignId('Countries_id')->nullable()->unsigned()->references('id')->on('Countries')
                 ->onUpdate('cascade')
                 ->onDelete('cascade')
                 ->comment('The foreign Key Id in Taleb In Countries');
 
-            $table->foreignId('Cuisine_id')->nullable()->references('id')->on('cuisines')
+            $table->foreignId('Cuisine_id')->nullable()->unsigned()->references('id')->on('cuisines')
                 ->onUpdate('cascade')
                 ->onDelete('cascade')
                 ->comment('The foreign Key Id in Taleb In cuisines');
 
-            $table->foreignId('Thumbnail_Id')->references('id')->on('thumbnails')
+            $table->foreignId('Thumbnail_Id')->nullable()->unsigned()->references('id')->on('thumbnails')
                 ->onUpdate('cascade')
                 ->onDelete('cascade')
                 ->comment('The foreign Key Id in Taleb In thumbnails');

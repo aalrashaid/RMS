@@ -69,80 +69,6 @@ class BrandsController extends Controller
 
         // Store the Brands
 
-         DB::transaction(function () use ($request) {
-           // dd($request);
-            Auth::user()
-                     ->Brands()
-                     ->create($request->except('csrf_token'));
-            dd($request);
-                // DB::commit();
-
-            //  try {
-
-            //      // Do your SQL here
-            //      Auth::user()
-            //          ->Brands()
-            //          ->create($request->except('csrf_token'));
-            //      DB::commit();
-            //  } catch (Exception $e) {
-            //      return $e;
-            //  }
-         });
-
-        // $Brands = new Brands;
-
-        // $Brands->User_id = $request->user()->id;
-        // $Brands->Cuisine_id = $request->Cuisine_id;
-        // $Brands->Thumbnail_Id = $request->Thumbnail_Id;
-        // $Brands->Slug = SlugService::createSlug(Brands::class, 'slug', $request->Name_Brand);
-
-        // $Brands->Brand_UID =  $request->Brand_UID;
-        // $Brands->Name_Brand =  $request->Name_Brand;
-        // $Brands->Description = $request->Description;
-        // $Brands->Brand_Loga = $request->Brand_Loga;
-
-        // $Brands->Address = $request->Address;
-        // $Brands->City = $request->City;
-        // $Brands->State = $request->State;
-        // $Brands->Zip_Code = $request->Zip_Code;
-        // $Brands->Country = $request->Country;
-        // $Brands->Moblie = $request->Moblie;
-        // $Brands->Whatsapp = $request->Whatsapp;
-        // $Brands->Email = $request->Email;
-        // $Brands->Web = $request->Web;
-
-        // $Brands->Facebook = $request->Facebook;
-        // $Brands->Youtube = $request->Youtube;
-        // $Brands->Instagram = $request->Instagram;
-        // $Brands->Twitter = $request->Twitter;
-
-        // dd($Brands);
-
-        // $Brands->saveOrFail();
-
-        // $Brands = Brands::create([
-        //     ['user_id' => auth()->user()->id],
-        //     ['Slug' => SlugService::createSlug(Brands::class, 'slug', $request->nameBrand)],
-        //     ['nameBrand' => $request->nameBrand],
-        //     ['Description' => $request->Description],
-        //     ['BrandLogas' => $request->BrandLogas],
-        //     ['Street' => $request->Street],
-        //     ['ZipCode' => $request->ZipCode],
-        //     ['City' => $request->City],
-        //     ['Province' => $request->Province],
-        //     ['Region' => $request->Region],
-        //     ['Country' => $request->Country],
-        //     ['Moblie' => $request->Moblie],
-        //     ['Whatsapp' => $request->Whatsapp],
-        //     ['Email' => $request->Email],
-        //     ['Web' => $request->Web],
-        //     ['Facebook' => $request->Facebook],
-        //     ['Youtube' => $request->Youtube],
-        //     ['Instagram' => $request->Instagram],
-        //     ['twitter' => $request->twitter],
-        // ]);
-
-        //dd();
 
         //Flash The session
 
@@ -183,19 +109,7 @@ class BrandsController extends Controller
     {
         //
 
-        DB::transaction(function () use ($request) {
-
-            try {
-
-                // Do your SQL here
-                Auth::user()
-                    ->Brands()
-                    ->update($request->except('csrf_token'));
-                DB::commit();
-            } catch (Exception $e) {
-                return $e;
-            }
-        });
+      
     }
 
     /**

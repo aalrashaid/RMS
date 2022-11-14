@@ -57,7 +57,7 @@
                 @endif
        </div>
 
-        <a href="{{ route('register') }}">{{ __('AM New User') }}</a>
+        <a href="{{ route('register') }}">{{ __('Don\'t have an account?') }}</a>
         <button type="submit" value="Submit" class="btn btn-dark">{{ __('Log in') }}</button>
     </form>
 @endsection

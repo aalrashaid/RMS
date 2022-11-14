@@ -123,6 +123,7 @@ class unitsOfMeasureSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
+
             [
                 'Unit_Name' => '5/6 Ounce (oz)',
                 'Unit_Type' => 'Weight',
@@ -132,6 +133,7 @@ class unitsOfMeasureSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
+
             [
                 'Unit_Name' => '2/3 Ounce (oz)',
                 'Unit_Type' => 'Weight',
@@ -141,6 +143,7 @@ class unitsOfMeasureSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
+
             [
                 'Unit_Name' => '1/2 Ounce (oz)',
                 'Unit_Type' => 'Weight',
@@ -170,7 +173,8 @@ class unitsOfMeasureSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
-                         [
+
+            [
                 'Unit_Name' => '1/2 Pound (lb)',
                 'Unit_Type' => 'Weight',
                 'Conversion_Factor' => '',
@@ -179,7 +183,8 @@ class unitsOfMeasureSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
-             [
+
+            [
                 'Unit_Name' => '3/8 Pound (lb)',
                 'Unit_Type' => 'Weight',
                 'Conversion_Factor' => '',
@@ -188,7 +193,8 @@ class unitsOfMeasureSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
-             [
+
+            [
                 'Unit_Name' => '1/4 Pound (lb)',
                 'Unit_Type' => 'Weight',
                 'Conversion_Factor' => '',
@@ -197,6 +203,7 @@ class unitsOfMeasureSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
+
             [
                 'Unit_Name' => '1/5 Pound (lb)',
                 'Unit_Type' => 'Weight',
@@ -366,7 +373,8 @@ class unitsOfMeasureSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
-                        [
+
+            [
                 'Unit_Name' => '1/2 Pint',
                 'Unit_Type' => 'Capacity (Volume)',
                 'Conversion_Factor' => '',
@@ -375,6 +383,7 @@ class unitsOfMeasureSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
+
             [
                 'Unit_Name' => '3/8 Pint',
                 'Unit_Type' => 'Capacity (Volume)',
@@ -384,6 +393,7 @@ class unitsOfMeasureSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
+
             [
                 'Unit_Name' => '1/4 Pint',
                 'Unit_Type' => 'Capacity (Volume)',
@@ -393,6 +403,7 @@ class unitsOfMeasureSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
+
             [
                 'Unit_Name' => '1/5 Pint',
                 'Unit_Type' => 'Capacity (Volume)',
@@ -402,6 +413,7 @@ class unitsOfMeasureSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
+
             [
                 'Unit_Name' => '1/8 Pint',
                 'Unit_Type' => 'Capacity (Volume)',
@@ -411,6 +423,7 @@ class unitsOfMeasureSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
+
             [
                 'Unit_Name' => '1/16 Pint',
                 'Unit_Type' => 'Capacity (Volume)',
@@ -430,6 +443,7 @@ class unitsOfMeasureSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
+
             [
                 'Unit_Name' => '5/7 Quart',
                 'Unit_Type' => 'Capacity (Volume)',
@@ -439,6 +453,7 @@ class unitsOfMeasureSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
+
             [
                 'Unit_Name' => '3/5 Quart',
                 'Unit_Type' => 'Capacity (Volume)',
@@ -448,6 +463,7 @@ class unitsOfMeasureSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
+
             [
                 'Unit_Name' => '1/2 Quart',
                 'Unit_Type' => 'Capacity (Volume)',
@@ -457,6 +473,7 @@ class unitsOfMeasureSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
+
             [
                 'Unit_Name' => '1/4 Quart',
                 'Unit_Type' => 'Capacity (Volume)',
@@ -466,6 +483,7 @@ class unitsOfMeasureSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
+
             [
                 'Unit_Name' => '1/6 Quart',
                 'Unit_Type' => 'Capacity (Volume)',
@@ -475,6 +493,7 @@ class unitsOfMeasureSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
+
             [
                 'Unit_Name' => '1/8 Quart',
                 'Unit_Type' => 'Capacity (Volume)',
@@ -484,6 +503,7 @@ class unitsOfMeasureSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
+
             [
                 'Unit_Name' => '1/11 Quart',
                 'Unit_Type' => 'Capacity (Volume)',
@@ -493,6 +513,7 @@ class unitsOfMeasureSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
+
             [
                 'Unit_Name' => '3/50 Quart',
                 'Unit_Type' => 'Capacity (Volume)',
@@ -502,6 +523,7 @@ class unitsOfMeasureSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
+
             [
                 'Unit_Name' => 'Gallon',
                 'Unit_Type' => 'Capacity (Volume)',
@@ -511,7 +533,8 @@ class unitsOfMeasureSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
-                        [
+
+            [
                 'Unit_Name' => '3/4 Gallon',
                 'Unit_Type' => 'Capacity (Volume)',
                 'Conversion_Factor' => '',
@@ -520,6 +543,7 @@ class unitsOfMeasureSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
+
             [
                 'Unit_Name' => '1/2 Gallon',
                 'Unit_Type' => 'Capacity (Volume)',
@@ -529,6 +553,7 @@ class unitsOfMeasureSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
+
             [
                 'Unit_Name' => '1/4 Gallon',
                 'Unit_Type' => 'Capacity (Volume)',
@@ -538,6 +563,7 @@ class unitsOfMeasureSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
+
             [
                 'Unit_Name' => '3/16 Gallon',
                 'Unit_Type' => 'Capacity (Volume)',
@@ -547,6 +573,7 @@ class unitsOfMeasureSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
+
             [
                 'Unit_Name' => '5/16 Gallon',
                 'Unit_Type' => 'Capacity (Volume)',
@@ -556,6 +583,7 @@ class unitsOfMeasureSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
+
             [
                 'Unit_Name' => '1/8 Gallon',
                 'Unit_Type' => 'Capacity (Volume)',
@@ -565,6 +593,7 @@ class unitsOfMeasureSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
+
             [
                 'Unit_Name' => '1/16 Gallon',
                 'Unit_Type' => 'Capacity (Volume)',
@@ -614,7 +643,8 @@ class unitsOfMeasureSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
-                        [
+
+            [
                 'Unit_Name' => '2/5 Fluid ounce (fl.oz. or oz.)',
                 'Unit_Type' => 'Capacity (Volume)',
                 'Conversion_Factor' => '',
@@ -623,6 +653,7 @@ class unitsOfMeasureSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
+
             [
                 'Unit_Name' => '1/3 Fluid ounce (fl.oz. or oz.)',
                 'Unit_Type' => 'Capacity (Volume)',
@@ -632,6 +663,7 @@ class unitsOfMeasureSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
+
             [
                 'Unit_Name' => '1/4 Fluid ounce (fl.oz. or oz.)',
                 'Unit_Type' => 'Capacity (Volume)',
@@ -641,6 +673,7 @@ class unitsOfMeasureSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
+
             [
                 'Unit_Name' => '1/6 Fluid ounce (fl.oz. or oz.)',
                 'Unit_Type' => 'Capacity (Volume)',
@@ -650,6 +683,7 @@ class unitsOfMeasureSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
+
             [
                 'Unit_Name' => '1/8 Fluid ounce (fl.oz. or oz.)',
                 'Unit_Type' => 'Capacity (Volume)',
@@ -659,6 +693,7 @@ class unitsOfMeasureSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
+
             [
                 'Unit_Name' => '1/12 Fluid ounce (fl.oz. or oz.)',
                 'Unit_Type' => 'Capacity (Volume)',
@@ -668,6 +703,7 @@ class unitsOfMeasureSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
+            
             [
                 'Unit_Name' => '1/24 Fluid ounce (fl.oz. or oz.)',
                 'Unit_Type' => 'Capacity (Volume)',

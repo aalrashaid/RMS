@@ -48,7 +48,7 @@ class Thumbnails extends Model
     * @var array
     */
     protected $fillable = [
-        'Brands_id',
+        //'Brands_id',
         'User_id',
         'File_Name',
         'File_Size',

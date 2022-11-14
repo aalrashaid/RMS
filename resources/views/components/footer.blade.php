@@ -12,7 +12,7 @@
             @php
                 echo date('Y');
             @endphp
-            {{ config('app.name', 'Laravel') }}, Inc
+            {{ config('app.name', 'RMS') }}, Inc
         </p>
     </footer>
 </div>

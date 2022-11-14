@@ -44,7 +44,27 @@ Route::resource('Profile',ProfileController::class);
 //The Static Pages
 Route::get('/', function () {
     return view('index');
-});
+})->name('home');
+
+Route::get('/faq', function () {
+    return view('faq');
+})->name('faq');
+
+Route::get('/cookies', function () {
+    return view('cookies');
+})->name('cookies');
+
+Route::get('/privacy', function () {
+    return view('privacy');
+})->name('privacy');
+
+Route::get('/terms', function () {
+    return view('terms');
+})->name('terms');
+
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
 
 Route::get('/readme', function () {
     return view('readme');

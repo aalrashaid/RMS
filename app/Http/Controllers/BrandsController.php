@@ -68,7 +68,38 @@ class BrandsController extends Controller
         // validator fails
 
         // Store the Brands
+        $brand = Brands::create([
+            'User_id' => auth()->user()->id,
+            'Countries_id' => $request->Countries_id,
+            'Cuisine_id' => $request->Cuisine_id,
+            'Thumbnail_Id' => $request->Thumbnail_Id,
+            'Brand_UID' => $request->Brand_UID,
+            'Slug' => $request->SlugService::createSlug(Post::class, 'slug', 'Slug'),
+            'Name_Brand' => $request->Name_Brand,
+            'Description' => $request->Description,
+            'Address' => $request->Address,
+            'City' => $request->City,
+            'State' => $request->State,
+            'Zip_Code' => $request->Zip_Code,
+            'Moblie' => $request->Moblie,
+            'Whatsapp' => $request->Whatsapp,
+            'Email' => $request->Email,
+            'Web' => $request->Web,
+            'Facebook' => $request->Facebook,
+            'Youtube' => $request->Youtube,
+            'Instagram' => $request->Instagram,
+            'Twitter' => $request->Twitter,
+        ]);
 
+        dd($brand);
+
+        $brand->save();
+        // DB::transaction(
+        //     function () use ($request) {
+        //         auth()->user()->Brands()->create($request->except('csrf_token'));
+        //     }
+
+        // );
 
         //Flash The session
 

@@ -3,7 +3,11 @@
 
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="" content="">
+    <meta name="" content="">
+    <meta name="" content="">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'RMS') }}</title>

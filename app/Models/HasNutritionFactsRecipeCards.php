@@ -83,49 +83,24 @@ class HasNutritionFactsRecipeCards extends Model
             ]
         ];
     }
+    /**
+     *
+     * Eloquent Relationships
+     * Defining Relationships: belongsTo
+     *
+     */
 
     /**
-    *
-    * Eloquent Relationships
-    * Defining Relationships: belongsTo
-    *
-    */
+     *
+     * Eloquent Relationships
+     * Defining Relationships: Has One Or has Many
+     *
+     */
 
     /**
-    *
-    * Get the Recipe Card that owns the Has Nutrition Facts Recipe Cards.
-    * Relationships: belongsTo
-    *
-    * @return BelongsTo
-    */
-    public function recipeCard() : BelongsTo
-    {
-        return $this->belongsTo(RecipeCard::class);
-    }
-
-    /**
-    *
-    * Eloquent Relationships
-    * Defining Relationships: Has One Or has Many
-    *
-    */
-
-    /**
-    *
-    * Get the [Name Model] associated with the [Name Model] .
-    * Relationships: [has One Or Has Many else.]
-    *
-    * @return HasOne
-    */
-
-
-
-    /**
-    *
-    * The Wirting All Function
-    *
-    */
-
-
+     *
+     * The Wirting All Function
+     *
+     */
 
 }

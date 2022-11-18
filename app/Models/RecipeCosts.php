@@ -89,84 +89,23 @@ class RecipeCosts extends Model
     }
 
     /**
-    *
-    * Eloquent Relationships
-    * Defining Relationships: belongsTo
-    *
-    */
+     *
+     * Eloquent Relationships
+     * Defining Relationships: belongsTo
+     *
+     */
 
     /**
-    *
-    * Get the user that owns the Recipe Costs.
-    * Relationships: belongsTo
-    *
-    * @return BelongsTo
-    */
-    public function user() : BelongsTo
-    {
-        return $this->belongsTo(User::class);
-    }
+     *
+     * Eloquent Relationships
+     * Defining Relationships: Has One Or has Many
+     *
+     */
 
     /**
-    *
-    * Get the Brands that owns the Recipe Costs.
-    * Relationships: belongsTo
-    *
-    * @return BelongsTo
-    */
-    public function brands() : BelongsTo
-    {
-        return $this->belongsTo(Brands::class);
-    }
-
-    /**
-    *
-    * Get the Category that owns the Recipe Costs.
-    * Relationships: belongsTo
-    *
-    * @return BelongsTo
-    */
-    public function Category() : BelongsTo
-    {
-        return $this->belongsTo(Category::class);
-    }
-
-    /**
-    *
-    * Get the Recipe Card that owns the Recipe Costs.
-    * Relationships: belongsTo
-    *
-    * @return BelongsTo
-    */
-    public function RecipeCard() : BelongsTo
-    {
-        return $this->belongsTo(RecipeCard::class,'Recipe_Card_Id','id');
-    }
-
-    /**
-    *
-    * Eloquent Relationships
-    * Defining Relationships: Has One Or has Many
-    *
-    */
-
-    /**
-    *
-    * Get the Has Recipe Costs associated with the Recipe Costs.
-    * Eloquent Relationships: Has Recipe Costs model has Many Recipe Costs model.
-    *
-    * @return HasMany
-    */
-    public function HasRecipeCosts() : HasMany
-    {
-        return $this->hanMany(HasRecipeCosts::class,'Recipe_Costs_Id','id');
-    }
-
-
-    /**
-    *
-    * The Wirting All Function
-    *
-    */
+     *
+     * The Wirting All Function
+     *
+     */
 
 }

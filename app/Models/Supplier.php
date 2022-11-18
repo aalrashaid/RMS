@@ -87,58 +87,22 @@ class Supplier extends Model
     }
 
     /**
-    *
-    * Eloquent Relationships
-    * Defining Relationships: belongsTo
-    *
-    */
+     *
+     * Eloquent Relationships
+     * Defining Relationships: belongsTo
+     *
+     */
 
     /**
-    *
-    * Get the user that owns the Supplier.
-    * Relationships: belongsTo
-    *
-    * @return belongsTo
-    */
-    public function user() : BelongsTo
-    {
-        return $this->belongsTo(User::class);
-    }
+     *
+     * Eloquent Relationships
+     * Defining Relationships: Has One Or has Many
+     *
+     */
 
     /**
-    *
-    * Get the Countries that owns the Supplier.
-    * Relationships: belongsTo
-    *
-    * @return belongsTo
-    */
-    public function Countries() : BelongsTo
-    {
-        return $this->belongsTo(Countries::class);
-    }
-
-    /**
-    *
-    * Eloquent Relationships
-    * Relationships: Has One Or has Many
-    *
-    */
-
-    /**
-    *
-    * Get the Supplier Items associated with the Supplier.
-    * Eloquent Relationships: Supplier Items model has Many Supplier model.
-    *
-    * @return HasMany
-    */
-    public function supplierItem() : HasMany
-    {
-        return $this->hanMany(SupplierItem::class,'Supplier_Id','Id');
-    }
-
-    /**
-    *
-    * The Wirting All Function
-    *
-    */
+     *
+     * The Wirting All Function
+     *
+     */
 }

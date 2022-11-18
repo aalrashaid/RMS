@@ -81,38 +81,22 @@ class HasRecipeCosts extends Model
     }
 
     /**
-    *
-    * Eloquent Relationships
-    * Defining Relationships: belongsTo
-    *
-    */
-
-    /**
-    *
-    * Get the Recipe Card that owns the Has Recipe Costs.
-    * Relationships: belongsTo
-    *
-    * @return BelongsTo
-    */
-    public function recipeCard() : BelongsTo
-    {
-        return $this->belongsTo(RecipeCard::class);
-    }
-
-    /**
-    *
-    * Eloquent Relationships
-    * Defining Relationships: Has One Or has Many
-    *
-    */
-
-    /**
-     * The Wirting All Function
+     *
+     * Eloquent Relationships
+     * Defining Relationships: belongsTo
+     *
      */
 
     /**
-    *
-    * Nutrition Facts
-    * Calculator Carbs Serving
-    */
+     *
+     * Eloquent Relationships
+     * Defining Relationships: Has One Or has Many
+     *
+     */
+
+    /**
+     *
+     * The Wirting All Function
+     *
+     */
 }

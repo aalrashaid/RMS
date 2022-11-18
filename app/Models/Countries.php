@@ -70,51 +70,25 @@ class Countries extends Model
     }
 
     /**
-    *
-    * Eloquent Relationships
-    * Defining Relationships: belongsTo
-    *
-    */
-
-
-    /**
-    *
-    * Eloquent Relationships
-    * Defining Relationships: Has One Or has Many
-    *
-    */
+     *
+     * Eloquent Relationships
+     * Defining Relationships: belongsTo
+     *
+     */
 
     /**
-    *
-    * Get the Brands associated with the Countries.
-    * Relationships: has Many
-    *
-    * @return HasMany
-    */
-    public function Brands() : HasMany
-    {
-        return $this->hasMany(Brands::class,'Countries_id','id');
-    }
+     *
+     * Eloquent Relationships
+     * Defining Relationships: Has One Or has Many
+     *
+     */
 
     /**
-    *
-    * Get the Supplier associated with the Countries.
-    * Relationships: has One
-    *
-    * @return HasOne
-    */
-    public function Supplier() : HasOne
-    {
-        return $this->hasOne(Supplier::class,'Countries_id','id');
-    }
-
-    /**
-    *
-    * The Wirting All Function
-    *
-    */
-
-
+     *
+     * The Wirting All Function
+     *
+     */
+  
 
 
 }

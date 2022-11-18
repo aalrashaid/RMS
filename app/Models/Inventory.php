@@ -84,52 +84,23 @@ class Inventory extends Model
     }
 
     /**
-    *
-    * Eloquent Relationships
-    * Defining Relationships: belongsTo
-    *
-    */
-
-    /**
-    * Get the user that owns the Inventory.
-    * Relationships: belongsTo
-    *
-    * @return BelongsTo
-    */
-    public function user() : BelongsTo
-    {
-        return $this->belongsTo(User::class);
-    }
-
-    /**
-    * Get the Brands that owns the Inventory.
-    * Relationships: belongsTo
-    *
-    * @return BelongsTo
-    */
-    public function brands() : BelongsTo
-    {
-        return $this->belongsTo(Brands::class);
-    }
-
-    /**
-    *
-    * Eloquent Relationships
-    * Defining Relationships: Has One Or has Many
-    *
-    */
-
-
-    /**
-    *
-    * The Wirting All Function
-    *
-    */
-
-    /**
-     * Inventory UID
-     * Generator Random Inventory UID (A unique identifier)
-     * Formula: YY - Time - Name - -Sequence Number
-     * Example: 22-0336-TK-0001
+     *
+     * Eloquent Relationships
+     * Defining Relationships: belongsTo
+     *
      */
+
+    /**
+     *
+     * Eloquent Relationships
+     * Defining Relationships: Has One Or has Many
+     *
+     */
+
+    /**
+     *
+     * The Wirting All Function
+     *
+     */
+
 }

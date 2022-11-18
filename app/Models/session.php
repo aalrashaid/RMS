@@ -68,22 +68,22 @@ class session extends Model
     }
 
     /**
-    *
-    * Eloquent Relationships
-    * Defining Relationships: belongsTo
-    *
-    */
+     *
+     * Eloquent Relationships
+     * Defining Relationships: belongsTo
+     *
+     */
 
     /**
-    *
-    * Eloquent Relationships
-    * Defining Relationships: Has One Or has Many
-    *
-    */
+     *
+     * Eloquent Relationships
+     * Defining Relationships: Has One Or has Many
+     *
+     */
 
     /**
-    *
-    * The Wirting All Function
-    *
-    */
+     *
+     * The Wirting All Function
+     *
+     */
 }

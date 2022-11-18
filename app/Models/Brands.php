@@ -98,171 +98,24 @@ class Brands extends Model
     }
 
     /**
-    *
-    * Eloquent Relationships
-    * Defining Relationships: belongsTo
-    *
-    */
+     *
+     * Eloquent Relationships
+     * Defining Relationships: belongsTo
+     *
+     */
 
     /**
-    *
-    * Get the user that owns the Brands.
-    * Relationships: belongsTo
-    *
-    * @return BelongsTo
-    */
-    public function user(): BelongsTo
-    {
-        return $this->belongsTo(User::class);
-    }
+     *
+     * Eloquent Relationships
+     * Defining Relationships: Has One Or has Many
+     *
+     */
 
     /**
-    *
-    * Get the Countries that owns the Brands.
-    * Relationships: belongsTo
-    *
-    * @return BelongsTo
-    */
-    public function Countries() : BelongsTo
-    {
-        return $this->belongsTo(Countries::class);
-    }
-
-    /**
-    *
-    * Get the Cuisine that owns the Brands.
-    * Relationships: belongsTo
-    *
-    * @return BelongsTo
-    */
-    public function Cuisine() :BelongsTo
-    {
-        return $this->belongsTo(Cuisine::class);
-    }
-
-
-    /**
-    *
-    * Eloquent Relationships
-    * Defining Relationships: Has One Or has Many
-    *
-    */
-
-    /**
-    *
-    * Get the Inventory associated with the Brands.
-    * Relationships: has Many
-    *
-    * @return HasMany
-    */
-    public function inventory() : HasMany
-    {
-        return $this->hasMany(Inventory::class, 'Brands_Id' ,'id');
-    }
-
-    /**
-    *
-    * Get the Menu associated with the Brands.
-    * Relationships: has One
-    *
-    * @return HasOne
-    */
-    public function menu() : HasOne
-    {
-        return $this->hasOne(Menu::class, 'Brands_Id','id');
-    }
-
-    /**
-    *
-    * Get the Recipe Card associated with the Brands.
-    * Relationships: has One
-    *
-    * @return HasOne
-    */
-    public function recipeCard() : HasOne
-    {
-        return $this->hasOne(RecipeCard::class,'Brands_Id','id');
-    }
-
-    /**
-    *
-    * Get the Recipe Card associated with the Brands.
-    * Relationships: has Many
-    *
-    * @return HasMany
-    */
-    public function recipeCosts() : HasMany
-    {
-        return $this->hasMany(RecipeCosts::class,'Brands_Id','id');
-    }
-
-    /**
-    *
-    * Get the Supplier Item associated with the Brands.
-    * Relationships: has Many
-    *
-    * @return HasMany
-    */
-    public function SupplierItem() : HasMany
-    {
-        return $this->hasMany(SupplierItem::class,'Brands_Id','Id');
-    }
-
-
-
-    /**
-    *
-    * The Wirting All Function
-    *
-    */
-
-    /**
-    *
-    * Function: The Brand UID  Generator Name
-    *
-    *
-    */
-    public function generatorBrandUID()
-    {
-        // Most Be Year-SYS-Number Unique
-        $nameRandom = Str::random(25);
-    }
-
-    /**
-    *
-    * Function: The Brand UID Save Name in DB
-    *
-    *
-    */
-    public function BrandUID()
-    {
-        //
-
-    }
-
-    /**
-    * Uploads Logo For in Create froms
-    * @param  App\Http\Requests
-    */
-    public function logoUplaod($request)
-    {
-        // if ($request->hasFile('thumbnails')) {
-        //     $name = $request->file('thumbnails')->getClientOriginalName();
-        //     $path = $request->file('thumbnails')->storeAs('public/Brands/Logos', $name);
-        // }
-
-        // Storage::disk($path)->put('thumbnails', 'Contents');
-
-        // $contents = Storage::get('Contents');
-
-        // if (Storage::disk($path)->exists('Contents')) {
-        //      // ...
-        // }
-
-        // if (Storage::disk($path)->missing('Contents')) {
-        //     // ...
-        // }
-    }
+     *
+     * The Wirting All Function
+     *
+     */
 
 
 }

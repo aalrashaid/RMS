@@ -77,114 +77,23 @@ class User extends Authenticatable
     ];
 
     /**
-    *
-    * Eloquent Relationships
-    * Defining Relationships: belongsTo
-    *
-    */
+     *
+     * Eloquent Relationships
+     * Defining Relationships: belongsTo
+     *
+     */
 
     /**
-    *
-    * Eloquent Relationships
-    * Defining Relationships: Has One Or has Many
-    *
-    */
+     *
+     * Eloquent Relationships
+     * Defining Relationships: Has One Or has Many
+     *
+     */
 
     /**
-    *
-    * Get the Brands associated with the user.
-    *
-    * @return HasOne
-    */
-    public function Brands() : HasOne
-    {
-        return $this->hasOne( Brands::class, 'user_id', 'id' );
-    }
-
-    /**
-    *
-    * Get the inventory associated with the user.
-    *
-    * @return HasMany
-    */
-    public function inventory() : HasMany
-    {
-        return $this->hasMany( Inventory::class, 'user_id', 'id' );
-    }
-
-    /**
-    *
-    * Get the Menu associated with the user.
-    *
-    * @return HasMany
-    */
-
-    public function menu() : HasMany
-    {
-        return $this->hasMany( Menu::class, 'User_Id' ,'id' );
-    }
-
-    /**
-    *
-    * Get the Recipe Card associated with the user.
-    *
-    * @return HasMany
-    */
-    public function recipeCard() : HasMany
-    {
-        return $this->hasMany(RecipeCard::class,'User_Id','id');
-    }
-
-    /**
-    *
-    * Get the Recipe Costs associated with the user.
-    *
-    * @return HasMany
-    */
-
-    public function recipeCosts() : HasMany
-    {
-        return $this->hasMany(RecipeCosts::class,'User_Id','id');
-    }
-
-    /**
-    *
-    * Get the Supplier associated with the user.
-    *
-    * @return HasOne
-    */
-
-    public function supplier() : HasOne
-    {
-        return $this->hasOne( Supplier::class,'User_Id','id');
-    }
-
-    /**
-    *
-    * Get the Supplier Item associated with the user.
-    *
-    * @return HasMany
-    */
-    public function supplierItem() : HasMany
-    {
-        return $this->hasMany( SupplierItem::class, 'User_Id','id'  );
-    }
-
-    /**
-    *
-    * Get the Thumbnails associated with the user.
-    *
-    * @return HasMany
-    */
-    public function thumbnails() : HasMany
-    {
-        return $this->hasMany(Thumbnails::class,  'User_Id','id' );
-    }
-
-    /**
-    *
-    * The Wirting All Function
-    *
-    */
+     *
+     * The Wirting All Function
+     *
+     */
 
 }

@@ -75,62 +75,23 @@ class Menu extends Model
     }
 
     /**
-    *
-    * Eloquent Relationships
-    * Defining Relationships: belongsTo
-    *
-    */
+     *
+     * Eloquent Relationships
+     * Defining Relationships: belongsTo
+     *
+     */
 
     /**
-    *
-    * Get the user that owns the Menu.
-    * Relationships: belongsTo
-    *
-    * @return BelongsTo
-    */
-    public function user() : BelongsTo
-    {
-        return $this->belongsTo(User::class,'User_Id','Id');
-    }
+     *
+     * Eloquent Relationships
+     * Defining Relationships: Has One Or has Many
+     *
+     */
 
     /**
-    *
-    * Get the Brands that owns the Menu.
-    * Relationships: belongsTo
-    *
-    * @return BelongsTo
-    */
-
-    public function brands(): BelongsTo
-    {
-        return $this->belongsTo(Brands::class);
-    }
-
-    /**
-    *
-    * Get the Category that owns the Menu.
-    * Relationships: belongsTo
-    *
-    * @return BelongsTo
-    *
-    */
-
-    public function Category() : BelongsTo
-    {
-        return $this->belongsTo(Category::class);
-    }
-
-    /**
-    *
-    * Eloquent Relationships
-    * Defining Relationships: Has One Or has Many
-    *
-    */
-
-    /**
-    *
-    * The Wirting All Function
-    *
-    */
+     *
+     * The Wirting All Function
+     *
+     */
 
 }

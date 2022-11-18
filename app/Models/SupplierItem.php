@@ -84,59 +84,24 @@ class SupplierItem extends Model
     }
 
     /**
-    *
-    * Eloquent Relationships Type: belongsTo
-    *
-    */
+     *
+     * Eloquent Relationships
+     * Defining Relationships: belongsTo
+     *
+     */
 
     /**
-    *
-    * Get the user that owns the Supplier Item.
-    * Defining Relationships: belongsTo
-    *
-    * @return belongsTo
-    */
-    public function user() : BelongsTo
-    {
-        return $this->belongsTo(User::class);
-    }
+     *
+     * Eloquent Relationships
+     * Defining Relationships: Has One Or has Many
+     *
+     */
 
     /**
-    *
-    * Get the Brands that owns the Supplier Item.
-    * Defining Relationships: belongsTo
-    *
-    * @return belongsTo
-    */
-    public function brands() : BelongsTo
-    {
-        return $this->belongsTo(Brands::class);
-    }
-
-    /**
-    *
-    * Get the Supplier that owns the Supplier Item.
-    * Defining Relationships: belongsTo
-    *
-    * @return belongsTo
-    */
-    public function supplier() : BelongsTo
-    {
-        return $this->belongsTo(Supplier::class);
-    }
-
-    /**
-    *
-    * Eloquent Relationships
-    * Defining Relationships: Has One Or has Many
-    *
-    */
-
-    /**
-    *
-    * The Wirting All Function
-    *
-    */
+     *
+     * The Wirting All Function
+     *
+     */
 
 
 

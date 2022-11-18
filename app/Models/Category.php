@@ -67,48 +67,24 @@ class Category extends Model
     }
 
     /**
-    *
-    * Eloquent Relationships
-    * Defining Relationships: belongsTo
-    *
-    */
-
-
-    /**
-    *
-    * Eloquent Relationships
-    * Defining Relationships: Has One Or has Many
-    *
-    */
+     *
+     * Eloquent Relationships
+     * Defining Relationships: belongsTo
+     *
+     */
 
     /**
-    *
-    * Get the Menu associated with the Category.
-    * Relationships: has Many
-    *
-    * @return HasMany
-    */
-    public function Menu() : HasMany
-    {
-        return $this->hasMany(Menu::class,'Category_Id','id');
-    }
+     *
+     * Eloquent Relationships
+     * Defining Relationships: Has One Or has Many
+     *
+     */
 
     /**
-    *
-    * Get the Recipe Costs associated with the Category.
-    * Relationships: has Many
-    *
-    * @return HasMany
-    */
-    public function RecipeCosts() : HasMany
-    {
-        return $this->hasMany(RecipeCosts::class,'Category_Id','id');
-    }
+     *
+     * The Wirting All Function
+     *
+     */
 
-    /**
-    *
-    * The Wirting All Function
-    *
-    */
-
+ 
 }

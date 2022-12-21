@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 use Cviebrock\EloquentSluggable\Sluggable;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
@@ -75,6 +76,16 @@ class Thumbnails extends Model
      * Defining Relationships: belongsTo
      *
      */
+
+    /**
+     * Get the user that owns the Thumbnails.
+     * 
+     * @return BelognsTo
+     */
+    public function user(): BelongsTo
+    {
+        return $this->belongsTo(User::class, 'User_id', 'id');
+    }
 
     /**
      *

@@ -91,6 +91,16 @@ class User extends Authenticatable
      */
 
     /**
+     * Get the Thumbnails for the User.
+     * 
+     * @return hasMany
+     */
+    public function Thumbnails(): hasMany
+    {
+        return $this->hasMany(Thumbnails::class);
+    }
+
+    /**
      *
      * The Wirting All Function
      *

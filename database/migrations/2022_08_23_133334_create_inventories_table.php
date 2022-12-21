@@ -50,6 +50,8 @@ return new class extends Migration
             $table->string('Item_Size')->nullable()->comment('for Inventory The Item OF Size  Bag, Box, Lb, Oz, etc. ');
             $table->double('Item_Unit_Price')->nullable()->comment('for Inventory Unit Price');
             $table->string('Quantity_In_Stock')->nullable()->comment('for Inventory Quantity In Stock');
+            $table->string('FIFO')->nullable()->comment(' first-in, first-out');
+            $table->string('LIFO')->nullable()->comment('last-in, first-out');
             $table->string('Inventory_Value')->nullable()->comment(' For Inventory Value');
             $table->enum('Stock_Status', ['In Stock', 'Only %s left in stock', 'Can be Backordered', 'Available On Backorder', 'Out Of Stock'])->nullable()->comment('Stock Status');
             $table->string('Reorder_Level')->nullable()->comment(' For Inventory Reorder Level');

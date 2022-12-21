@@ -1,0 +1,7 @@
+session:table
+queue:failed-table
+queue:batches-table
+notifications:table
+cache:table
+queue:batches-table
+queue:table 

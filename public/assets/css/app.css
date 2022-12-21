@@ -1,0 +1,129 @@
+/** 
+Main scss To css
+**/
+/* Roboto regular */
+@font-face {
+  font-family: "Roboto";
+  src: local("../fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+/* Roboto italic */
+@font-face {
+  font-family: "Roboto";
+  src: local("/fonts/Roboto-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+/* Roboto Light 300  */
+@font-face {
+  font-family: "Roboto";
+  src: local("/fonts/Roboto-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: Light;
+}
+/* Roboto Light 300 Italic  */
+@font-face {
+  font-family: "Roboto";
+  src: local("/fonts/Roboto-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: Light;
+}
+/* Roboto Medium 500  */
+@font-face {
+  font-family: "Roboto";
+  src: local("/fonts/Roboto-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: Medium;
+}
+/* Roboto Medium 500 Italic */
+@font-face {
+  font-family: "Roboto";
+  src: local("/fonts/Roboto-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: Medium;
+}
+/* Roboto Medium 500 Italic */
+@font-face {
+  font-family: "Roboto";
+  src: local("/fonts/Roboto-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: Medium;
+}
+/* Roboto Bold 700 */
+@font-face {
+  font-family: "Roboto";
+  src: local("/fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: bold;
+}
+/* Roboto Bold 700 Italic */
+@font-face {
+  font-family: "Roboto";
+  src: local("/fonts/Roboto-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: bold;
+}
+/* Roboto Black 900 */
+@font-face {
+  font-family: "Roboto";
+  src: local("/fonts/Roboto-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: bold;
+}
+/* Roboto Black 900 Italic */
+@font-face {
+  font-family: "Roboto";
+  src: local("/fonts/Roboto-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: bold;
+}
+/* Roboto Thin 100 */
+@font-face {
+  font-family: "Roboto";
+  src: local("/fonts/Roboto-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: Thin;
+}
+/* Roboto Thin 100 Italic */
+@font-face {
+  font-family: "Roboto";
+  src: local("/fonts/Roboto-ThinItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: Thin;
+}
+html::before {
+  display: block;
+}
+
+html::after {
+  display: block;
+}
+
+html::content {
+  display: block;
+}
+
+html {
+  display: block;
+}
+
+body::before {
+  display: block;
+}
+
+body::after {
+  display: block;
+}
+
+body {
+  display: block;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+  text-align: center;
+  padding: 2px 1px 0;
+  color: #BC212E;
+}

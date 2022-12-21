@@ -13,7 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('password_resets', function (Blueprint $table) {
+        Schema::create('Password_Resets', function (Blueprint $table) {
+
+            $table->engine = 'InnoDB';
+            $table->charset = 'utf8';
+            $table->collation = 'utf8_general_ci';
+
             $table->string('email')->index();
             $table->string('token');
             $table->timestamp('created_at')->nullable();

@@ -2,6 +2,19 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\BrandsController;
+use App\Http\Controllers\InventoryController;
+use App\Http\Controllers\MenuController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RecipeCardController;
+use App\Http\Controllers\RecipeCostsController;
+use App\Http\Controllers\SupplierController;
+use App\Http\Controllers\SupplierItemController;
+
+
+use App\Http\Middleware\Dashboards;
+use Symfony\Component\HttpKernel\Profiler\Profile;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +26,61 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::middleware([Dashboards::class])->group(function () {
+
+require __DIR__ . '/auth.php';
+Route::resource('Brands', BrandsController::class);
+Route::resource('Inventory', InventoryController::class);
+Route::resource('Menu', MenuController::class);
+Route::resource('RecipeCard', RecipeCardController::class);
+Route::resource('RecipeCosts', RecipeCostsController::class);
+Route::resource('Supplier', SupplierController::class);
+Route::resource('SupplierItem', SupplierItemController::class);
+Route::resource('Profile',ProfileController::class);
+
+// });
+
+
+//The Static Pages
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
+})->name('home');
+
+Route::get('/faq', function () {
+    return view('faq');
+})->name('faq');
+
+Route::get('/cookies', function () {
+    return view('cookies');
+})->name('cookies');
+
+Route::get('/privacy', function () {
+    return view('privacy');
+})->name('privacy');
+
+Route::get('/terms', function () {
+    return view('terms');
+})->name('terms');
+
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
+
+Route::get('/readme', function () {
+    return view('readme');
 });
+
+Route::get('/info', function () {
+    return view('info');
+});
+
+Route::get('/Cheatsheet', function () {
+    return view('Cheatsheet');
+});
+
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+
